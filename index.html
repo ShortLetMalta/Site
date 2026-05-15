@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleva Malta | Premium Short-Let & Airbnb Management</title>
+    <meta name="description" content="Maximize your property income in Malta with Eleva's AI-powered luxury short-let management. Premium guest experiences, revenue optimization, and investor-focused results.">
+    
+    <!-- Design System & Components -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Luxury fonts: Cinzel + Josefin Sans for real-estate premium feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* Hero contrast + dashboard shadow */
+        .hero__overlay{background:linear-gradient(135deg,rgba(17,17,17,0.85) 0%,rgba(17,17,17,0.6) 60%,rgba(17,17,17,0.4) 100%) !important}
+        .hero__title,.hero__stat-value,.hero__stat-label,.hero__sub,.hero__label{color:#ffffff !important}
+        .hero__label{color:#C9A96E !important}
+        .hero__dashboard{filter:drop-shadow(0 10px 30px rgba(0,0,0,0.35))}
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav nav--transparent" id="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                ELEVA MALTA<span class="nav__logo-dot"></span>
+            </a>
+            <div class="nav__links">
+                <a href="services.html" class="nav__link">Services</a>
+                <a href="locations.html" class="nav__link">Locations</a>
+                <a href="investors.html" class="nav__link">Investors</a>
+                <a href="calculator.html" class="nav__link">Calculator</a>
+                <a href="blog.html" class="nav__link">Insights</a>
+            </div>
+            <div class="nav__cta">
+                <a href="contact.html" class="btn btn-white btn-sm">Get Revenue Estimate</a>
+            </div>
+            <div class="nav__hamburger" id="navHamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="navMobile">
+        <a href="index.html" class="nav__mobile-link">Home</a>
+        <a href="services.html" class="nav__mobile-link">Services</a>
+        <a href="locations.html" class="nav__mobile-link">Locations</a>
+        <a href="investors.html" class="nav__mobile-link">Investors</a>
+        <a href="calculator.html" class="nav__mobile-link">Revenue Calculator</a>
+        <a href="contact.html" class="btn btn-white btn-lg" style="margin-top: 2rem;">Book Consultation</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero__bg">
+            <img src="images/hero.png" alt="Luxury Malta Terrace View">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <div class="hero__label label">The Future of Short-Let Hospitality</div>
+            <h1 class="hero__title heading-1">
+                Maximize Your <br>
+                <span class="gradient-text">Short-Let Revenue</span> <br>
+                in 2026/2027
+            </h1>
+            <p class="hero__sub">
+                Elevate your property to a high-performing investment. We combine AI-powered optimization with luxury hospitality to deliver 30% higher ROI than traditional agencies.
+            </p>
+            <div class="hero__ctas">
+                <a href="calculator.html" class="btn btn-gold btn-lg">Get Free Estimate</a>
+                <a href="contact.html" class="btn btn-outline btn-lg">Book Consultation</a>
+            </div>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <div class="hero__stat-value" data-target="96" data-suffix="%">0%</div>
+                    <div class="hero__stat-label">Avg Occupancy</div>
+                </div>
+                <div class="hero__stat">
+                    <div class="hero__stat-value" data-target="4.9" data-suffix="/5">0</div>
+                    <div class="hero__stat-label">Guest Rating</div>
+                </div>
+                <div class="hero__stat">
+                    <div class="hero__stat-value" data-target="200" data-prefix="€" data-suffix="+">€0</div>
+                    <div class="hero__stat-label">Avg Nightly Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Dashboard Mockup -->
+        <div class="hero__dashboard">
+            <div class="dashboard-card card--glass">
+                <div class="dashboard-metric" style="margin-bottom: 1.5rem;">
+                    <span class="dashboard-metric__label">Monthly Revenue</span>
+                    <span class="dashboard-metric__value">€12,450.00</span>
+                    <span class="dashboard-metric__change">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                        14.2% vs last month
+                    </span>
+                </div>
+                <div class="dashboard-bars" data-group="hero">
+                    <div class="dashboard-bar-row">
+                        <span class="dashboard-bar-label">MAY</span>
+                        <div class="dashboard-bar-track"><div class="dashboard-bar-fill" data-width="85%" style="width: 0%"></div></div>
+                        <span class="dashboard-bar-val">85%</span>
+                    </div>
+                    <div class="dashboard-bar-row">
+                        <span class="dashboard-bar-label">JUN</span>
+                        <div class="dashboard-bar-track"><div class="dashboard-bar-fill" data-width="92%" style="width: 0%"></div></div>
+                        <span class="dashboard-bar-val">92%</span>
+                    </div>
+                    <div class="dashboard-bar-row">
+                        <span class="dashboard-bar-label">JUL</span>
+                        <div class="dashboard-bar-track"><div class="dashboard-bar-fill" data-width="98%" style="width: 0%"></div></div>
+                        <span class="dashboard-bar-val">98%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust__label">Trusted Across Leading Platforms</div>
+            <div class="trust__logos reveal">
+                <span class="trust__logo">Airbnb</span>
+                <span class="trust__logo">Booking.com</span>
+                <span class="trust__logo">VRBO</span>
+                <span class="trust__logo">Expedia</span>
+                <span class="trust__logo">Google Travel</span>
+                <span class="trust__logo">MTA Licensed</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header section-header--center reveal">
+                <div class="label">Our Expertise</div>
+                <h2 class="heading-2">Beyond Property Management</h2>
+                <p class="subheading">We don't just manage keys; we optimize assets using data, AI, and premium hospitality standards.</p>
+            </div>
+            <div class="grid-3 stagger">
+                <div class="value-card">
+                    <div class="value-card__icon">📈</div>
+                    <h3 class="value-card__title">Revenue Optimization</h3>
+                    <p class="value-card__text">Our AI algorithms adjust pricing daily based on local demand, events, and competitor data to maximize your ADR and occupancy.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-card__icon">✨</div>
+                    <h3 class="value-card__title">Luxury Hospitality</h3>
+                    <p class="value-card__text">We provide 5-star guest experiences, from professional styling and photography to 24/7 concierge services and premium amenities.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-card__icon">🛡️</div>
+                    <h3 class="value-card__title">Full-Service Care</h3>
+                    <p class="value-card__text">From MTA licensing and taxation to maintenance and cleaning, we handle every detail. You just enjoy the passive income.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator Section -->
+    <section class="section bg-black text-white">
+        <div class="container">
+            <div class="grid-2 gap-8 align-items-center">
+                <div class="reveal-left">
+                    <div class="label">Revenue Calculator</div>
+                    <h2 class="heading-2" style="margin-bottom: 1.5rem;">See Your <br><span class="text-gold">Potential Earnings</span></h2>
+                    <p class="subheading text-grey" style="margin-bottom: 2rem;">Our proprietary data model estimates your property's performance based on live Malta market trends. 30% management fee net of OTA fees applies.</p>
+                    <ul class="flex-col gap-4">
+                        <li class="flex align-items-center gap-4">
+                            <span class="dot-gold"></span>
+                            <span>Live market data integration</span>
+                        </li>
+                        <li class="flex align-items-center gap-4">
+                            <span class="dot-gold"></span>
+                            <span>Location-specific occupancy modeling</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal-right">
+                    <div class="calc-wrapper">
+                        <div class="flex-col gap-6">
+                            <div class="form-group">
+                                <label class="calc-label">Property Type & Bedrooms</label>
+                                <select id="calcBedrooms" class="calc-form-input">
+                                    <option value="studio">Studio Apartment</option>
+                                    <option value="1br" selected>1 Bedroom Apartment</option>
+                                    <option value="2br">2 Bedroom Apartment</option>
+                                    <option value="3br">3 Bedroom House / Villa</option>
+                                    <option value="4br">Luxury Estate (4+ BR)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="calc-label">Location in Malta</label>
+                                <select id="calcLocation" class="calc-form-input">
+                                    <option value="sliema" selected>Sliema</option>
+                                    <option value="stjulians">St. Julian's / Paceville</option>
+                                    <option value="valletta">Valletta</option>
+                                    <option value="gzira">Gzira</option>
+                                    <option value="mellieha">Mellieha</option>
+                                    <option value="bugibba">Bugibba / St. Paul's Bay</option>
+                                    <option value="gozo">Gozo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="calc-label">Expected Occupancy: <span id="calcOccupancyVal" class="text-gold">75%</span></label>
+                                <input type="range" id="calcOccupancy" min="40" max="100" value="75" class="calc-slider">
+                            </div>
+                            <div class="calc-output reveal-scale delay-300">
+                                <span class="calc-output__label">Estimated Monthly Income (Net)</span>
+                                <div class="calc-output__main" id="outMonthly">€2,450</div>
+                                <p class="calc-output__sub">Estimated <span id="outYearly">€29,400</span> per year.</p>
+                                <div class="divider" style="background: rgba(255,255,255,0.1); width: 100%; margin: 1.5rem 0;"></div>
+                                <div class="flex-between">
+                                    <span class="text-sm text-grey">Avg. Nightly Rate</span>
+                                    <span class="text-sm font-600" id="outADR">€145</span>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn btn-gold btn-lg" style="width: 100%;">Get Detailed Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="label">Prime Locations</div>
+                <h2 class="heading-2">Where We Operate</h2>
+            </div>
+            <div class="grid-3 stagger">
+                <!-- Sliema -->
+                <div class="location-card">
+                    <img src="images/location-sliema.png" alt="Sliema" class="location-card__img">
+                    <div class="location-card__overlay"></div>
+                    <div class="location-card__content">
+                        <span class="location-card__badge">High Demand</span>
+                        <h3 class="location-card__name">Sliema</h3>
+                        <div class="location-card__meta">
+                            <span class="location-card__stat">Avg. Occ: <strong>82%</strong></span>
+                            <span class="location-card__stat">ADR: <strong>€165</strong></span>
+                        </div>
+                        <a href="locations.html#sliema" class="btn btn-white btn-sm location-card__cta">View Insights</a>
+                    </div>
+                </div>
+                <!-- Valletta -->
+                <div class="location-card">
+                    <img src="images/location-valletta.png" alt="Valletta" class="location-card__img">
+                    <div class="location-card__overlay"></div>
+                    <div class="location-card__content">
+                        <span class="location-card__badge">Premium</span>
+                        <h3 class="location-card__name">Valletta</h3>
+                        <div class="location-card__meta">
+                            <span class="location-card__stat">Avg. Occ: 78%</span>
+                            <span class="location-card__stat">ADR: €195</span>
+                        </div>
+                        <a href="locations.html#valletta" class="btn btn-white btn-sm location-card__cta">View Insights</a>
+                    </div>
+                </div>
+                <!-- St Julians -->
+                <div class="location-card">
+                    <img src="images/location-stjulians.png" alt="St Julian's" class="location-card__img">
+                    <div class="location-card__overlay"></div>
+                    <div class="location-card__content">
+                        <span class="location-card__badge">Most Popular</span>
+                        <h3 class="location-card__name">St. Julian's</h3>
+                        <div class="location-card__meta">
+                            <span class="location-card__stat">Avg. Occ: 85%</span>
+                            <span class="location-card__stat">ADR: €175</span>
+                        </div>
+                        <a href="locations.html#stjulians" class="btn btn-white btn-sm location-card__cta">View Insights</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-center" style="margin-top: 4rem;">
+                <a href="locations.html" class="btn btn-outline-dark btn-lg">Explore All 8 Locations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Dashboard Preview -->
+    <section class="section bg-off-white">
+        <div class="container">
+            <div class="grid-2 gap-8 align-items-center">
+                <div class="reveal-left">
+                    <div class="dashboard-card dashboard-card--portal card--dark">
+                         <div class="flex-between dashboard-card__header">
+                            <div class="flex-col">
+                                <span class="label dashboard-card__eyebrow">Owner Portal</span>
+                                <h3 class="heading-3">Full Transparency</h3>
+                            </div>
+                            <div class="pulse-dot"></div>
+                         </div>
+                         <div class="grid-2 gap-4 dashboard-card__metrics">
+                             <div class="dashboard-metric">
+                                 <span class="dashboard-metric__label">Total Payout</span>
+                                 <span class="dashboard-metric__value">€42,120</span>
+                             </div>
+                             <div class="dashboard-metric">
+                                 <span class="dashboard-metric__label">Occupancy</span>
+                                 <span class="dashboard-metric__value">94.2%</span>
+                             </div>
+                         </div>
+                         <div class="dashboard-bars" data-group="portal">
+                            <div class="dashboard-bar-row">
+                                <div class="dashboard-bar-track dashboard-bar-track--portal"><div class="dashboard-bar-fill" data-width="70%" style="width: 0%"></div></div>
+                            </div>
+                            <div class="dashboard-bar-row">
+                                <div class="dashboard-bar-track dashboard-bar-track--portal"><div class="dashboard-bar-fill" data-width="95%" style="width: 0%"></div></div>
+                            </div>
+                         </div>
+                         <div class="flex-center dashboard-card__footer">
+                            <span class="text-xs text-grey">Live data updated 2 mins ago</span>
+                         </div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="label">Investor Control</div>
+                    <h2 class="heading-2">Your Short-Let Portfolio, <br>On Autopilot</h2>
+                    <p class="subheading">Our proprietary owner dashboard gives you 24/7 access to holiday rental data, cleaning schedules, guest reviews, and monthly payouts. Total visibility, zero stress.</p>
+                    <div class="divider"></div>
+                    <ul class="flex-col gap-4">
+                        <li class="flex align-items-center gap-4">
+                            <span class="text-gold">✓</span>
+                            <span>Real-time revenue analytics</span>
+                        </li>
+                        <li class="flex align-items-center gap-4">
+                            <span class="text-gold">✓</span>
+                            <span>Automated monthly payouts</span>
+                        </li>
+                        <li class="flex align-items-center gap-4">
+                            <span class="text-gold">✓</span>
+                            <span>Expense & maintenance tracking</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header section-header--center reveal">
+                <div class="label">Common Questions</div>
+                <h2 class="heading-2">Frequently Asked</h2>
+            </div>
+            <div class="max-width-800" style="margin: 0 auto;">
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        How much can I realistically earn on Airbnb in Malta?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Earnings vary by location and property type, but prime areas like Sliema and Valletta typically see 75-85% occupancy with ADRs ranging from €120 to €300+. Our clients usually see a 30-50% uplift compared to long-term rentals.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        What is included in your 30% management fee?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Our fee covers everything: dynamic pricing, professional listing optimization, 24/7 guest communication, cleaning coordination, maintenance management, and owner reporting. The fee is calculated net of OTA commissions (like Airbnb's 15%).
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        Is Airbnb legal in Malta and do I need a license?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes, it is legal. You must have an MTA (Malta Tourism Authority) license to operate a short-let property. We assist all our clients in navigating the licensing process and ensuring full compliance with local regulations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-center" style="margin-top: 3rem;">
+                <a href="faq.html" class="btn btn-outline-dark btn-sm">View All FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section bg-black text-white cta-gradient">
+        <div class="container flex-center flex-col text-center">
+            <div class="reveal">
+                <div class="label" style="color: var(--gold-light);">Start Your Journey</div>
+                <h2 class="heading-1" style="margin: 1rem 0 2rem;">Ready to Boost Your <br>Property ROI?</h2>
+                <div class="flex-center gap-4 flex-wrap">
+                    <a href="contact.html" class="btn btn-gold btn-lg">Book Free Consultation</a>
+                    <a href="calculator.html" class="btn btn-outline btn-lg">Calculate My Revenue</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand-col">
+                    <div class="footer__brand">ELEVA MALTA<span class="nav__logo-dot"></span></div>
+                    <p class="footer__desc">Premium property management for the modern investor. Combining AI technology with luxury hospitality to redefine the short-let market in Malta.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Platform</h4>
+                    <div class="footer__links">
+                        <a href="services.html" class="footer__link">Services</a>
+                        <a href="locations.html" class="footer__link">Locations</a>
+                        <a href="investors.html" class="footer__link">Investors</a>
+                        <a href="calculator.html" class="footer__link">Revenue Calculator</a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Company</h4>
+                    <div class="footer__links">
+                        <a href="about.html" class="footer__link">About Us</a>
+                        <a href="blog.html" class="footer__link">Insights</a>
+                        <a href="contact.html" class="footer__link">Contact</a>
+                        <a href="faq.html" class="footer__link">FAQs</a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Legal</h4>
+                    <div class="footer__links">
+                        <a href="#" class="footer__link">Privacy Policy</a>
+                        <a href="#" class="footer__link">Terms of Service</a>
+                        <a href="#" class="footer__link">MTA Compliance</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026/2027 Eleva Malta. All rights reserved. MTA License: Placeholder-001</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">FB</a>
+                    <a href="#" class="footer__social-link">IG</a>
+                    <a href="#" class="footer__social-link">LI</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/placeholder" class="whatsapp-float">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg>
+    </a>
+
+    <!-- Page transition overlay -->
+    <div class="page-transition-overlay"></div>
+
+    <!-- GSAP + ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

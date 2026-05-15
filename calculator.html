@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Calculator | Eleva Malta | Short-Let Performance Estimator</title>
+    <meta name="description" content="Calculate your property's potential income on the Malta short-let market. Real-time data-driven estimates for Airbnb and holiday rentals.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="bg-black">
+
+    <nav class="nav nav--scrolled" id="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">ELEVA MALTA<span class="nav__logo-dot"></span></a>
+            <div class="nav__links">
+                <a href="services.html" class="nav__link">Services</a>
+                <a href="locations.html" class="nav__link">Locations</a>
+                <a href="investors.html" class="nav__link">Investors</a>
+                <a href="calculator.html" class="nav__link">Calculator</a>
+                <a href="blog.html" class="nav__link">Insights</a>
+            </div>
+            <div class="nav__cta"><a href="contact.html" class="btn btn-white btn-sm">Estimate My Revenue</a></div>
+            <div class="nav__hamburger" id="navHamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="section--lg">
+        <div class="container">
+            <div class="grid-2 gap-8">
+                <!-- Left: Inputs -->
+                <div class="reveal-left">
+                    <div class="label" style="color: var(--gold-light);">Data-Driven Insights</div>
+                    <h1 class="heading-2 text-white" style="margin: 1rem 0 2rem;">Short-Let <br><span class="text-gold">Profitability Estimator</span></h1>
+                    <p class="subheading text-grey" style="margin-bottom: 3rem;">Adjust the parameters below to see how your property would perform under our management. Our model accounts for seasonality, location demand, and our proprietary dynamic pricing strategy.</p>
+                    
+                    <div class="calc-wrapper" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="flex-col gap-6">
+                            <div class="form-group">
+                                <label class="calc-label">Property Type</label>
+                                <select id="calcBedrooms" class="calc-form-input">
+                                    <option value="studio">Studio Apartment</option>
+                                    <option value="1br" selected>1 Bedroom Apartment</option>
+                                    <option value="2br">2 Bedroom Apartment</option>
+                                    <option value="3br">3 Bedroom House / Villa</option>
+                                    <option value="4br">Luxury Estate / Farmhouse</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="calc-label">Location</label>
+                                <select id="calcLocation" class="calc-form-input">
+                                    <option value="sliema" selected>Sliema</option>
+                                    <option value="stjulians">St. Julian's</option>
+                                    <option value="valletta">Valletta</option>
+                                    <option value="gzira">Gzira</option>
+                                    <option value="mellieha">Mellieha</option>
+                                    <option value="bugibba">Bugibba</option>
+                                    <option value="gozo">Gozo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="calc-label">Occupancy Percentage: <span id="calcOccupancyVal" class="text-gold">75%</span></label>
+                                <input type="range" id="calcOccupancy" min="40" max="100" value="75" class="calc-slider">
+                                <div class="flex-between text-xs text-grey">
+                                    <span>Conservative (40%)</span>
+                                    <span>Optimistic (100%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card--glass" style="margin-top: 2rem; padding: 2rem;">
+                        <h4 class="heading-4 text-white" style="margin-bottom: 1rem;">Management Structure</h4>
+                        <ul class="flex-col gap-3">
+                            <li class="flex-between text-sm">
+                                <span class="text-grey">Management Fee</span>
+                                <span class="text-white">30% (Net of OTA fees)</span>
+                            </li>
+                            <li class="flex-between text-sm">
+                                <span class="text-grey">OTA Booking Fees (Avg)</span>
+                                <span class="text-white">~15%</span>
+                            </li>
+                            <li class="flex-between text-sm">
+                                <span class="text-grey">Guest Cleaning Fee</span>
+                                <span class="text-white">Paid by Guest</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Output -->
+                <div class="reveal-right">
+                    <div class="calc-output" style="padding: 3rem; background: var(--charcoal); border: 1px solid var(--gold-dark);">
+                        <div class="text-center" style="margin-bottom: 3rem;">
+                            <span class="calc-output__label">Estimated Monthly Payout to You</span>
+                            <div class="calc-output__main" id="outMonthly" style="font-size: 5rem; color: var(--gold-light);">€2,450</div>
+                            <p class="text-lg text-grey">Potential Yearly Income: <strong id="outYearly" class="text-white">€29,400</strong></p>
+                        </div>
+
+                        <div class="grid-2 gap-6" style="margin-bottom: 3rem;">
+                            <div class="dashboard-card" style="background: rgba(0,0,0,0.2);">
+                                <span class="calc-output__label" style="font-size: 0.65rem;">Avg Nightly Rate</span>
+                                <div class="heading-3" id="outADR">€145</div>
+                            </div>
+                            <div class="dashboard-card" style="background: rgba(0,0,0,0.2);">
+                                <span class="calc-output__label" style="font-size: 0.65rem;">ROI vs Long-Let</span>
+                                <div class="heading-3 text-gold" id="outUplift">+45%</div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card" style="margin-bottom: 3rem; background: rgba(255,255,255,0.03);">
+                            <div class="flex-between" style="margin-bottom: 1rem;">
+                                <span class="text-sm text-grey">Competitive Occupancy</span>
+                                <span class="text-sm" id="outOccupancy">75%</span>
+                            </div>
+                            <div class="dashboard-bar-track"><div class="dashboard-bar-fill" id="calcOccBar" style="width: 75%;"></div></div>
+                        </div>
+
+                        <div class="flex-col gap-4">
+                            <h4 class="heading-4 text-white">Unlock Your Property's Full Potential</h4>
+                            <p class="text-sm text-grey">This estimate is based on average market performance. Our premium styling and marketing often outperform these numbers by an additional 15-20%.</p>
+                            <a href="contact.html" class="btn btn-gold btn-lg" style="margin-top: 1rem;">Book Professional Audit</a>
+                        </div>
+                    </div>
+
+                    <div class="flex-center" style="margin-top: 3rem;">
+                         <p class="text-xs text-grey text-center max-width-400">
+                            *Disclaimer: Estimates are based on historical and current market data. Performance is subject to property condition, seasonality, and regulatory changes.
+                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom" style="border: none;">
+                <p class="footer__copy">&copy; 2026/2027 Eleva Malta. All rights reserved.</p>
+                <div class="footer__links">
+                    <a href="index.html" class="footer__link">Home</a>
+                    <a href="contact.html" class="footer__link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Page transition overlay -->
+    <div class="page-transition-overlay"></div>
+
+    <!-- GSAP + ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
