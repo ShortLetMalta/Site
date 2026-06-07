@@ -1,0 +1,419 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "ELEVA MALTA" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+      - link "WhatsApp Us" [ref=e5] [cursor=pointer]:
+        - /url: https://wa.me/393514901584
+        - img [ref=e6]
+        - text: WhatsApp Us
+  - banner [ref=e8]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e14]: 2026 Enforcement Active — 3-year ban for unlicensed short-lets
+        - heading "Your Malta Property Needs an MTA Licence. We Handle It." [level=1] [ref=e15]:
+          - text: Your Malta Property
+          - text: Needs an MTA Licence.
+          - emphasis [ref=e16]: We Handle It.
+        - paragraph [ref=e17]: From document prep and Perit coordination to MTA submission, inspection, and approval — Eleva manages the entire licencing process. You sign where needed. We do the rest.
+        - generic [ref=e18]:
+          - link "Get My Free Compliance Check" [ref=e19] [cursor=pointer]:
+            - /url: "#cta"
+          - generic [ref=e20]: Free · No commitment · Reply within 24h
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]: 4–6 wks
+            - generic [ref=e24]: Avg licence timeline
+          - generic [ref=e25]:
+            - generic [ref=e26]: 100%
+            - generic [ref=e27]: First-submission pass rate
+          - generic [ref=e28]:
+            - generic [ref=e29]: €0
+            - generic [ref=e30]: Eleva fee for licencing
+          - generic [ref=e31]:
+            - generic [ref=e32]: 4.9★
+            - generic [ref=e33]: Portfolio guest rating
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: Risk of operating unlicensed
+          - generic [ref=e37]: What's at stake in 2026
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - generic [ref=e40]: 1st offence fine
+            - generic [ref=e41]: €2,330
+          - generic [ref=e42]:
+            - generic [ref=e43]: Repeat offence
+            - generic [ref=e44]: €5,000
+          - generic [ref=e45]:
+            - generic [ref=e46]: Listing removal risk
+            - generic [ref=e47]: "Yes"
+          - generic [ref=e48]:
+            - generic [ref=e49]: Licence ban (2026 law)
+            - generic [ref=e50]: 3 years
+          - generic [ref=e51]:
+            - generic [ref=e52]: Eleva licencing fee
+            - generic [ref=e53]: €0
+        - link "Start My Compliance Check" [ref=e55] [cursor=pointer]:
+          - /url: "#cta"
+  - generic [ref=e57]:
+    - generic [ref=e58]:
+      - generic [ref=e59]: ⚖️
+      - generic [ref=e60]:
+        - generic [ref=e61]: Legal requirement since 2016
+        - generic [ref=e62]: All short-lets in Malta — no exceptions
+    - generic [ref=e64]:
+      - generic [ref=e65]: 🔍
+      - generic [ref=e66]:
+        - generic [ref=e67]: Airbnb now verifies licence numbers
+        - generic [ref=e68]: EU Regulation 2024/1028 — active May 2026
+    - generic [ref=e70]:
+      - generic [ref=e71]: 🚫
+      - generic [ref=e72]:
+        - generic [ref=e73]: Unlicensed = 3-year application ban
+        - generic [ref=e74]: Legal Notice 92 of 2026 — Malta
+    - generic [ref=e76]:
+      - generic [ref=e77]: 📊
+      - generic [ref=e78]:
+        - generic [ref=e79]: Platforms share monthly data with MTA
+        - generic [ref=e80]: Every booking tracked from May 2026
+  - generic [ref=e82]:
+    - generic [ref=e83]:
+      - generic [ref=e84]: Sound Familiar?
+      - heading "Property owners come to us with the same four problems" [level=2] [ref=e85]:
+        - text: Property owners come to us
+        - text: with the same four problems
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]: "01"
+        - paragraph [ref=e89]: "\"I know I need the licence but I don't know where to start — there are so many documents.\""
+        - paragraph [ref=e90]:
+          - text: "The MTA requires 6+ documents: proof of ownership, Perit declaration, insurance, building permits, and more."
+          - strong [ref=e91]: Eleva prepares the entire package
+          - text: — you provide your ID and title deed. We handle everything else.
+      - generic [ref=e92]:
+        - generic [ref=e93]: "02"
+        - paragraph [ref=e94]: "\"I'm already on Airbnb without a licence. I'm worried about the 2026 crackdown.\""
+        - paragraph [ref=e95]:
+          - text: You're not alone — many Malta owners are in this position.
+          - strong [ref=e96]: Acting now protects you
+          - text: from the 3-year ban and gives time to get compliant before platform enforcement kicks in fully.
+      - generic [ref=e97]:
+        - generic [ref=e98]: "03"
+        - paragraph [ref=e99]: "\"I started the application myself, got stuck on the Perit requirement, and gave up.\""
+        - paragraph [ref=e100]:
+          - text: The Perit (certified architect) declaration is the most common sticking point.
+          - strong [ref=e101]: Eleva coordinates directly with approved Periti
+          - text: — we've done this dozens of times and know exactly what each inspector expects.
+      - generic [ref=e102]:
+        - generic [ref=e103]: "04"
+        - paragraph [ref=e104]: "\"I live abroad. How can I possibly manage a Malta licence application remotely?\""
+        - paragraph [ref=e105]:
+          - text: Most of our owners are overseas. Eleva acts as your full local representative — we submit, attend inspections, and receive correspondence on your behalf.
+          - strong [ref=e106]: You don't need to be in Malta.
+  - generic [ref=e108]:
+    - generic [ref=e109]:
+      - generic [ref=e110]: The Eleva Process
+      - heading "From Unlicensed to Earning in 4 Steps" [level=2] [ref=e111]
+      - paragraph [ref=e112]: We manage the full licencing journey — plus set your property up to perform from day one.
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - generic [ref=e115]: "1"
+        - generic [ref=e116]: Day 1
+        - generic [ref=e117]: Free Compliance Audit
+        - paragraph [ref=e118]: We review your property's current status — planning permits, documentation gaps, compliance issues — and give you a clear action plan at no cost and no commitment.
+        - generic [ref=e119]: No cost · No commitment
+      - generic [ref=e120]:
+        - generic [ref=e121]: "2"
+        - generic [ref=e122]: Weeks 1–2
+        - generic [ref=e123]: Document Preparation
+        - paragraph [ref=e124]: We gather all required documents — Perit declaration, fire safety, insurance, building permits — and prepare the full MTA application. You provide ID and title deed. We handle the rest.
+        - generic [ref=e125]: You provide 2 docs. We handle 6+.
+      - generic [ref=e126]:
+        - generic [ref=e127]: "3"
+        - generic [ref=e128]: Weeks 2–6
+        - generic [ref=e129]: MTA Submission & Inspection
+        - paragraph [ref=e130]: We submit via the MTA portal, conduct a pre-inspection walkthrough against MTA standards, and attend the official inspection. Our properties overwhelmingly pass first time.
+        - generic [ref=e131]: Fully handled by Eleva
+      - generic [ref=e132]:
+        - generic [ref=e133]: "4"
+        - generic [ref=e134]: Post-Approval
+        - generic [ref=e135]: Launch & Start Earning
+        - paragraph [ref=e136]: Once licensed, we photograph your property, build optimised listings on Airbnb, Booking.com and more, activate AI pricing — and manage everything on an ongoing basis.
+        - generic [ref=e137]: Annual renewal handled automatically
+  - generic [ref=e139]:
+    - generic [ref=e140]:
+      - generic [ref=e141]: Why Eleva
+      - heading "How We Compare" [level=2] [ref=e142]
+      - paragraph [ref=e143]: "Transparent side-by-side: DIY, a standard manager, and Eleva."
+    - table [ref=e145]:
+      - rowgroup [ref=e146]:
+        - row "Feature Do It Yourself Standard Manager Eleva Malta ★ Recommended" [ref=e147]:
+          - columnheader "Feature" [ref=e148]
+          - columnheader "Do It Yourself" [ref=e149]
+          - columnheader "Standard Manager" [ref=e150]
+          - columnheader "Eleva Malta ★ Recommended" [ref=e151]:
+            - text: Eleva Malta
+            - generic [ref=e152]: ★ Recommended
+      - rowgroup [ref=e153]:
+        - row "MTA licence management ✕ You figure it out ~ Varies ✓ Full-service, included" [ref=e154]:
+          - cell "MTA licence management" [ref=e155]
+          - cell "✕ You figure it out" [ref=e156]
+          - cell "~ Varies" [ref=e157]
+          - cell "✓ Full-service, included" [ref=e158]
+        - row "Perit / architect coordination ✕ Source and pay yourself ~ Sometimes ✓ Always included" [ref=e159]:
+          - cell "Perit / architect coordination" [ref=e160]
+          - cell "✕ Source and pay yourself" [ref=e161]
+          - cell "~ Sometimes" [ref=e162]
+          - cell "✓ Always included" [ref=e163]
+        - row "Inspection preparation ✕ No guidance ~ Basic advice ✓ Pre-inspection walkthrough" [ref=e164]:
+          - cell "Inspection preparation" [ref=e165]
+          - cell "✕ No guidance" [ref=e166]
+          - cell "~ Basic advice" [ref=e167]
+          - cell "✓ Pre-inspection walkthrough" [ref=e168]
+        - row "Annual licence renewal ✕ You track and manage ~ Varies by contract ✓ Automatic, never lapses" [ref=e169]:
+          - cell "Annual licence renewal" [ref=e170]
+          - cell "✕ You track and manage" [ref=e171]
+          - cell "~ Varies by contract" [ref=e172]
+          - cell "✓ Automatic, never lapses" [ref=e173]
+        - row "Eco-tax collection & remittance ✕ Manual responsibility ~ Sometimes ✓ Automated, 100% compliant" [ref=e174]:
+          - cell "Eco-tax collection & remittance" [ref=e175]
+          - cell "✕ Manual responsibility" [ref=e176]
+          - cell "~ Sometimes" [ref=e177]
+          - cell "✓ Automated, 100% compliant" [ref=e178]
+        - row "AI dynamic pricing ✕ ✕ Manual pricing ✓ Daily rate optimisation" [ref=e179]:
+          - cell "AI dynamic pricing" [ref=e180]
+          - cell "✕" [ref=e181]
+          - cell "✕ Manual pricing" [ref=e182]
+          - cell "✓ Daily rate optimisation" [ref=e183]
+        - row "Setup / onboarding fee N/A ✕ Often charged ✓ Zero setup fees" [ref=e184]:
+          - cell "Setup / onboarding fee" [ref=e185]
+          - cell "N/A" [ref=e186]
+          - cell "✕ Often charged" [ref=e187]
+          - cell "✓ Zero setup fees" [ref=e188]
+        - row "Lock-in contract N/A ✕ Typically 12 months ✓ No lock-in" [ref=e189]:
+          - cell "Lock-in contract" [ref=e190]
+          - cell "N/A" [ref=e191]
+          - cell "✕ Typically 12 months" [ref=e192]
+          - cell "✓ No lock-in" [ref=e193]
+        - row "Fee structure All costs on you ~10%+VAT of gross 30% of net — fully transparent" [ref=e194]:
+          - cell "Fee structure" [ref=e195]
+          - cell "All costs on you" [ref=e196]
+          - cell "~10%+VAT of gross" [ref=e197]
+          - cell "30% of net — fully transparent" [ref=e198]:
+            - strong [ref=e199]: 30% of net
+            - text: — fully transparent
+        - row "2026 compliance guarantee ✕ ~ ✓ Every property compliant" [ref=e200]:
+          - cell "2026 compliance guarantee" [ref=e201]
+          - cell "✕" [ref=e202]
+          - cell "~" [ref=e203]
+          - cell "✓ Every property compliant" [ref=e204]
+    - paragraph [ref=e205]:
+      - text: "Fee note: a manager at 10%+18% VAT = ~11.8% effective fee. Eleva's 30% applies to"
+      - emphasis [ref=e206]: net revenue after OTA fees
+      - text: "(~85% of gross), equating to ~25.5% of gross — with AI pricing generating 30%+ more revenue to offset. Source: Gobnb public pricing, June 2026."
+  - generic [ref=e208]:
+    - generic [ref=e209]:
+      - generic [ref=e210]: What's Included
+      - heading "Everything Handled. Nothing Left to You." [level=2] [ref=e211]
+      - paragraph [ref=e212]: Licencing is just the beginning. Once approved, Eleva manages every aspect of your property.
+    - generic [ref=e213]:
+      - generic [ref=e214]:
+        - generic [ref=e215]: 📋
+        - generic [ref=e216]: MTA Licence Application
+        - paragraph [ref=e217]: Full document prep, Perit coordination, MTA portal submission, inspection attendance, and approval tracking. Zero first-submission failures to date.
+        - generic [ref=e218]: ✓ Included in management
+      - generic [ref=e219]:
+        - generic [ref=e220]: 🔄
+        - generic [ref=e221]: Annual Licence Renewal
+        - paragraph [ref=e222]: Eleva tracks every renewal date, prepares the renewal paperwork, and resubmits before expiry. You'll never operate with an expired licence.
+        - generic [ref=e223]: ✓ Included in management
+      - generic [ref=e224]:
+        - generic [ref=e225]: 💶
+        - generic [ref=e226]: Eco-Contribution & Tax
+        - paragraph [ref=e227]: Malta's €0.50/guest/night eco levy is collected from guests and remitted to authorities automatically — fully documented in your monthly statement.
+        - generic [ref=e228]: ✓ Included in management
+      - generic [ref=e229]:
+        - generic [ref=e230]: 📸
+        - generic [ref=e231]: Professional Photography
+        - paragraph [ref=e232]: Properties with professional photos earn 26% more per booking on Airbnb. Eleva organises and funds the shoot as part of your onboarding — no extra cost.
+        - generic [ref=e233]: ✓ Included in management
+      - generic [ref=e234]:
+        - generic [ref=e235]: 📊
+        - generic [ref=e236]: AI Dynamic Pricing
+        - paragraph [ref=e237]: "Your nightly rate is adjusted daily based on Malta demand, competitor rates, local events, and seasonal patterns. Portfolio average: 30%+ revenue uplift vs self-managed."
+        - generic [ref=e238]: Ongoing management
+      - generic [ref=e239]:
+        - generic [ref=e240]: 🎧
+        - generic [ref=e241]: 24/7 Guest Communication
+        - paragraph [ref=e242]: Every enquiry answered, every issue resolved — in English, Italian, and other major languages. Eleva-managed properties average 4.9/5 across all platforms.
+        - generic [ref=e243]: Ongoing management
+  - generic [ref=e245]:
+    - generic [ref=e246]:
+      - generic [ref=e247]: What You Can Earn
+      - heading "Licensed Properties Earn More." [level=2] [ref=e248]
+      - paragraph [ref=e249]: Monthly net owner earnings after Eleva's 30% management fee. BnbCalc p75 data, May 2026.
+    - table [ref=e251]:
+      - rowgroup [ref=e252]:
+        - row "Property Type Location Avg Occupancy Avg Nightly Rate Monthly Net to Owner" [ref=e253]:
+          - columnheader "Property Type" [ref=e254]
+          - columnheader "Location" [ref=e255]
+          - columnheader "Avg Occupancy" [ref=e256]
+          - columnheader "Avg Nightly Rate" [ref=e257]
+          - columnheader "Monthly Net to Owner" [ref=e258]
+      - rowgroup [ref=e259]:
+        - row "Studio Sliema / St Julian's 65% €110/night €1,550" [ref=e260]:
+          - cell "Studio" [ref=e261]
+          - cell "Sliema / St Julian's" [ref=e262]
+          - cell "65%" [ref=e263]
+          - cell "€110/night" [ref=e264]
+          - cell "€1,550" [ref=e265]
+        - row "1 Bedroom Sliema 65% €133/night €1,870" [ref=e266]:
+          - cell "1 Bedroom" [ref=e267]
+          - cell "Sliema" [ref=e268]
+          - cell "65%" [ref=e269]
+          - cell "€133/night" [ref=e270]
+          - cell "€1,870" [ref=e271]
+        - row "1 Bedroom Valletta 75% €130/night €2,060" [ref=e272]:
+          - cell "1 Bedroom" [ref=e273]
+          - cell "Valletta" [ref=e274]
+          - cell "75%" [ref=e275]
+          - cell "€130/night" [ref=e276]
+          - cell "€2,060" [ref=e277]
+        - row "2 Bedrooms St Julian's 66% €168/night €2,340" [ref=e278]:
+          - cell "2 Bedrooms" [ref=e279]
+          - cell "St Julian's" [ref=e280]
+          - cell "66%" [ref=e281]
+          - cell "€168/night" [ref=e282]
+          - cell "€2,340" [ref=e283]
+        - row "2 Bedrooms Mellieħa 64% €183/night €2,460" [ref=e284]:
+          - cell "2 Bedrooms" [ref=e285]
+          - cell "Mellieħa" [ref=e286]
+          - cell "64%" [ref=e287]
+          - cell "€183/night" [ref=e288]
+          - cell "€2,460" [ref=e289]
+        - row "3 Bedrooms Valletta / Sliema 70% €234/night €3,450" [ref=e290]:
+          - cell "3 Bedrooms" [ref=e291]
+          - cell "Valletta / Sliema" [ref=e292]
+          - cell "70%" [ref=e293]
+          - cell "€234/night" [ref=e294]
+          - cell "€3,450" [ref=e295]
+    - paragraph [ref=e296]: Net = Gross × 0.85 (after OTA fees) × 0.70 (after Eleva 30%). BnbCalc p75, May 2026. Results vary by property and season.
+    - link "Get My Property's Estimate" [ref=e298] [cursor=pointer]:
+      - /url: "#cta"
+  - generic [ref=e300]:
+    - generic [ref=e301]:
+      - img [ref=e303]
+      - generic [ref=e306]:
+        - generic [ref=e307]: 100% Licensed Portfolio
+        - generic [ref=e308]: Every Eleva-managed property holds a valid MTA licence
+    - generic [ref=e310]:
+      - img [ref=e312]
+      - generic [ref=e315]:
+        - generic [ref=e316]: No Compliance Violations
+        - generic [ref=e317]: Zero fines or enforcement actions across the entire portfolio
+    - generic [ref=e319]:
+      - img [ref=e321]
+      - generic [ref=e323]:
+        - generic [ref=e324]: Real-Time Owner Portal
+        - generic [ref=e325]: Earnings, bookings, and statements accessible 24/7
+    - generic [ref=e327]:
+      - img [ref=e329]
+      - generic [ref=e333]:
+        - generic [ref=e334]: 24/7 Owner & Guest Support
+        - generic [ref=e335]: Round-the-clock assistance, every day of the year
+  - generic [ref=e337]:
+    - generic [ref=e338]:
+      - generic [ref=e339]: Owner Experience
+      - heading "What owners say" [level=2] [ref=e340]
+    - generic [ref=e341]:
+      - generic [ref=e342]: ★★★★★
+      - paragraph [ref=e343]: “I tried to apply for the MTA licence myself for three months. Eleva had my licence approved in five weeks and my property live on Airbnb the week after. I wish I'd called them on day one.”
+      - generic [ref=e344]:
+        - generic [ref=e345]: MB
+        - generic [ref=e346]:
+          - generic [ref=e347]: Marco B.
+          - generic [ref=e348]: 2-bedroom apartment, Valletta · Owner since 2025
+  - generic [ref=e350]:
+    - generic [ref=e351]:
+      - generic [ref=e352]: Common Questions
+      - heading "What owners ask about the MTA licence" [level=2] [ref=e353]
+    - generic [ref=e354]:
+      - generic [ref=e355]:
+        - button "Do I need a licence if I only rent occasionally?" [ref=e356] [cursor=pointer]:
+          - generic [ref=e357]: Do I need a licence if I only rent occasionally?
+          - img [ref=e359]
+        - generic [ref=e362]: Yes — the licence applies regardless of frequency. Any property rented to tourists for any period under 3 months requires a Holiday Furnished Premises Licence. There are no exemptions for occasional or seasonal rentals.
+      - generic [ref=e363]:
+        - button "Does each property need its own licence?" [ref=e364] [cursor=pointer]:
+          - generic [ref=e365]: Does each property need its own licence?
+          - img [ref=e367]
+        - generic [ref=e369]: Yes. Licences are property-specific — not owner-specific or agency-specific. If you own three apartments and want to rent all three, you need three separate licences, each with its own application, inspection, and annual fee. There is no blanket licence covering multiple units.
+      - generic [ref=e370]:
+        - button "How long does the licencing process take?" [ref=e371] [cursor=pointer]:
+          - generic [ref=e372]: How long does the licencing process take?
+          - img [ref=e374]
+        - generic [ref=e376]: The MTA targets 5 working days for document vetting, followed by a property inspection, and 10 further working days for approval. In practice, plan for 4–6 weeks from submission to licence — assuming complete documents and a first-time inspection pass, which Eleva's pre-inspection walkthrough is designed to ensure.
+      - generic [ref=e377]:
+        - button "I live abroad — can Eleva handle everything remotely?" [ref=e378] [cursor=pointer]:
+          - generic [ref=e379]: I live abroad — can Eleva handle everything remotely?
+          - img [ref=e381]
+        - generic [ref=e383]: Yes — most of our owners are overseas. Eleva acts as your full local representative. We submit the application, manage MTA correspondence, attend the inspection, and receive the licence on your behalf. You don't need to be in Malta at any point during the process.
+      - generic [ref=e384]:
+        - button "What if my property fails the MTA inspection?" [ref=e385] [cursor=pointer]:
+          - generic [ref=e386]: What if my property fails the MTA inspection?
+          - img [ref=e388]
+        - generic [ref=e390]: Before any MTA submission, Eleva conducts a full pre-inspection walkthrough of your property against MTA standards. We identify and resolve compliance gaps — fire equipment, furnishing requirements, signage — before the official visit. Our properties have a strong first-time pass rate as a result.
+      - generic [ref=e391]:
+        - button "What does the MTA licence cost and who pays for it?" [ref=e392] [cursor=pointer]:
+          - generic [ref=e393]: What does the MTA licence cost and who pays for it?
+          - img [ref=e395]
+        - generic [ref=e397]: The MTA annual licence fee is €130 per unit in Malta (€104 in Gozo), paid directly to the MTA by the owner. A one-time application fee also applies. Eleva's service — preparing and managing the entire licencing process — is included in your management agreement at no additional charge.
+      - generic [ref=e398]:
+        - button "Can I rent my property while the application is pending?" [ref=e399] [cursor=pointer]:
+          - generic [ref=e400]: Can I rent my property while the application is pending?
+          - img [ref=e402]
+        - generic [ref=e404]: No. You must hold a valid licence before accepting any bookings. From May 2026, Airbnb and Booking.com verify licence numbers and unlicensed properties face listing removal. This makes starting the application process immediately the only safe path forward.
+  - generic [ref=e406]:
+    - generic [ref=e407]: Get Started
+    - heading "Get Your Free Compliance Check" [level=2] [ref=e408]:
+      - text: Get Your Free
+      - text: Compliance Check
+    - paragraph [ref=e409]: Free, no obligation. We'll review your property's licence status and send you a personalised income estimate within 24 hours.
+    - generic [ref=e410]:
+      - generic [ref=e411]:
+        - generic [ref=e412]:
+          - generic [ref=e413]: Your Name
+          - textbox "Maria Borg" [ref=e414]
+        - generic [ref=e415]:
+          - generic [ref=e416]: Phone / WhatsApp
+          - textbox "+356 xxxx xxxx" [ref=e417]
+      - generic [ref=e418]:
+        - generic [ref=e419]: Email Address
+        - textbox "maria@example.com" [ref=e420]
+      - generic [ref=e421]:
+        - generic [ref=e422]: Property Location
+        - combobox [ref=e423]:
+          - option "Select area" [disabled] [selected]
+          - option "Sliema"
+          - option "St Julian's / Paceville"
+          - option "Valletta"
+          - option "Gzira"
+          - option "Mellieħa"
+          - option "Bugibba / St Paul's Bay"
+          - option "Other Malta location"
+      - generic [ref=e424]:
+        - generic [ref=e425]: Current Licence Status
+        - combobox [ref=e426]:
+          - option "Select status" [disabled] [selected]
+          - option "No licence — never applied"
+          - option "Application in progress — stuck"
+          - option "Licence expired"
+          - option "Already licensed — looking for management"
+          - option "Not sure"
+      - button "Get My Free Compliance Check →" [ref=e427] [cursor=pointer]
+      - paragraph [ref=e428]: No commitment. Response within 24 hours. Your data is never shared.
+  - contentinfo [ref=e429]:
+    - paragraph [ref=e430]: © 2026 Eleva Group · Malta Tourism Authority Licensed · All figures are estimates based on market data. Individual results vary.
+  - link "Chat on WhatsApp" [ref=e431] [cursor=pointer]:
+    - /url: https://wa.me/393514901584
+    - img [ref=e432]

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shortlet Malta — Property Management for Owners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1612;
+  --forest:#1B3A2D;
+  --forest-lt:#264D3C;
+  --gold:#B8892A;
+  --gold-lt:#D4A84B;
+  --gold-pale:#F5EDD6;
+  --parch:#F9F6EF;
+  --cream:#F2EBD9;
+  --stone:#D6CCBA;
+  --muted:#6E6458;
+  --border:rgba(184,137,42,.14);
+  --fd:'Playfair Display',Georgia,serif;
+  --fb:'Outfit',-apple-system,sans-serif;
+  --sh-sm:0 2px 12px rgba(26,22,18,.07);
+  --sh-md:0 10px 40px rgba(26,22,18,.11);
+  --sh-lg:0 28px 70px rgba(26,22,18,.16);
+  --sh-g:0 8px 36px rgba(184,137,42,.28);
+  --ease:.32s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--parch);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--fb);border:none;background:none}
+input,select,textarea{font-family:var(--fb)}
+
+/* grain */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.3}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.375rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:var(--ease)}
+.nav.s{background:rgba(249,246,239,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1rem 3rem;box-shadow:var(--sh-sm)}
+.logo{font-family:var(--fd);font-size:1.375rem;font-weight:700;letter-spacing:-.01em;color:var(--forest)}
+.logo em{font-style:italic;color:var(--gold)}
+.nav-r{display:flex;align-items:center;gap:2rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink);opacity:.6;transition:var(--ease)}
+.nav-r a:hover{opacity:1}
+.nav-cta{background:var(--forest);color:var(--parch)!important;opacity:1!important;padding:.6rem 1.5rem;border-radius:6px;font-weight:600!important;letter-spacing:.02em;transition:var(--ease)!important}
+.nav-cta:hover{background:var(--gold)!important;transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+
+/* left dark panel */
+.hero-left{background:var(--forest);padding:9rem 4rem 5rem 3rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-left::before{content:'';position:absolute;top:-30%;right:-20%;width:80%;height:80%;background:radial-gradient(ellipse,rgba(184,137,42,.12) 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.hero-left::after{content:'';position:absolute;bottom:-20%;left:-10%;width:60%;height:60%;background:radial-gradient(ellipse,rgba(38,77,60,.6) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+
+/* large ghost text */
+.hero-ghost{position:absolute;bottom:-5%;left:-3%;font-family:var(--fd);font-size:22vw;font-weight:900;color:rgba(255,255,255,.025);line-height:1;pointer-events:none;letter-spacing:-.05em;white-space:nowrap}
+
+.hero-inner-l{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(184,137,42,.18);border:1px solid rgba(184,137,42,.3);color:var(--gold-lt);font-size:.625rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.375rem 1rem;border-radius:4px;margin-bottom:2rem}
+.eyebrow::before{content:'';width:6px;height:6px;background:var(--gold-lt);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+
+h1{font-family:var(--fd);font-size:clamp(2.75rem,4.5vw,4.5rem);font-weight:400;line-height:1.05;color:var(--parch);letter-spacing:-.02em;margin-bottom:1.5rem}
+h1 em{font-style:italic;color:var(--gold-lt)}
+h1 strong{font-weight:700}
+
+.hero-sub{font-size:1rem;color:rgba(249,246,239,.6);max-width:400px;line-height:1.75;margin-bottom:2.5rem;font-weight:300}
+
+.hero-proof{display:flex;gap:2rem;margin-bottom:2.5rem}
+.hpv{border-left:2px solid rgba(184,137,42,.4);padding-left:1rem}
+.hpv-n{font-family:var(--fd);font-size:1.875rem;font-weight:700;color:var(--parch);letter-spacing:-.02em;line-height:1}
+.hpv-n span{color:var(--gold-lt)}
+.hpv-l{font-size:.6875rem;color:rgba(249,246,239,.45);text-transform:uppercase;letter-spacing:.08em;margin-top:.25rem}
+
+.btn-main{display:inline-flex;align-items:center;gap:.625rem;background:var(--gold);color:var(--ink);padding:.9rem 2rem;border-radius:6px;font-size:.9375rem;font-weight:600;letter-spacing:.02em;transition:var(--ease)}
+.btn-main:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:var(--sh-g)}
+.btn-main svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round}
+
+/* right form panel */
+.hero-right{background:var(--parch);padding:9rem 3rem 5rem 4rem;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero-right::before{content:'';position:absolute;top:0;left:0;width:1px;height:100%;background:linear-gradient(to bottom,transparent,var(--border),var(--border),transparent)}
+
+.form-card{background:white;border-radius:16px;padding:2.5rem;box-shadow:var(--sh-md);border:1px solid var(--border);max-width:420px}
+.form-eyebrow{font-size:.625rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.form-title{font-family:var(--fd);font-size:1.625rem;font-weight:500;color:var(--forest);letter-spacing:-.01em;margin-bottom:.5rem;line-height:1.25}
+.form-sub{font-size:.875rem;color:var(--muted);margin-bottom:1.75rem;line-height:1.6}
+.form-sub strong{color:var(--forest)}
+
+.fgroup{margin-bottom:1.125rem}
+.fgroup label{display:block;font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.fgroup input,.fgroup select{width:100%;background:var(--parch);border:1px solid var(--stone);border-radius:8px;padding:.7rem 1rem;font-size:.9375rem;color:var(--ink);outline:none;transition:var(--ease);-webkit-appearance:none}
+.fgroup input:focus,.fgroup select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,137,42,.12)}
+.fgroup-row{display:grid;grid-template-columns:1fr 1fr;gap:.875rem}
+
+.form-submit{width:100%;background:var(--forest);color:var(--parch);border-radius:8px;padding:.875rem;font-size:.9375rem;font-weight:600;letter-spacing:.02em;transition:var(--ease);margin-top:.5rem;display:flex;align-items:center;justify-content:center;gap:.625rem}
+.form-submit:hover{background:var(--gold);color:var(--ink);transform:translateY(-1px);box-shadow:var(--sh-g)}
+.form-submit svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round}
+
+.form-trust{display:flex;align-items:center;gap:.625rem;margin-top:1.25rem;color:var(--muted);font-size:.8rem}
+.form-trust svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0}
+
+/* ── INCOME BAND ── */
+.income-band{background:var(--cream);padding:3.5rem 3rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.income-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+.ib{background:var(--cream);padding:2rem 2rem;text-align:center}
+.ib-n{font-family:var(--fd);font-size:2.75rem;font-weight:700;color:var(--forest);letter-spacing:-.03em;line-height:1}
+.ib-n span{color:var(--gold)}
+.ib-l{font-size:.6875rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:.5rem}
+
+/* ── SECTION UTILS ── */
+.sec{padding:6rem 3rem}
+.sec-inner{max-width:1200px;margin:0 auto}
+.sec-hd{margin-bottom:4rem}
+.sec-ey{font-size:.625rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+.sec-t{font-family:var(--fd);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.15;letter-spacing:-.025em;color:var(--forest)}
+.sec-t em{font-style:italic;color:var(--gold)}
+.sec-d{color:var(--muted);line-height:1.75;font-size:1rem;max-width:440px;margin-top:.75rem;font-weight:300}
+
+/* ── PAIN → SOLUTION ── */
+.pain{background:var(--parch)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pain-card{padding:2rem;border:1px solid var(--border);border-radius:12px;background:white;transition:var(--ease);position:relative;overflow:hidden}
+.pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--gold),var(--gold-lt));transform:scaleX(0);transform-origin:left;transition:var(--ease)}
+.pain-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.pain-card:hover::before{transform:scaleX(1)}
+.pain-ico{width:44px;height:44px;background:var(--gold-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.pain-ico svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pain-card h3{font-family:var(--fd);font-size:1.125rem;font-weight:500;color:var(--forest);margin-bottom:.5rem;letter-spacing:-.01em}
+.pain-tag{display:inline-block;background:rgba(255,80,80,.08);color:#c0392b;font-size:.6375rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;margin-bottom:.75rem}
+.pain-card p{font-size:.9rem;color:var(--muted);line-height:1.65}
+.pain-arrow{display:flex;align-items:center;gap:.5rem;margin-top:1rem;font-size:.8125rem;font-weight:600;color:var(--forest)}
+.pain-arrow svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round}
+
+/* ── PROCESS ── */
+.process{background:var(--forest);padding:6rem 3rem;position:relative;overflow:hidden}
+.process::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.process .sec-ey{color:var(--gold-lt)}
+.process .sec-t{color:var(--parch)}
+.process .sec-d{color:rgba(249,246,239,.5)}
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:4rem}
+.process-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(to right,rgba(184,137,42,.3),rgba(184,137,42,.6),rgba(184,137,42,.3));z-index:0}
+.pstep{text-align:center;padding:0 1rem;position:relative;z-index:1}
+.pstep-dot{width:56px;height:56px;background:var(--forest);border:2px solid rgba(184,137,42,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;transition:var(--ease)}
+.pstep:hover .pstep-dot{border-color:var(--gold-lt);background:rgba(184,137,42,.12)}
+.pstep-dot svg{width:22px;height:22px;stroke:var(--gold-lt);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pstep h4{font-size:.9375rem;font-weight:600;color:var(--parch);margin-bottom:.5rem}
+.pstep p{font-size:.8125rem;color:rgba(249,246,239,.45);line-height:1.6}
+.pstep-n{font-family:var(--fd);font-size:.75rem;font-weight:700;color:var(--gold);letter-spacing:.06em;margin-bottom:.75rem}
+
+/* ── SERVICES ── */
+.services{background:var(--parch)}
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.svc{background:var(--parch);padding:2.5rem;display:flex;gap:1.5rem;transition:var(--ease)}
+.svc:hover{background:var(--cream)}
+.svc-ico{width:52px;height:52px;flex-shrink:0;background:var(--forest);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.svc-ico svg{width:22px;height:22px;stroke:var(--gold-lt);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-family:var(--fd);font-size:1.1875rem;font-weight:500;color:var(--forest);margin-bottom:.5rem;letter-spacing:-.01em}
+.svc p{font-size:.875rem;color:var(--muted);line-height:1.65}
+.included{display:flex;flex-wrap:wrap;gap:.375rem;margin-top:.875rem}
+.tag{display:inline-block;background:rgba(27,58,45,.07);color:var(--forest);font-size:.625rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .625rem;border-radius:4px}
+
+/* ── INCOME CALCULATOR ── */
+.calc-sec{background:var(--cream);padding:6rem 3rem}
+.calc-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.calc-box{background:white;border-radius:20px;padding:2.5rem;box-shadow:var(--sh-md);border:1px solid var(--border)}
+.calc-box h3{font-family:var(--fd);font-size:1.5rem;font-weight:500;color:var(--forest);margin-bottom:.375rem;letter-spacing:-.01em}
+.calc-sub{font-size:.875rem;color:var(--muted);margin-bottom:1.875rem;line-height:1.55}
+.calc-row{margin-bottom:1.25rem}
+.calc-row label{display:flex;justify-content:space-between;align-items:center;font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.625rem}
+.calc-row label span{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--forest);text-transform:none;letter-spacing:0}
+input[type=range]{-webkit-appearance:none;width:100%;height:4px;background:var(--stone);border-radius:2px;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;background:var(--forest);border-radius:50%;cursor:pointer;border:2px solid white;box-shadow:0 2px 8px rgba(26,22,18,.2);transition:var(--ease)}
+input[type=range]::-webkit-slider-thumb:hover{background:var(--gold);transform:scale(1.2)}
+.calc-result{margin-top:1.75rem;background:var(--forest);border-radius:12px;padding:1.5rem;text-align:center}
+.calc-result-label{font-size:.6875rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(249,246,239,.5);margin-bottom:.375rem}
+.calc-result-n{font-family:var(--fd);font-size:3rem;font-weight:700;color:var(--parch);letter-spacing:-.03em;line-height:1}
+.calc-result-n span{color:var(--gold-lt)}
+.calc-result-sub{font-size:.8125rem;color:rgba(249,246,239,.45);margin-top:.375rem}
+.calc-disclaimer{font-size:.7rem;color:var(--muted);margin-top:1rem;line-height:1.5;font-style:italic}
+
+.calc-why{padding-top:1rem}
+.calc-why .sec-ey{color:var(--gold)}
+.calc-why .sec-t{color:var(--forest)}
+.earnings-list{margin-top:2rem;display:flex;flex-direction:column;gap:1rem}
+.earn-item{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;border-radius:10px;border:1px solid var(--border);background:white}
+.earn-item-left{display:flex;align-items:center;gap:.875rem}
+.earn-avatar{width:38px;height:38px;border-radius:50%;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--gold);flex-shrink:0}
+.earn-name{font-size:.875rem;font-weight:600;color:var(--ink)}
+.earn-loc{font-size:.75rem;color:var(--muted)}
+.earn-income{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--forest);letter-spacing:-.01em}
+.earn-income span{font-size:.7rem;font-weight:400;color:var(--muted);font-family:var(--fb)}
+
+/* ── TESTIMONIALS ── */
+.testi{background:var(--parch)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.tcard{background:white;border-radius:16px;padding:2rem;border:1px solid var(--border);box-shadow:var(--sh-sm);transition:var(--ease)}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+.tcard-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem}
+.tcard-stars{display:flex;gap:3px}
+.tcard-stars svg{width:13px;height:13px;fill:var(--gold)}
+.tcard-income{font-family:var(--fd);font-size:1.125rem;font-weight:700;color:var(--forest);background:var(--gold-pale);padding:.25rem .75rem;border-radius:6px}
+.tcard q{font-family:var(--fd);font-size:1rem;font-style:italic;color:var(--forest);line-height:1.65;display:block;margin-bottom:1.5rem}
+.tcard q::before,.tcard q::after{content:''}
+.tauthor{display:flex;align-items:center;gap:.875rem}
+.tavatar{width:42px;height:42px;border-radius:50%;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.125rem;font-weight:700;color:var(--gold);flex-shrink:0;border:2px solid var(--border)}
+.tname{font-size:.875rem;font-weight:600;color:var(--ink)}
+.tsrc{font-size:.75rem;color:var(--muted)}
+
+/* ── FAQ ── */
+.faq{background:var(--cream)}
+.faq-list{margin-top:3rem;max-width:720px}
+.fitem{border-bottom:1px solid var(--border)}
+.fitem:first-child{border-top:1px solid var(--border)}
+.fq{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0;font-size:1rem;font-weight:500;color:var(--forest);text-align:left;cursor:pointer;gap:1rem;transition:var(--ease)}
+.fq:hover{color:var(--gold)}
+.fq-ico{width:24px;height:24px;flex-shrink:0;border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--ease)}
+.fq-ico svg{width:12px;height:12px;stroke:var(--muted);fill:none;stroke-width:2.5;stroke-linecap:round;transition:var(--ease)}
+.fitem.open .fq{color:var(--gold)}
+.fitem.open .fq-ico{background:var(--gold);border-color:var(--gold)}
+.fitem.open .fq-ico svg{stroke:white;transform:rotate(45deg)}
+.fa{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.fa-inner{padding-bottom:1.25rem;font-size:.9375rem;color:var(--muted);line-height:1.75}
+
+/* ── FINAL CTA ── */
+.final{background:var(--forest);padding:7rem 3rem;position:relative;overflow:hidden;text-align:center}
+.final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(184,137,42,.1) 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.final::after{content:'PROPERTY';position:absolute;font-family:var(--fd);font-size:18vw;font-weight:900;color:rgba(255,255,255,.02);top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;letter-spacing:-.05em;pointer-events:none}
+.final-inner{position:relative;z-index:2;max-width:600px;margin:0 auto}
+.final .sec-ey{color:var(--gold-lt);text-align:center}
+.final .sec-t{color:var(--parch);text-align:center;font-size:clamp(2.25rem,4vw,3.5rem)}
+.final-sub{color:rgba(249,246,239,.55);font-size:1.0625rem;line-height:1.7;margin:1.25rem auto 2.5rem;max-width:460px;font-weight:300}
+.final-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-g{background:var(--gold);color:var(--ink);padding:.9375rem 2.25rem;border-radius:6px;font-size:.9375rem;font-weight:600;letter-spacing:.02em;transition:var(--ease);display:inline-flex;align-items:center;gap:.5rem}
+.btn-g:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:var(--sh-g)}
+.btn-g svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round}
+.btn-outline{background:rgba(255,255,255,.08);color:var(--parch);padding:.9375rem 2.25rem;border-radius:6px;font-size:.9375rem;font-weight:500;letter-spacing:.02em;transition:var(--ease);border:1px solid rgba(255,255,255,.18)}
+.btn-outline:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+
+/* ── FOOTER ── */
+.footer{background:var(--ink);padding:4rem 3rem 2rem;color:rgba(249,246,239,.45)}
+.footer-top{max-width:1200px;margin:0 auto 3rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.footer .logo{color:var(--parch);margin-bottom:1rem;display:block;font-size:1.25rem}
+.ftag{font-size:.875rem;line-height:1.7;max-width:270px}
+.fcol h4{font-size:.625rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--parch);margin-bottom:1.25rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.fcol ul a{font-size:.875rem;transition:var(--ease)}
+.fcol ul a:hover{color:var(--gold-lt)}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;font-size:.8rem}
+
+/* ── ANIMATIONS ── */
+.fu{opacity:0;transform:translateY(28px);transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1)}
+.fu.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr}
+  .hero-right{padding:4rem 3rem 5rem}
+  .hero-left{padding:9rem 3rem 4rem}
+  .form-card{max-width:100%}
+  .income-inner{grid-template-columns:repeat(2,1fr)}
+  .calc-inner{grid-template-columns:1fr;gap:3rem}
+  .services-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr 1fr;gap:2rem}
+  .process-steps::before{display:none}
+}
+@media(max-width:768px){
+  .nav-r a:not(.nav-cta){display:none}
+  .hero-left,.hero-right{padding:7rem 1.5rem 3rem}
+  .hero-left{min-height:auto;padding-bottom:3rem}
+  .pain-grid,.testi-grid{grid-template-columns:1fr}
+  .income-inner{grid-template-columns:1fr 1fr}
+  .sec{padding:4rem 1.5rem}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:.75rem;text-align:center}
+  .process-steps{grid-template-columns:1fr}
+  .fgroup-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="logo">Shortlet <em>Malta</em></a>
+  <div class="nav-r">
+    <a href="#services">Services</a>
+    <a href="#calc">Earn More</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Get Free Estimate</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-ghost">OWN</div>
+    <div class="hero-inner-l">
+      <div class="eyebrow">Property Management · Malta &amp; Gozo</div>
+
+      <h1>
+        Your Malta property,<br>
+        earning <em>while you sleep.</em>
+      </h1>
+
+      <p class="hero-sub">
+        We handle every detail — guests, cleaning, licensing, pricing, maintenance.
+        You receive a monthly payment. Nothing else required.
+      </p>
+
+      <div class="hero-proof">
+        <div class="hpv">
+          <div class="hpv-n"><span class="counter" data-t="200">0</span><span>+</span></div>
+          <div class="hpv-l">Owners Trust Us</div>
+        </div>
+        <div class="hpv">
+          <div class="hpv-n"><span>€</span><span class="counter" data-t="18">0</span><span>k</span></div>
+          <div class="hpv-l">Avg Annual Owner Income</div>
+        </div>
+        <div class="hpv">
+          <div class="hpv-n"><span class="counter" data-t="94">0</span><span>%</span></div>
+          <div class="hpv-l">Average Occupancy</div>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn-main">
+        Get My Free Income Estimate
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- LEAD CAPTURE FORM — right panel -->
+  <div class="hero-right" id="contact">
+    <div class="form-card">
+      <div class="form-eyebrow">Free Rental Estimate</div>
+      <div class="form-title">How much could your property earn?</div>
+      <p class="form-sub">Takes 60 seconds. We'll send your personalised income projection within <strong>24 hours.</strong></p>
+
+      <div class="fgroup">
+        <label>Your Name</label>
+        <input type="text" placeholder="Maria Borg">
+      </div>
+      <div class="fgroup">
+        <label>Property Location</label>
+        <select>
+          <option value="" disabled selected>Select area</option>
+          <option>Sliema</option>
+          <option>St. Julian's</option>
+          <option>Valletta</option>
+          <option>Mellieħa</option>
+          <option>St. Paul's Bay</option>
+          <option>Gozo</option>
+          <option>Other Malta</option>
+        </select>
+      </div>
+      <div class="fgroup-row">
+        <div class="fgroup">
+          <label>Property Type</label>
+          <select>
+            <option value="" disabled selected>Type</option>
+            <option>Studio</option>
+            <option>1 Bedroom</option>
+            <option>2 Bedrooms</option>
+            <option>3+ Bedrooms</option>
+            <option>Villa / House</option>
+          </select>
+        </div>
+        <div class="fgroup">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" placeholder="+356 ···">
+        </div>
+      </div>
+
+      <button class="form-submit">
+        Send My Free Estimate
+        <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+
+      <div class="form-trust">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        No obligation. 100% confidential. No spam, ever.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCOME STATS BAND -->
+<section class="income-band">
+  <div class="income-inner">
+    <div class="ib fu">
+      <div class="ib-n"><span>€</span><span class="counter" data-t="18">0</span><span>k</span></div>
+      <div class="ib-l">Average Annual Owner Income</div>
+    </div>
+    <div class="ib fu d1">
+      <div class="ib-n"><span class="counter" data-t="94">0</span><span>%</span></div>
+      <div class="ib-l">Average Occupancy Rate</div>
+    </div>
+    <div class="ib fu d2">
+      <div class="ib-n"><span class="counter" data-t="72">0</span><span>h</span></div>
+      <div class="ib-l">Average Onboarding Time</div>
+    </div>
+    <div class="ib fu d3">
+      <div class="ib-n"><span class="counter" data-t="0">0</span><span>%</span></div>
+      <div class="ib-l">Hidden Fees for Owners</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="sec pain" id="about">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <div class="sec-ey fu">The Problem We Solve</div>
+      <h2 class="sec-t fu d1">Every headache, <em>handled.</em></h2>
+      <p class="sec-d fu d2">Most Malta property owners leave money on the table — or burn out managing it themselves. We eliminate both problems.</p>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card fu">
+        <div class="pain-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="pain-tag">Common Problem</div>
+        <h3>MTA Licensing Confusion</h3>
+        <p>Malta now requires every short-let to hold an MTA Holiday Furnished Premises licence. The process is complex, paperwork-heavy, and easy to get wrong.</p>
+        <div class="pain-arrow">
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          We handle the full licence application
+        </div>
+      </div>
+
+      <div class="pain-card fu d1">
+        <div class="pain-ico"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="pain-tag">Common Problem</div>
+        <h3>Low Occupancy &amp; Flat Rates</h3>
+        <p>Owners who self-manage or use a single platform typically achieve 60–70% occupancy and miss peak pricing windows worth thousands per year.</p>
+        <div class="pain-arrow">
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Dynamic pricing across 6 platforms
+        </div>
+      </div>
+
+      <div class="pain-card fu d2">
+        <div class="pain-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.39 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.1 6.1l.94-.94a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="pain-tag">Common Problem</div>
+        <h3>Guest Issues at 2am</h3>
+        <p>A locked-out guest or broken boiler at midnight is a property owner's nightmare. Without a dedicated team, every stay carries this risk.</p>
+        <div class="pain-arrow">
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          24/7 on-island emergency team
+        </div>
+      </div>
+
+      <div class="pain-card fu">
+        <div class="pain-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="pain-tag">Common Problem</div>
+        <h3>Property Condition Deterioration</h3>
+        <p>Without professional changeovers and regular inspection, short-let properties age quickly — costing far more in repairs than proper management would.</p>
+        <div class="pain-arrow">
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Hotel-grade cleaning &amp; inspections
+        </div>
+      </div>
+
+      <div class="pain-card fu d1">
+        <div class="pain-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="pain-tag">Common Problem</div>
+        <h3>Platform Fees Eating Margins</h3>
+        <p>Airbnb takes 3%, Booking.com takes 15–18%. Stack that across 200+ nights and owners lose thousands to platforms they barely control.</p>
+        <div class="pain-arrow">
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Direct booking channel included
+        </div>
+      </div>
+
+      <div class="pain-card fu d2">
+        <div class="pain-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="pain-tag">Common Problem</div>
+        <h3>Zero Visibility on Performance</h3>
+        <p>Most property managers send a monthly transfer with no context. You don't know your occupancy, ADR, or how your property ranks against comparable ones.</p>
+        <div class="pain-arrow">
+          <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Live owner dashboard + monthly report
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <div class="sec-ey fu">How It Works</div>
+      <h2 class="sec-t fu d1">From agreement to <em>income</em> in 72 hours</h2>
+      <p class="sec-d fu d2">The fastest onboarding in Malta. Most properties are live and earning within 3 days.</p>
+    </div>
+    <div class="process-steps">
+      <div class="pstep fu">
+        <div class="pstep-n">01</div>
+        <div class="pstep-dot"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.39 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.1 6.1l.94-.94a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h4>Free Consultation</h4>
+        <p>30-minute call to assess your property and give an honest income projection.</p>
+      </div>
+      <div class="pstep fu d1">
+        <div class="pstep-n">02</div>
+        <div class="pstep-dot"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h4>Management Agreement</h4>
+        <p>Simple 2-page contract. Clear fee structure, no hidden clauses, 30-day exit.</p>
+      </div>
+      <div class="pstep fu d2">
+        <div class="pstep-n">03</div>
+        <div class="pstep-dot"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <h4>Professional Shoot</h4>
+        <p>We send a photographer within 48h. High-converting listing photos at no extra cost.</p>
+      </div>
+      <div class="pstep fu d2">
+        <div class="pstep-n">04</div>
+        <div class="pstep-dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h4>MTA Licence &amp; Go Live</h4>
+        <p>We handle the MTA application and list your property across all 6 platforms simultaneously.</p>
+      </div>
+      <div class="pstep fu d3">
+        <div class="pstep-n">05</div>
+        <div class="pstep-dot"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h4>Monthly Payout</h4>
+        <p>Receive your net rental income on the 5th of every month with a full performance report.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <div class="sec-ey fu">Full-Service Management</div>
+      <h2 class="sec-t fu d1">Everything included.<br><em>Nothing extra.</em></h2>
+      <p class="sec-d fu d2">One flat management fee covers all of this. No surprise invoices, no à-la-carte add-ons.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc fu">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 11 12 14 22 4" transform="translate(-4, 2)"/></svg></div>
+        <div>
+          <h3>MTA Licensing &amp; Compliance</h3>
+          <p>Full Holiday Furnished Premises licence application, renewal management, and ongoing regulatory compliance so you're always legal.</p>
+          <div class="included"><span class="tag">Application</span><span class="tag">Renewal</span><span class="tag">Inspections</span><span class="tag">Annual Cert</span></div>
+        </div>
+      </div>
+
+      <div class="svc fu d1">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div>
+          <h3>Guest Management</h3>
+          <p>Enquiry handling, booking confirmation, pre-arrival communication, check-in coordination, and 24/7 in-stay support. In English, Italian, German, and Arabic.</p>
+          <div class="included"><span class="tag">24/7 Support</span><span class="tag">Check-in</span><span class="tag">Reviews</span><span class="tag">4 Languages</span></div>
+        </div>
+      </div>
+
+      <div class="svc fu">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div>
+          <h3>Hotel-Grade Housekeeping</h3>
+          <p>Professional changeover cleans, linen service, toiletry replenishment, and a post-clean photo report after every stay. Your property always looks its best.</p>
+          <div class="included"><span class="tag">Changeovers</span><span class="tag">Linen</span><span class="tag">Inspection Photos</span></div>
+        </div>
+      </div>
+
+      <div class="svc fu d1">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div>
+          <h3>Dynamic Pricing</h3>
+          <p>AI-driven nightly rate optimisation updated in real-time across all channels. We capture peak-season premiums and fill shoulder periods automatically.</p>
+          <div class="included"><span class="tag">Airbnb</span><span class="tag">Booking.com</span><span class="tag">VRBO</span><span class="tag">Direct</span><span class="tag">+2 more</span></div>
+        </div>
+      </div>
+
+      <div class="svc fu">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div>
+          <h3>Owner Dashboard &amp; Reporting</h3>
+          <p>Live access to bookings, occupancy, revenue, and guest reviews. Monthly PDF report with performance benchmarking against comparable Malta properties.</p>
+          <div class="included"><span class="tag">Live Dashboard</span><span class="tag">Monthly Reports</span><span class="tag">Benchmarking</span></div>
+        </div>
+      </div>
+
+      <div class="svc fu d1">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div>
+          <h3>Maintenance Coordination</h3>
+          <p>We manage a vetted network of Malta-based plumbers, electricians, and handymen. Minor issues are handled same-day with owner approval for any cost above €150.</p>
+          <div class="included"><span class="tag">Emergency Response</span><span class="tag">Vetted Trades</span><span class="tag">Cost Approval</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCOME CALCULATOR -->
+<section class="calc-sec" id="calc">
+  <div class="sec-inner">
+    <div class="calc-inner">
+      <div>
+        <div class="calc-why">
+          <div class="sec-ey fu">Income Estimator</div>
+          <h2 class="sec-t fu d1">How much could your property <em>earn?</em></h2>
+          <p class="sec-d fu d2">Slide to your property profile. These are real averages from our current managed portfolio.</p>
+        </div>
+        <div class="earnings-list fu d1">
+          <div class="earn-item">
+            <div class="earn-item-left">
+              <div class="earn-avatar">J</div>
+              <div><div class="earn-name">John &amp; Maria</div><div class="earn-loc">2-bed Sliema · Owner since 2022</div></div>
+            </div>
+            <div class="earn-income">€22,400<span>/yr</span></div>
+          </div>
+          <div class="earn-item">
+            <div class="earn-item-left">
+              <div class="earn-avatar">C</div>
+              <div><div class="earn-name">Claire R.</div><div class="earn-loc">1-bed Valletta · Owner since 2023</div></div>
+            </div>
+            <div class="earn-income">€14,800<span>/yr</span></div>
+          </div>
+          <div class="earn-item">
+            <div class="earn-item-left">
+              <div class="earn-avatar">S</div>
+              <div><div class="earn-name">Stefan M.</div><div class="earn-loc">Villa Mellieħa · Owner since 2021</div></div>
+            </div>
+            <div class="earn-income">€38,600<span>/yr</span></div>
+          </div>
+          <div class="earn-item">
+            <div class="earn-item-left">
+              <div class="earn-avatar">A</div>
+              <div><div class="earn-name">Anna D.</div><div class="earn-loc">Studio St. Julian's · Owner since 2024</div></div>
+            </div>
+            <div class="earn-income">€9,200<span>/yr</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-box fu">
+        <h3>Your Rental Income Estimate</h3>
+        <p class="calc-sub">Based on our live portfolio data for Malta &amp; Gozo.</p>
+
+        <div class="calc-row">
+          <label>Bedrooms <span id="bed-val">2 bedrooms</span></label>
+          <input type="range" id="beds" min="0" max="4" value="1" step="1">
+        </div>
+        <div class="calc-row">
+          <label>Location <span id="loc-val">Sliema</span></label>
+          <input type="range" id="loc" min="0" max="4" value="3" step="1">
+        </div>
+        <div class="calc-row">
+          <label>Property Quality <span id="q-val">Good</span></label>
+          <input type="range" id="qual" min="0" max="2" value="1" step="1">
+        </div>
+
+        <div class="calc-result">
+          <div class="calc-result-label">Estimated Annual Net Income</div>
+          <div class="calc-result-n"><span>€</span><span id="result">18,400</span></div>
+          <div class="calc-result-sub">After all management fees</div>
+        </div>
+        <p class="calc-disclaimer">Estimates based on current portfolio performance data. Actual income depends on specific property conditions. Request a personalised assessment for an accurate projection.</p>
+
+        <a href="#contact" class="btn-main" style="margin-top:1.5rem;width:100%;justify-content:center">
+          Get My Precise Estimate
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec testi">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <div class="sec-ey fu">Owner Testimonials</div>
+      <h2 class="sec-t fu d1">What our owners <em>actually say</em></h2>
+      <p class="sec-d fu d2">Unedited. From real Malta property owners in our portfolio.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard fu">
+        <div class="tcard-top">
+          <div class="tcard-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="tcard-income">€22,400 / yr</div>
+        </div>
+        <q>"I was earning €700/month renting long-term. Within 6 months of switching to Shortlet Malta I was clearing €1,800 net — and I haven't spoken to a single guest myself."</q>
+        <div class="tauthor"><div class="tavatar">J</div><div><div class="tname">John Farrugia</div><div class="tsrc">2-bed apt, Sliema · Owner 3 years</div></div></div>
+      </div>
+      <div class="tcard fu d1">
+        <div class="tcard-top">
+          <div class="tcard-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="tcard-income">€14,800 / yr</div>
+        </div>
+        <q>"The MTA licensing alone would have taken me months to figure out. They had my property live in 3 days. The dashboard is excellent — I check it every morning over coffee."</q>
+        <div class="tauthor"><div class="tavatar">C</div><div><div class="tname">Claire Rizzo</div><div class="tsrc">1-bed apt, Valletta · Owner 2 years</div></div></div>
+      </div>
+      <div class="tcard fu d2">
+        <div class="tcard-top">
+          <div class="tcard-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="tcard-income">€38,600 / yr</div>
+        </div>
+        <q>"I live in Germany and was worried about leaving my Mellieħa villa empty. Now it earns more in peak season than I earn in three months of work. Completely hands-off."</q>
+        <div class="tauthor"><div class="tavatar">S</div><div><div class="tname">Stefan Müller</div><div class="tsrc">Villa, Mellieħa · Owner 4 years</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="sec-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
+      <div>
+        <div class="sec-ey fu">FAQ</div>
+        <h2 class="sec-t fu d1">Questions owners <em>always ask</em></h2>
+        <p class="sec-d fu d2">Honest answers. No sales spin.</p>
+        <a href="#contact" class="btn-main" style="margin-top:2.5rem;display:inline-flex">
+          Still have questions? Talk to us
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="faq-list fu d1">
+        <div class="fitem">
+          <button class="fq">What is your management fee?<div class="fq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="fa"><div class="fa-inner">Our fee is a single percentage of net rental income — typically 18–22% depending on property type and location. There are no setup fees, no photography fees, no maintenance call-out fees, and no monthly retainers. We only earn when you earn.</div></div>
+        </div>
+        <div class="fitem">
+          <button class="fq">Can I block dates for personal use?<div class="fq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="fa"><div class="fa-inner">Absolutely. Your owner dashboard lets you block any dates for personal use, family stays, or maintenance. We ask for 7 days' notice to avoid displacing confirmed guests, but beyond that your calendar is always yours to control.</div></div>
+        </div>
+        <div class="fitem">
+          <button class="fq">Do I need an MTA licence already?<div class="fq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="fa"><div class="fa-inner">No. We handle the full MTA Holiday Furnished Premises licence application as part of our onboarding. The licence is issued in your name (as required by law), and we manage all renewals and compliance checks going forward. Most licences are issued within 4–6 weeks.</div></div>
+        </div>
+        <div class="fitem">
+          <button class="fq">What happens if a guest damages something?<div class="fq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="fa"><div class="fa-inner">All guests pay a security deposit. For damage above the deposit, we pursue recovery through the platform's damage protection programmes (Airbnb AirCover provides up to USD $3M). We document every changeover with photos to support any claim.</div></div>
+        </div>
+        <div class="fitem">
+          <button class="fq">What's the minimum contract length?<div class="fq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="fa"><div class="fa-inner">Our management agreement has a 30-day exit clause after the initial 90 days. We're confident enough in our results that we don't lock owners into long contracts. If you're not happy, you can leave — though very few do.</div></div>
+        </div>
+        <div class="fitem">
+          <button class="fq">When and how do I get paid?<div class="fq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="fa"><div class="fa-inner">Net rental income is transferred to your Malta or international bank account on the 5th of each month, for all stays completed in the previous month. You receive a full itemised report with each payment showing revenue, fees, and any maintenance deductions.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="final-inner">
+    <div class="sec-ey fu">Ready to Start?</div>
+    <h2 class="sec-t fu d1">Your property should be <em>working for you.</em></h2>
+    <p class="final-sub fu d2">Get a free, no-obligation income estimate in 24 hours. 200+ Malta owners already trust us with their most valuable asset.</p>
+    <div class="final-btns fu d2">
+      <a href="#contact" class="btn-g">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Get My Free Estimate
+      </a>
+      <a href="tel:+35621000000" class="btn-outline">Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <span class="logo">Shortlet <em>Malta</em></span>
+      <p class="ftag">Malta's premier short-let property management company. Trusted by 200+ owners across Malta and Gozo.</p>
+    </div>
+    <div class="fcol">
+      <h4>For Owners</h4>
+      <ul>
+        <li><a href="#">Free Income Estimate</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Owner Portal Login</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">MTA Licensing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Owner Agreement</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Shortlet Malta. All rights reserved.</span>
+    <span>MTA Registered Property Manager · Malta &amp; Gozo</span>
+  </div>
+</footer>
+
+<script>
+// sticky nav
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>60));
+
+// scroll reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+
+// counters
+const cobs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,t=+el.dataset.t,dur=1600,step=t/(dur/16);
+  let cur=0;
+  const ti=setInterval(()=>{cur+=step;if(cur>=t){el.textContent=t.toLocaleString();clearInterval(ti)}else el.textContent=Math.floor(cur).toLocaleString()},16);
+  cobs.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('.counter').forEach(c=>cobs.observe(c));
+
+// FAQ accordion
+document.querySelectorAll('.fq').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.closest('.fitem');
+    const ans=item.querySelector('.fa');
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.fitem.open').forEach(i=>{
+      i.classList.remove('open');
+      i.querySelector('.fa').style.maxHeight='0';
+    });
+    if(!open){
+      item.classList.add('open');
+      ans.style.maxHeight=ans.scrollHeight+'px';
+    }
+  });
+});
+
+// INCOME CALCULATOR
+const beds=[{l:'Studio',v:1},{l:'1 Bedroom',v:1.4},{l:'2 Bedrooms',v:1.9},{l:'3 Bedrooms',v:2.8},{l:'4+ Bedrooms',v:4.2}];
+const locs=[{l:'St. Paul\'s Bay',v:1},{l:'Mellieħa',v:1.15},{l:'St. Julian\'s',v:1.3},{l:'Sliema',v:1.35},{l:'Valletta',v:1.45}];
+const quals=[{l:'Standard',v:.85},{l:'Good',v:1},{l:'Premium',v:1.25}];
+const BASE=7200;
+
+function calc(){
+  const b=beds[+document.getElementById('beds').value];
+  const l=locs[+document.getElementById('loc').value];
+  const q=quals[+document.getElementById('qual').value];
+  const income=Math.round(BASE*b.v*l.v*q.v/100)*100;
+  document.getElementById('result').textContent=income.toLocaleString();
+  document.getElementById('bed-val').textContent=b.l;
+  document.getElementById('loc-val').textContent=l.l;
+  document.getElementById('q-val').textContent=q.l;
+}
+
+['beds','loc','qual'].forEach(id=>document.getElementById(id).addEventListener('input',calc));
+calc();
+</script>
+</body>
+</html>

@@ -40,7 +40,7 @@ ul,ol{list-style:none}
 
 /* Layout */
 .container{width:100%;max-width:var(--container-max);margin:0 auto;padding:0 2rem}
-.section{padding:7rem 0}
+.section{padding:7rem 0;overflow:clip}
 .section--sm{padding:4rem 0}
 .section--lg{padding:9rem 0}
 

@@ -1,0 +1,224 @@
+- generic [active] [ref=e1]:
+  - region "Welcome to Eleva Malta" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - heading "Welcome to Eleva Malta" [level=2] [ref=e8]
+          - paragraph [ref=e10]: We use cookies to elevate your browsing experience, personalise content, and analyse traffic on our site. As a Malta-based premium short-let business, we comply with the EU GDPR and Malta's Data Protection Act. Click "Accept All" to consent, or manage your preferences anytime.
+        - generic [ref=e11]:
+          - button "Customise" [ref=e12] [cursor=pointer]
+          - button "Reject All" [ref=e13] [cursor=pointer]
+          - button "Accept All" [ref=e14] [cursor=pointer]
+      - generic [ref=e17]:
+        - text: Powered by
+        - link "Visit CookieYes website" [ref=e18] [cursor=pointer]:
+          - /url: https://www.cookieyes.com/product/cookie-consent/?ref=cypbcyb&utm_source=cookie-banner&utm_medium=fl-branding
+          - img [ref=e19]
+  - heading "The Complete Guide to MTA Short-Let Licensing in Malta (2026)" [level=1] [ref=e35]
+  - generic [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - link "Blog /" [ref=e42] [cursor=pointer]:
+          - /url: "#"
+        - link "Regulation" [ref=e43] [cursor=pointer]:
+          - /url: /blog-categories/regulation
+        - generic [ref=e44]: /
+        - generic [ref=e45]: The Complete Guide to MTA Short-Let Licensing in Malta (2026)
+      - heading "The Complete Guide to MTA Short-Let Licensing in Malta (2026)" [level=2] [ref=e46]
+      - generic [ref=e47]:
+        - paragraph [ref=e48]:
+          - text: Every short-let property in Malta must hold a valid
+          - strong [ref=e49]: MTA Holiday Furnished Premises Licence
+          - text: before accepting a single booking. This applies regardless of the platform — Airbnb, Booking.com, or direct — and regardless of how many nights per year you rent. There are no exemptions for occasional or seasonal rentals.
+        - heading "What Is an MTA Holiday Furnished Premises Licence?" [level=3] [ref=e50]
+        - paragraph [ref=e51]: The MTA Holiday Furnished Premises Licence is issued by the Malta Tourism Authority and certifies that a property meets minimum standards for short-term tourist accommodation. Standards cover fire safety, electrical installation, furnishing quality, emergency signage, and habitability.
+        - paragraph [ref=e52]:
+          - text: The licence is
+          - strong [ref=e53]: property-specific
+          - text: — not owner-specific or agency-specific. Each individual unit requires its own application, inspection, and fee. If you own three apartments and wish to rent all three, you need three separate licences.
+        - heading "Who Applies for the Licence?" [level=3] [ref=e54]
+        - paragraph [ref=e55]: The licence is held by the property owner. If a management company handles the property, the owner remains the licence holder. Eleva prepares and manages the full application as a service — owners simply provide the required documents and sign where needed.
+        - heading "Documents Required" [level=2] [ref=e56]
+        - paragraph [ref=e57]: "The following documents are required for a standard application:"
+        - list [ref=e58]:
+          - listitem [ref=e59]:
+            - strong [ref=e60]: Valid ID
+            - text: of the applicant (ID card or passport)
+          - listitem [ref=e61]:
+            - strong [ref=e62]: Proof of ownership
+            - text: (deed of sale or title document) or a signed lease contract
+          - listitem [ref=e63]:
+            - strong [ref=e64]: Written owner consent
+            - text: if the applicant is not the registered property owner
+          - listitem [ref=e65]:
+            - strong [ref=e66]: Third-party liability insurance
+            - text: with a minimum coverage of €250,000
+          - listitem [ref=e67]:
+            - strong [ref=e68]: Building permits and compliance evidence
+          - listitem [ref=e69]:
+            - strong [ref=e70]: Perit (architect) declaration
+            - text: confirming the property’s structural conformity and habitability
+          - listitem [ref=e71]:
+            - text: "If applying as a company:"
+            - strong [ref=e72]: Memorandum and Articles of Association
+            - text: plus a board resolution
+        - paragraph [ref=e73]: Missing documents pause the vetting clock. Eleva coordinates with a certified Perit and prepares the full application package to avoid delays.
+        - heading "The Application Process Step by Step" [level=3] [ref=e74]
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - strong [ref=e77]: Online application
+            - text: submitted via the MTA portal with all supporting documents.
+          - listitem [ref=e78]:
+            - strong [ref=e79]: "Initial vetting — 5 working days:"
+            - text: The MTA reviews documents. If anything is incomplete, the clock pauses until resolved.
+          - listitem [ref=e80]:
+            - strong [ref=e81]: "Property inspection:"
+            - text: An MTA inspector visits the property to assess compliance. The property must be fully furnished and ready for guests.
+          - listitem [ref=e82]:
+            - strong [ref=e83]: Final approval — 10 working days
+            - text: after a positive inspection.
+        - paragraph [ref=e84]:
+          - strong [ref=e85]: "Realistic total timeline: 4–6 weeks"
+          - text: from initial submission to licence in hand, assuming documents are complete and the property passes inspection first time.
+        - heading "How Much Does an MTA Licence Cost?" [level=3] [ref=e86]
+        - paragraph [ref=e87]: "The current MTA licence fee is approximately:"
+        - list [ref=e88]:
+          - listitem [ref=e89]:
+            - strong [ref=e90]: €130 per unit
+            - text: for properties in Malta
+          - listitem [ref=e91]:
+            - strong [ref=e92]: €104 per unit
+            - text: for properties in Gozo
+        - paragraph [ref=e93]: These fees are paid directly to the MTA and are separate from any management company charges.
+        - heading "Post-Licence Obligations" [level=3] [ref=e94]
+        - paragraph [ref=e95]: "Receiving your MTA licence is not the end. Licensed operators have ongoing obligations:"
+        - list [ref=e96]:
+          - listitem [ref=e97]:
+            - strong [ref=e98]: Display the licence number on all listings
+            - text: — Airbnb, Booking.com, and every other platform. From May 2026, platforms are legally required to verify registration numbers.
+          - listitem [ref=e99]:
+            - strong [ref=e100]: Physical notice at the property
+            - text: showing the MTA licence number and a 24/7 emergency contact.
+          - listitem [ref=e101]:
+            - strong [ref=e102]: Notify the building administrator
+            - text: if the property is in a condominium.
+          - listitem [ref=e103]:
+            - strong [ref=e104]: Maintain a waste collection management plan.
+          - listitem [ref=e105]:
+            - strong [ref=e106]: VAT and fiscal receipt compliance
+            - text: for all rental income.
+          - listitem [ref=e107]:
+            - strong [ref=e108]: Eco-Tax collection
+            - text: — €0.50 per adult per night collected from guests and remitted to authorities.
+        - heading "The 2026 Regulatory Changes" [level=3] [ref=e109]
+        - paragraph [ref=e110]: "Legal Notice 92 of 2026 introduced the most significant overhaul of Malta’s short-let regulations in recent years:"
+        - list [ref=e111]:
+          - listitem [ref=e112]:
+            - text: Booking platforms must now
+            - strong [ref=e113]: verify MTA licence numbers
+            - text: for all Malta listings and share monthly activity data with Maltese authorities.
+          - listitem [ref=e114]:
+            - text: Unlicensed operators face
+            - strong [ref=e115]: 3-year disqualification
+            - text: from obtaining an MTA licence, plus financial penalties.
+          - listitem [ref=e116]: Stricter enforcement of the physical notice requirement at properties.
+        - heading "How Eleva Manages Licensing for Property Owners" [level=3] [ref=e117]
+        - paragraph [ref=e118]: "Eleva handles the entire MTA licence process: document preparation, Perit coordination, MTA portal submission, inspection management, and approval tracking. Ongoing compliance — licence number display, Eco-Tax remittance, and renewal management — is included in the standard service. No Eleva-managed property has ever faced a compliance action."
+        - heading "Frequently Asked Questions" [level=3] [ref=e119]
+        - heading "Can I rent my property while the licence application is pending?" [level=4] [ref=e120]
+        - paragraph [ref=e121]: No. You must hold a valid licence before accepting any bookings. Platforms now verify licence numbers, so unlicensed properties are at risk of removal.
+        - heading "Does the MTA licence need to be renewed?" [level=4] [ref=e122]
+        - paragraph [ref=e123]: Yes, the licence requires periodic renewal. Eleva manages renewal processes for all properties in its portfolio.
+        - heading "What if my property fails the MTA inspection?" [level=4] [ref=e124]
+        - paragraph [ref=e125]: The MTA issues a list of required remediation works. Once completed, a re-inspection is scheduled. Eleva prepares properties thoroughly before the initial inspection to minimise failure risk.
+    - generic [ref=e127]:
+      - generic [ref=e128]:
+        - generic [ref=e129]: Other Articles
+        - generic [ref=e131]:
+          - list [ref=e132]:
+            - listitem [ref=e133]:
+              - 'link "Malta Holiday Rentals: Income Data, Regulations & What to Expect in 2026 Malta Holiday Rentals: Income Data, Regulations & What to Expect in 2026" [ref=e134] [cursor=pointer]':
+                - /url: /blog/blog-posts/malta-holiday-rentals-guide-2026
+                - 'img "Malta Holiday Rentals: Income Data, Regulations & What to Expect in 2026" [ref=e135]'
+                - generic [ref=e136]: "Malta Holiday Rentals: Income Data, Regulations & What to Expect in 2026"
+            - listitem [ref=e137]:
+              - 'link "Holiday Let Malta: The Complete Owner''s Guide to Licensing, Tax & Income in 2026 Holiday Let Malta: The Complete Owner''s Guide to Licensing, Tax & Income in 2026" [ref=e138] [cursor=pointer]':
+                - /url: /blog/blog-posts/holiday-let-malta-guide-2026
+                - 'img "Holiday Let Malta: The Complete Owner''s Guide to Licensing, Tax & Income in 2026" [ref=e139]'
+                - generic [ref=e140]: "Holiday Let Malta: The Complete Owner's Guide to Licensing, Tax & Income in 2026"
+            - listitem [ref=e141]:
+              - 'link "Buying Property in Malta to Short-Let on Airbnb: 2026 Investor Checklist Buying Property in Malta to Short-Let on Airbnb: 2026 Investor Checklist" [ref=e142] [cursor=pointer]':
+                - /url: /blog/blog-posts/buying-property-malta-airbnb-2026
+                - 'img "Buying Property in Malta to Short-Let on Airbnb: 2026 Investor Checklist" [ref=e143]'
+                - generic [ref=e144]: "Buying Property in Malta to Short-Let on Airbnb: 2026 Investor Checklist"
+          - navigation "List" [ref=e145]:
+            - link "Next Page" [ref=e146] [cursor=pointer]:
+              - /url: "?fa134a5b_page=2"
+              - generic [ref=e147]: Next page
+              - img [ref=e148]
+      - generic [ref=e150]:
+        - generic [ref=e151]: Categories
+        - button "Regulation" [ref=e154] [cursor=pointer]:
+          - generic [ref=e155]: 
+          - generic [ref=e156]: Regulation
+  - contentinfo [ref=e157]:
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - link "ELEVA MALTA" [ref=e161] [cursor=pointer]:
+          - /url: /
+          - text: ELEVA MALTA
+        - paragraph [ref=e163]: Premium property management for the modern investor. Combining AI technology with luxury hospitality to redefine the short-let market in Malta.
+      - generic [ref=e164]:
+        - heading "Platform" [level=4] [ref=e165]
+        - generic [ref=e166]:
+          - link "Services" [ref=e167] [cursor=pointer]:
+            - /url: /services
+          - link "Locations" [ref=e168] [cursor=pointer]:
+            - /url: /locations
+          - link "Investors" [ref=e169] [cursor=pointer]:
+            - /url: /investors
+          - link "Revenue Calculator" [ref=e170] [cursor=pointer]:
+            - /url: /calculator
+      - generic [ref=e171]:
+        - heading "Company" [level=4] [ref=e172]
+        - generic [ref=e173]:
+          - link "About Us" [ref=e174] [cursor=pointer]:
+            - /url: /about
+          - link "Insights" [ref=e175] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=e176] [cursor=pointer]:
+            - /url: /contact
+          - link "FAQs" [ref=e177] [cursor=pointer]:
+            - /url: /faq
+      - generic [ref=e178]:
+        - heading "Legal" [level=4] [ref=e179]
+        - generic [ref=e180]:
+          - link "Privacy Policy" [ref=e181] [cursor=pointer]:
+            - /url: /privacy-policy
+          - link "Terms of Service" [ref=e182] [cursor=pointer]:
+            - /url: /terms-of-service
+    - generic [ref=e184]: Copyright © 2026Eleva Group
+  - banner [ref=e185]:
+    - generic [ref=e186]:
+      - link "ELEVA MALTA" [ref=e187] [cursor=pointer]:
+        - /url: /
+        - text: ELEVA MALTA
+      - navigation [ref=e189]:
+        - generic [ref=e190]:
+          - link "Home" [ref=e191] [cursor=pointer]:
+            - /url: /
+          - link "Services" [ref=e192] [cursor=pointer]:
+            - /url: /services
+          - link "Locations" [ref=e193] [cursor=pointer]:
+            - /url: /locations
+          - link "Faq" [ref=e194] [cursor=pointer]:
+            - /url: /faq
+          - link "Investors" [ref=e195] [cursor=pointer]:
+            - /url: /investors
+          - link "Calculator" [ref=e196] [cursor=pointer]:
+            - /url: /calculator
+          - link "Insights" [ref=e197] [cursor=pointer]:
+            - /url: /blog
+          - link "Get Revenue Estimate" [ref=e198] [cursor=pointer]:
+            - /url: /contact
+      - text: 

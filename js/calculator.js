@@ -7,17 +7,17 @@
 const CONFIG = {
   otaFee: 0.15,
   mgmtFee: 0.30,
-  // Base ADR (€) by bedrooms (2026/2027 Projections)
-  adr: { studio: 105, '1br': 155, '2br': 210, '3br': 285, '4br': 395 },
-  // Location multipliers (High demand adjustments)
+  // Base ADR (€) by bedrooms — Sliema p75, BnbCalc May 2026 (USD×0.92)
+  adr: { studio: 110, '1br': 133, '2br': 171, '3br': 240, '4br': 290 },
+  // Location multipliers relative to Sliema = 1.0 (BnbCalc p75 2-bed)
   locationMult: {
-    valletta: 1.25, stjulians: 1.20, sliema: 1.15, gzira: 1.08,
-    mellieha: 1.05, bugibba: 0.98, msida: 1.05, gozo: 1.10
+    valletta: 0.977, stjulians: 0.982, sliema: 1.000, gzira: 0.930,
+    mellieha: 1.070, bugibba: 0.865
   },
-  // Default occupancy by location
+  // Default occupancy by location (BnbCalc p75, May 2026)
   occupancy: {
-    valletta: 0.80, stjulians: 0.82, sliema: 0.79, gzira: 0.74,
-    mellieha: 0.72, bugibba: 0.70, msida: 0.72, gozo: 0.73
+    valletta: 0.75, stjulians: 0.66, sliema: 0.65, gzira: 0.68,
+    mellieha: 0.64, bugibba: 0.64
   }
 };
 

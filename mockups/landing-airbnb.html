@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airbnb Management Malta | Professional Airbnb Property Managers | Eleva Malta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/components.css">
+<style>
+  .lp-bar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;background:rgba(17,17,17,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center}
+  .lp-bar__inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1280px;margin:0 auto;padding:0 2rem}
+  .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.45);transition:transform 0.2s}
+  .wa-float:hover{transform:scale(1.08)}
+  .cta-input{width:100%;padding:14px 18px;border:1.5px solid rgba(255,255,255,0.12);border-radius:12px;font-family:var(--font-body);font-size:0.95rem;color:#fff;background:rgba(255,255,255,0.06);outline:none;transition:border-color 0.2s}
+  .cta-input:focus{border-color:rgba(201,169,110,0.6)}
+  .cta-input::placeholder{color:rgba(255,255,255,0.35)}
+  .cta-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:44px;appearance:none;-webkit-appearance:none}
+  .hero-airbnb{position:relative;min-height:85vh;display:flex;align-items:center;background:#111;overflow:hidden}
+  .hero-airbnb__bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(17,17,17,0.9) 0%,rgba(17,17,17,0.65) 55%,rgba(17,17,17,0.3) 100%)}
+  .hero-airbnb__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55}
+  .hero-airbnb__content{position:relative;z-index:2;padding:8rem 0 6rem;max-width:720px}
+  .platform-logos{display:flex;gap:0.75rem;flex-wrap:wrap;margin:2.5rem 0}
+  .platform-logo{padding:0.5rem 1.25rem;border-radius:99px;border:1px solid rgba(255,255,255,0.2);font-size:0.85rem;color:rgba(255,255,255,0.8);font-weight:500}
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+  .result-card{background:#FAFAF8;border-radius:20px;padding:2rem;border:1px solid #F0F0F0;text-align:center}
+  .result-card__value{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.8rem;font-weight:800;color:#C9A96E;line-height:1;margin-bottom:0.4rem}
+  .result-card__label{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#9E9E9E;margin-bottom:0.75rem}
+  .result-card__text{font-size:0.85rem;color:#616161;line-height:1.6}
+  .what-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:2.5rem}
+  .what-item{display:flex;gap:1.25rem;padding:1.5rem;border-radius:16px;border:1px solid #F0F0F0;align-items:flex-start}
+  .what-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(201,169,110,0.12),rgba(201,169,110,0.05));border:1px solid rgba(201,169,110,0.25);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+  .what-title{font-weight:700;font-size:0.95rem;margin-bottom:0.35rem}
+  .what-text{font-size:0.85rem;color:#616161;line-height:1.6}
+  .diy-vs{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:2.5rem;border-radius:24px;overflow:hidden;border:1px solid #E0E0E0}
+  .diy-col{padding:2.5rem 2rem}
+  .diy-col--left{background:#F8F8F8}
+  .diy-col--right{background:#111}
+  .diy-col__heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:700;margin-bottom:1.5rem}
+  .diy-row{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:0.875rem}
+  .diy-row:last-child{border-bottom:none}
+  .diy-col--right .diy-row{border-bottom-color:rgba(255,255,255,0.07);color:#fff}
+  .diy-val--bad{color:#f44336;font-weight:600}
+  .diy-val--good{color:#C9A96E;font-weight:600}
+  .pricing-card{background:linear-gradient(135deg,#111 0%,#2A2A2A 100%);border-radius:28px;padding:3.5rem;text-align:center;max-width:520px;margin:2.5rem auto 0}
+  .pricing-card__rate{font-family:'Cormorant Garamond',Georgia,serif;font-size:5rem;font-weight:800;color:#C9A96E;line-height:1}
+  .pricing-card__label{font-size:0.85rem;color:rgba(255,255,255,0.5);margin-bottom:2rem}
+  .pricing-includes{text-align:left;margin:2rem 0}
+  .pricing-includes li{display:flex;gap:0.75rem;padding:0.6rem 0;font-size:0.9rem;color:rgba(255,255,255,0.8);border-bottom:1px solid rgba(255,255,255,0.07)}
+  .pricing-includes li:last-child{border-bottom:none}
+</style>
+</head>
+<body>
+
+<div class="lp-bar">
+  <div class="lp-bar__inner">
+    <a href="../index.html" class="nav__logo">ELEVA MALTA<span class="nav__logo-dot"></span></a>
+    <a href="https://wa.me/393514901584" target="_blank" rel="noopener" class="btn btn-gold btn-sm" style="display:inline-flex;align-items:center;gap:0.5rem"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg> WhatsApp</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero-airbnb">
+  <img src="../images/location-stjulians.png" class="hero-airbnb__img" alt="Malta Airbnb property">
+  <div class="hero-airbnb__bg"></div>
+  <div class="container hero-airbnb__content">
+    <div class="label" style="color:#C9A96E;margin-bottom:1.2rem;display:flex;align-items:center;gap:0.5rem">
+      <span style="width:24px;height:1.5px;background:#C9A96E;display:inline-block"></span>
+      Airbnb Management Malta
+    </div>
+    <h1 class="heading-1 text-white" style="margin-bottom:1.5rem">
+      Malta's Premier<br>
+      <span style="color:#C9A96E">Airbnb Management</span><br>
+      Company
+    </h1>
+    <p class="subheading text-white" style="opacity:0.85;margin-bottom:1.5rem">
+      We manage your Malta Airbnb end-to-end: listing optimisation, AI dynamic pricing, 24/7 guest communication, professional cleaning, and MTA compliance. Average 4.9★ rating across our entire portfolio.
+    </p>
+    <div class="platform-logos">
+      <div class="platform-logo">Airbnb</div>
+      <div class="platform-logo">Booking.com</div>
+      <div class="platform-logo">Google Travel</div>
+      <div class="platform-logo">Direct Website</div>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+      <a href="#cta-form" class="btn btn-gold btn-lg">Get a Free Airbnb Assessment</a>
+      <a href="../calculator.html" class="btn btn-outline btn-lg">Estimate My Airbnb Income</a>
+    </div>
+  </div>
+</header>
+
+<!-- KEY RESULTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="label">Our Results</div>
+      <h2 class="heading-2">What Eleva Airbnb Management Delivers</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-card__label">Average Portfolio Occupancy</div>
+        <div class="result-card__value">74–80%</div>
+        <p class="result-card__text">Eleva-managed properties versus the Malta market average of 64–74% (BnbCalc, May 2026). Multi-platform listing drives the gap.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-card__label">Average Guest Rating</div>
+        <div class="result-card__value">4.9★</div>
+        <p class="result-card__text">Consistent 4.9/5 across Airbnb and Booking.com. High ratings unlock Superhost status and ranking boosts.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-card__label">Income Uplift vs DIY</div>
+        <div class="result-card__value">+38%</div>
+        <p class="result-card__text">Owners switching from single-platform self-management (55–64% occ) to Eleva (68–80% occ + AI pricing) average +37% net income. Source: BnbCalc comparable analysis, Malta, May 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="section bg-sand" style="padding:5rem 0">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="label">Full Service</div>
+      <h2 class="heading-2">Everything Your Airbnb Needs, Done</h2>
+    </div>
+    <div class="what-grid">
+      <div class="what-item">
+        <div class="what-icon">📸</div>
+        <div>
+          <div class="what-title">Professional Photography & Listing</div>
+          <p class="what-text">Hotel-standard photography, optimised titles, SEO-rich descriptions, and amenity positioning that maximises click-through rate on Airbnb.</p>
+        </div>
+      </div>
+      <div class="what-item">
+        <div class="what-icon">🤖</div>
+        <div>
+          <div class="what-title">AI Dynamic Pricing</div>
+          <p class="what-text">Rates adjusted daily based on local events, competitor pricing, and demand patterns. Never leave a night unfilled at the wrong price.</p>
+        </div>
+      </div>
+      <div class="what-item">
+        <div class="what-icon">💬</div>
+        <div>
+          <div class="what-title">24/7 Guest Communication</div>
+          <p class="what-text">Enquiry response, booking confirmation, pre-arrival instructions, and checkout follow-up — in English, Italian, French, and German.</p>
+        </div>
+      </div>
+      <div class="what-item">
+        <div class="what-icon">🧹</div>
+        <div>
+          <div class="what-title">Professional Cleaning & Linen</div>
+          <p class="what-text">Hotel-quality turnover after every checkout. Fresh linen, restocked toiletries, and a quality-checked property for every new arrival.</p>
+        </div>
+      </div>
+      <div class="what-item">
+        <div class="what-icon">🪪</div>
+        <div>
+          <div class="what-title">MTA Licence Management</div>
+          <p class="what-text">Your Malta Airbnb must have an MTA Holiday Furnished Premises licence. We handle application, inspection, annual renewal, and compliance tracking.</p>
+        </div>
+      </div>
+      <div class="what-item">
+        <div class="what-icon">📊</div>
+        <div>
+          <div class="what-title">Owner Portal & Reporting</div>
+          <p class="what-text">Real-time bookings, revenue, and occupancy visible in your owner dashboard 24/7. Monthly income statements and annual tax reports included.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIY vs ELEVA -->
+<section class="section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="label">The Comparison</div>
+      <h2 class="heading-2">DIY Airbnb Malta vs Eleva Management</h2>
+    </div>
+    <div class="diy-vs">
+      <div class="diy-col diy-col--left">
+        <div class="diy-col__heading">Managing It Yourself</div>
+        <div class="diy-row"><span>Avg occupancy</span><span class="diy-val--bad">55–64%</span></div>
+        <div class="diy-row"><span>Pricing updates</span><span class="diy-val--bad">Manual / rarely</span></div>
+        <div class="diy-row"><span>Platforms active</span><span class="diy-val--bad">1–2</span></div>
+        <div class="diy-row"><span>Guest response time</span><span class="diy-val--bad">Hours</span></div>
+        <div class="diy-row"><span>MTA compliance</span><span class="diy-val--bad">Your problem</span></div>
+        <div class="diy-row"><span>Time investment</span><span class="diy-val--bad">8–15 hrs/week</span></div>
+        <div class="diy-row"><span>Average review score</span><span class="diy-val--bad">4.4–4.6 ★</span></div>
+      </div>
+      <div class="diy-col diy-col--right">
+        <div class="diy-col__heading" style="color:#fff">With Eleva Malta</div>
+        <div class="diy-row"><span style="color:rgba(255,255,255,0.6)">Avg occupancy</span><span class="diy-val--good">68–80%</span></div>
+        <div class="diy-row"><span style="color:rgba(255,255,255,0.6)">Pricing updates</span><span class="diy-val--good">Daily AI</span></div>
+        <div class="diy-row"><span style="color:rgba(255,255,255,0.6)">Platforms active</span><span class="diy-val--good">4 platforms</span></div>
+        <div class="diy-row"><span style="color:rgba(255,255,255,0.6)">Guest response time</span><span class="diy-val--good">&lt; 5 minutes</span></div>
+        <div class="diy-row"><span style="color:rgba(255,255,255,0.6)">MTA compliance</span><span class="diy-val--good">Fully managed</span></div>
+        <div class="diy-row"><span style="color:rgba(255,255,255,0.6)">Time investment</span><span class="diy-val--good">0 hrs/week</span></div>
+        <div class="diy-row"><span style="color:rgba(255,255,255,0.6)">Average review score</span><span class="diy-val--good">4.9 ★</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section bg-sand" style="padding:5rem 0">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="label">Pricing</div>
+      <h2 class="heading-2">One Simple Airbnb Management Fee</h2>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-card__rate">30%</div>
+      <div class="pricing-card__label">of rental revenue, net of OTA platform fees</div>
+      <ul class="pricing-includes" style="list-style:none;padding:0;margin:0">
+        <li><span style="color:#C9A96E;font-weight:700">✓</span> Multi-platform listing (Airbnb, Booking.com, Google Travel, direct site)</li>
+        <li><span style="color:#C9A96E;font-weight:700">✓</span> AI dynamic pricing updated daily</li>
+        <li><span style="color:#C9A96E;font-weight:700">✓</span> 24/7 guest communication in 4 languages</li>
+        <li><span style="color:#C9A96E;font-weight:700">✓</span> Professional cleaning & hotel linen after every stay</li>
+        <li><span style="color:#C9A96E;font-weight:700">✓</span> MTA licence management — application & renewal</li>
+        <li><span style="color:#C9A96E;font-weight:700">✓</span> Owner portal, monthly statements, tax reporting</li>
+        <li><span style="color:#C9A96E;font-weight:700">✓</span> Maintenance coordination & inspections</li>
+      </ul>
+      <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin:1.5rem 0 2rem;line-height:1.6">No setup fee. No hidden extras. No lock-in contract.<br>Cancel with 30 days notice.</div>
+      <a href="#cta-form" class="btn btn-gold btn-lg" style="width:100%;display:block">Start Airbnb Management</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FORM -->
+<section id="cta-form" style="background:#0A0A0A;padding:7rem 0;border-top:1px solid rgba(255,255,255,0.06)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:1020px;margin:0 auto">
+      <div>
+        <div class="label" style="color:#C9A96E;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem"><span style="width:24px;height:1.5px;background:#C9A96E;display:block"></span>Free Airbnb Assessment</div>
+        <h2 class="heading-2 text-white" style="margin-bottom:1.25rem">Get a Free Airbnb Property Assessment</h2>
+        <p style="color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:2.5rem;font-size:0.95rem">We'll assess your Malta property's Airbnb potential — occupancy benchmarks, projected ADR, and a management proposal. Free, no obligation, response within 2 hours.</p>
+        <a href="https://wa.me/393514901584" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.875rem;padding:18px 36px;background:#25D366;color:#fff;border-radius:99px;font-weight:700;font-size:1.05rem;text-decoration:none;box-shadow:0 8px 32px rgba(37,211,102,0.3)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg>
+          Message Us on WhatsApp
+        </a>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:1rem">Or fill the form — we respond within 2 hours.</p>
+      </div>
+      <form name="airbnb-assessment" method="POST" action="../contact.html" style="display:flex;flex-direction:column;gap:1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:2.5rem">
+        <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:700;color:#fff;margin-bottom:0.25rem">Free Airbnb Assessment</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);margin-bottom:0.75rem">Takes 60 seconds. We'll handle the rest.</p>
+        <input type="text" name="name" placeholder="Your full name" class="cta-input" required>
+        <input type="text" name="location" placeholder="Property location in Malta" class="cta-input" required>
+        <select name="bedrooms" class="cta-input cta-select" required>
+          <option value="" disabled selected>Number of bedrooms</option>
+          <option value="studio">Studio</option>
+          <option value="1">1 Bedroom</option>
+          <option value="2">2 Bedrooms</option>
+          <option value="3+">3+ Bedrooms</option>
+        </select>
+        <select name="status" class="cta-input cta-select">
+          <option value="" disabled selected>Property status</option>
+          <option value="new">New — not yet listed</option>
+          <option value="self">Self-managing on Airbnb</option>
+          <option value="managed">With another manager</option>
+          <option value="long-term">Currently long-term let</option>
+        </select>
+        <input type="tel" name="phone" placeholder="Your WhatsApp number" class="cta-input" required>
+        <button type="submit" style="padding:18px;background:linear-gradient(135deg,#C9A96E,#A07D45);color:#fff;border:none;border-radius:12px;font-family:var(--font-body);font-size:1rem;font-weight:700;cursor:pointer;margin-top:0.5rem;box-shadow:0 8px 24px rgba(201,169,110,0.35)">Get My Free Airbnb Assessment →</button>
+        <p style="font-size:0.72rem;color:rgba(255,255,255,0.25);text-align:center;margin:0">No setup fee. No lock-in. Reply within 2 hours.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/393514901584" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg>
+</a>
+
+</body>
+</html>

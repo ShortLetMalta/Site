@@ -1,0 +1,13 @@
+- application [ref=e1]:
+  - iframe [ref=e2]:
+    
+  - generic [ref=e5]:
+    - generic [ref=e12]:
+      - button
+    - img [ref=e13]
+  - iframe [active] [ref=e14]:
+    - textbox "Contenuti del documento" [active] [ref=f6e1]
+    - group
+  - link "Attiva il supporto per lo screen reader" [ref=e15] [cursor=pointer]:
+    - /url: "#"
+  - region [ref=e16]: Per attivare il supporto per lo screen reader, premi ⌘+Opzione+Z Per informazioni sulle scorciatoie da tastiera, premi ⌘barra

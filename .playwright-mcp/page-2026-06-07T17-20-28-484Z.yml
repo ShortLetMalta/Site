@@ -1,0 +1,100 @@
+- application [ref=e1]:
+  - iframe [ref=e2]:
+    
+  - iframe [ref=e3]:
+    
+  - banner "Barra dei menu" [ref=e4]:
+    - generic [ref=e7]:
+      - link "Home di Documenti" [ref=e9] [cursor=pointer]:
+        - /url: https://docs.google.com/document/?usp=docs_web
+      - generic [ref=e16]:
+        - generic "La MTA Licence per gli Affitti Brevi a Malta 2" [ref=e18]:
+          - generic [ref=e20]: La MTA Licence per gli Affitti Brevi a Malta 2
+          - 'button "Stato del documento: Salvato in Drive." [ref=e24]'
+        - generic [ref=e32]:
+          - button "Richiedi accesso in modifica. Puoi solo visualizzare questo documento. Per richiedere l'accesso in modifica al proprietario devi aver effettuato l'accesso a un Account Google." [disabled] [ref=e34]: Richiedi accesso in modifica
+          - button "Eleva Shortlet" [ref=e40]:
+            - img "Eleva Shortlet" [ref=e45] [cursor=pointer]
+          - generic [ref=e46]:
+            - button "Condividi. Chiunque abbia il link. Chiunque ha ricevuto il link ha diritto di accesso. Non è richiesto l'inserimento di dati di accesso." [disabled] [ref=e47]: Condividi
+            - button "Azioni di condivisione rapida" [disabled] [ref=e49]
+          - link "Accedi" [ref=e53] [cursor=pointer]:
+            - /url: https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&osid=1&continue=https://docs.google.com/document/d/1ziLmzOAAqLJBtu-nqXx8UDAJd600SjI_mAUSHHMPQB0/edit?tab%3Dt.0&followup=https://docs.google.com/document/d/1ziLmzOAAqLJBtu-nqXx8UDAJd600SjI_mAUSHHMPQB0/edit?tab%3Dt.0&ltmpl=docs&ec=GAZAGQ
+    - menubar [ref=e56]:
+      - menuitem "File" [ref=e57] [cursor=pointer]
+      - menuitem "Modifica" [ref=e58] [cursor=pointer]
+      - menuitem "Visualizza" [ref=e59] [cursor=pointer]
+      - menuitem "Strumenti" [ref=e60] [cursor=pointer]
+      - menuitem "Guida" [ref=e61] [cursor=pointer]
+  - generic [ref=e64]:
+    - generic [ref=e70]:
+      - button
+    - img [ref=e73]
+    - generic "Schede dei documenti" [ref=e76]:
+      - button "Nascondi schede e strutture" [ref=e78] [cursor=pointer]:
+        - button "Indietro" [disabled] [ref=e79]:
+          - button "Indietro" [disabled] [ref=e83]
+      - generic [ref=e89]:
+        - heading "Schede dei documenti" [ref=e92]
+        - tree "Schede dei documenti" [ref=e95]:
+          - generic [ref=e97] [cursor=pointer]:
+            - treeitem "Scheda 1" [selected] [ref=e98]:
+              - generic [ref=e105]: Scheda 1
+              - button "Opzioni scheda" [ref=e108]
+            - generic [ref=e112]:
+              - menuitem "La MTA Licence per gli Affitti Brevi a Malta livello 1" [ref=e113]:
+                - generic "La MTA Licence per gli Affitti Brevi a Malta livello 1" [ref=e118]:
+                  - generic [ref=e119]: La MTA Licence per gli Affitti Brevi a Malta
+              - menuitem "La MTA Licence è unica per l'agenzia? livello 2" [ref=e120]:
+                - generic "La MTA Licence è unica per l'agenzia? livello 2" [ref=e125]:
+                  - generic [ref=e126]: La MTA Licence è unica per l'agenzia?
+              - menuitem "Chi deve richiedere la licenza? livello 1" [ref=e127]:
+                - generic "Chi deve richiedere la licenza? livello 1" [ref=e132]:
+                  - generic [ref=e133]: Chi deve richiedere la licenza?
+              - menuitem "Caso 1 – Property Management tradizionale livello 2" [ref=e134]:
+                - generic "Caso 1 – Property Management tradizionale livello 2" [ref=e139]:
+                  - generic [ref=e140]: Caso 1 – Property Management tradizionale
+              - menuitem "Requisiti principali della MTA Holiday Furnished Premises Licence livello 1" [ref=e141]:
+                - generic "Requisiti principali della MTA Holiday Furnished Premises Licence livello 1" [ref=e146]:
+                  - generic [ref=e147]: Requisiti principali della MTA Holiday Furnished Premises Licence
+              - menuitem "Procedura di ottenimento della licenza livello 1" [ref=e148]:
+                - generic "Procedura di ottenimento della licenza livello 1" [ref=e153]:
+                  - generic [ref=e154]: Procedura di ottenimento della licenza
+              - menuitem "1. Preparazione della documentazione livello 2" [ref=e155]:
+                - generic "1. Preparazione della documentazione livello 2" [ref=e160]:
+                  - generic [ref=e161]: 1. Preparazione della documentazione
+              - menuitem "2. Presentazione della domanda livello 2" [ref=e162]:
+                - generic "2. Presentazione della domanda livello 2" [ref=e167]:
+                  - generic [ref=e168]: 2. Presentazione della domanda
+              - menuitem "3. Verifica preliminare livello 2" [ref=e169]:
+                - generic "3. Verifica preliminare livello 2" [ref=e174]:
+                  - generic [ref=e175]: 3. Verifica preliminare
+              - menuitem "4. Ispezione dell'immobile livello 2" [ref=e176]:
+                - generic "4. Ispezione dell'immobile livello 2" [ref=e181]:
+                  - generic [ref=e182]: 4. Ispezione dell'immobile
+              - menuitem "5. Approvazione e pagamento livello 2" [ref=e183]:
+                - generic "5. Approvazione e pagamento livello 2" [ref=e188]:
+                  - generic [ref=e189]: 5. Approvazione e pagamento
+              - menuitem "6. Pubblicazione dell'annuncio livello 2" [ref=e190]:
+                - generic "6. Pubblicazione dell'annuncio livello 2" [ref=e195]:
+                  - generic [ref=e196]: 6. Pubblicazione dell'annuncio
+              - menuitem "È necessaria una licenza immobiliare? livello 1" [ref=e197]:
+                - generic "È necessaria una licenza immobiliare? livello 1" [ref=e202]:
+                  - generic [ref=e203]: È necessaria una licenza immobiliare?
+              - menuitem "1. Licenza MTA livello 2" [ref=e204]:
+                - generic "1. Licenza MTA livello 2" [ref=e209]:
+                  - generic [ref=e210]: 1. Licenza MTA
+              - menuitem "2. Licenza Real Estate livello 2" [ref=e211]:
+                - generic "2. Licenza Real Estate livello 2" [ref=e216]:
+                  - generic [ref=e217]: 2. Licenza Real Estate
+              - menuitem "Conclusione livello 1" [ref=e218]:
+                - generic "Conclusione livello 1" [ref=e223]:
+                  - generic [ref=e224]: Conclusione
+  - iframe [active] [ref=e225]:
+    - textbox "Contenuti del documento" [active] [ref=f1e1]
+    - group
+  - link "Attiva il supporto per lo screen reader" [ref=e226] [cursor=pointer]:
+    - /url: "#"
+  - generic [ref=e227]: Banner nascosto
+  - region
+  - region [ref=e228]: Per attivare il supporto per lo screen reader, premi ⌘+Opzione+Z Per informazioni sulle scorciatoie da tastiera, premi ⌘barra

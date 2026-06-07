@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTA Licence Malta | Eleva Handles Everything — Licensed in 4–6 Weeks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',system-ui,sans-serif;color:#1A1714;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ── TOKENS ── */
+:root{
+  --gold:#C9A96E;
+  --gold-d:#A07D45;
+  --gold-l:#E8C98A;
+  --gold-faint:rgba(201,169,110,0.1);
+  --ink:#111009;
+  --ink2:#1E1B17;
+  --text:#2A2520;
+  --muted:#7A756F;
+  --cream:#FAF8F3;
+  --sand:#F2EDE3;
+  --line:#E8E3DA;
+  --red:#D43F3F;
+  --red-bg:rgba(212,63,63,0.08);
+  --green:#1A7A4A;
+  --green-bg:rgba(26,122,74,0.09);
+  --r:16px;
+  --r-lg:24px;
+}
+
+/* ── LAYOUT ── */
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 2rem}
+.wrap-sm{width:100%;max-width:760px;margin:0 auto;padding:0 2rem}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);display:flex;align-items:center}
+.nav__in{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1200px;margin:0 auto;padding:0 2rem}
+.nav__logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.nav__logo span{color:var(--gold-d)}
+.btn-nav{display:inline-flex;align-items:center;gap:.5rem;padding:9px 20px;background:var(--ink);color:#fff;border-radius:10px;font-size:.85rem;font-weight:600;transition:background .2s}
+.btn-nav:hover{background:#2a2520}
+
+/* ── HERO ── */
+.hero{padding:120px 0 80px;background:var(--cream);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-100px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.12) 0%,transparent 70%);pointer-events:none}
+.hero__grid{display:grid;grid-template-columns:1fr 380px;gap:5rem;align-items:start}
+.hero__alert{display:inline-flex;align-items:center;gap:.6rem;padding:.5rem 1rem;background:var(--red-bg);border:1px solid rgba(212,63,63,0.25);border-radius:100px;margin-bottom:1.75rem}
+.hero__alert-dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:pulse 1.6s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+.hero__alert-text{font-size:.73rem;font-weight:600;color:var(--red);letter-spacing:.04em}
+.hero__h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.8rem,5vw,4.2rem);font-weight:700;line-height:1.05;color:var(--ink);margin-bottom:1.5rem}
+.hero__h1 em{font-style:italic;color:var(--gold-d)}
+.hero__sub{font-size:1.05rem;color:var(--muted);line-height:1.8;max-width:520px;margin-bottom:2.5rem}
+.hero__actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.hero__reassure{font-size:.8rem;color:var(--muted)}
+.hero__stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.hero__stat{padding:1.25rem 1rem;border-right:1px solid var(--line);text-align:center}
+.hero__stat:last-child{border-right:none}
+.hero__stat-n{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;font-weight:700;color:var(--gold-d);line-height:1;display:block}
+.hero__stat-l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;display:block;line-height:1.3}
+
+/* Hero risk card */
+.risk-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.07)}
+.risk-card__head{background:var(--ink);padding:1.25rem 1.5rem}
+.risk-card__head-label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.2rem}
+.risk-card__head-title{font-size:.95rem;font-weight:600;color:#fff}
+.risk-card__body{padding:0 1.5rem}
+.risk-card__row{display:flex;justify-content:space-between;align-items:center;padding:.95rem 0;border-bottom:1px solid var(--line)}
+.risk-card__row:last-child{border-bottom:none}
+.risk-card__label{font-size:.85rem;color:var(--muted)}
+.risk-card__val{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:700}
+.risk-card__val--red{color:var(--red)}
+.risk-card__val--green{color:var(--green)}
+.risk-card__cta{padding:1.5rem}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:14px 28px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;border:none;transition:all .2s;letter-spacing:.01em;line-height:1}
+.btn--gold{background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff}
+.btn--gold:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(160,125,69,.35)}
+.btn--outline{background:transparent;border:1.5px solid var(--line);color:var(--text)}
+.btn--outline:hover{border-color:var(--gold);color:var(--gold-d)}
+.btn--dark{background:var(--ink);color:#fff}
+.btn--dark:hover{background:var(--ink2)}
+.btn--lg{padding:16px 36px;font-size:1rem;border-radius:14px}
+.btn--full{width:100%}
+
+/* ── STAKES BAR ── */
+.stakes{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.5rem 0}
+.stakes__in{display:flex;align-items:stretch;flex-wrap:wrap;max-width:1200px;margin:0 auto;padding:0 2rem}
+.stakes__item{display:flex;align-items:center;gap:.85rem;padding:.5rem 2.5rem;flex:1;min-width:220px}
+.stakes__item:first-child{padding-left:0}
+.stakes__rule{width:1px;background:var(--line);align-self:stretch;flex-shrink:0}
+.stakes__icon{width:36px;height:36px;border-radius:10px;background:var(--red-bg);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.stakes__label{font-size:.82rem;font-weight:600;color:var(--ink);line-height:1.3}
+.stakes__sub{font-size:.73rem;color:var(--muted);margin-top:2px}
+
+/* ── SECTION BASE ── */
+.sec{padding:6rem 0}
+.sec--cream{background:var(--cream)}
+.sec--sand{background:var(--sand)}
+.sec--dark{background:var(--ink)}
+.sec-label{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);margin-bottom:.75rem}
+.sec-label--light{color:rgba(201,169,110,.75)}
+.sec-h{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.9rem,3.5vw,2.9rem);font-weight:700;line-height:1.1;color:var(--ink)}
+.sec-h--white{color:#fff}
+.sec-sub{font-size:1rem;color:var(--muted);line-height:1.75;margin-top:.75rem}
+.sec-sub--white{color:rgba(255,255,255,.6)}
+.center{text-align:center}
+
+/* ── PAIN SECTION ── */
+.pain__intro{text-align:center;margin-bottom:4rem}
+.pain__grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
+.pain__item{background:#fff;padding:3.5rem 3rem;position:relative}
+.pain__n{font-family:'Cormorant Garamond',Georgia,serif;font-size:4rem;font-weight:700;color:rgba(201,169,110,.15);position:absolute;top:2rem;right:2.5rem;line-height:1}
+.pain__quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-style:italic;line-height:1.5;color:var(--ink);margin-bottom:1.25rem;padding-left:1.25rem;border-left:3px solid var(--gold)}
+.pain__body{font-size:.88rem;color:var(--muted);line-height:1.75;padding-left:1.25rem}
+.pain__body strong{color:var(--ink);font-weight:600}
+
+/* ── PROCESS ── */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+.proc-step{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:2.25rem 1.75rem;position:relative}
+.proc-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:1.5rem;box-shadow:0 4px 16px rgba(201,169,110,.35)}
+.proc-when{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);margin-bottom:.4rem}
+.proc-title{font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.6rem}
+.proc-text{font-size:.85rem;color:var(--muted);line-height:1.7}
+.proc-tag{display:inline-block;margin-top:1.25rem;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:100px;background:var(--gold-faint);color:var(--gold-d)}
+
+/* ── COMPARE TABLE ── */
+.compare-wrap{overflow-x:auto;border-radius:var(--r-lg);border:1px solid var(--line);margin-top:3rem;box-shadow:0 2px 24px rgba(0,0,0,.05);background:#fff}
+.compare-table{width:100%;border-collapse:collapse;min-width:640px}
+.compare-table thead th{padding:1.2rem 1.5rem;text-align:center;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#fff;border-bottom:2px solid var(--line)}
+.compare-table thead th:first-child{text-align:left;width:35%}
+.th-eleva{color:var(--gold-d)!important;background:rgba(201,169,110,.14)!important;border-bottom:2px solid var(--gold)!important;border-left:1px solid rgba(201,169,110,.4)!important;border-right:1px solid rgba(201,169,110,.4)!important}
+.th-badge{display:block;font-size:.62rem;margin-top:3px;font-weight:700;color:var(--gold-d);letter-spacing:.1em}
+.compare-table tbody td{padding:1rem 1.5rem;border-bottom:1px solid var(--line);font-size:.88rem;text-align:center;color:var(--text);background:#fff}
+.compare-table tbody td:first-child{text-align:left;font-weight:600;color:var(--ink)}
+.compare-table tbody tr:last-child td{border-bottom:none}
+.compare-table tbody tr:hover td{background:#FAFAF7}
+.compare-table tbody tr:hover .td-eleva{background:rgba(201,169,110,.14)!important}
+.td-eleva{background:rgba(201,169,110,.08)!important;border-left:1px solid rgba(201,169,110,.3)!important;border-right:1px solid rgba(201,169,110,.3)!important}
+.ico-yes{color:var(--green);font-weight:700}
+.ico-no{color:var(--red)}
+.ico-meh{color:#D97706}
+.compare-note{font-size:.76rem;color:var(--muted);margin-top:1.25rem;text-align:center;line-height:1.6}
+
+/* ── INCLUDES ── */
+.inc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
+.inc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:2rem 1.75rem;display:flex;flex-direction:column}
+.inc-icon{width:48px;height:48px;border-radius:14px;background:var(--gold-faint);border:1px solid rgba(201,169,110,.25);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem;flex-shrink:0}
+.inc-title{font-weight:700;font-size:.97rem;color:var(--ink);margin-bottom:.5rem}
+.inc-body{font-size:.85rem;color:var(--muted);line-height:1.7;flex:1}
+.inc-tag{display:inline-block;margin-top:1.25rem;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:100px}
+.inc-tag--green{background:var(--green-bg);color:var(--green)}
+.inc-tag--gold{background:var(--gold-faint);color:var(--gold-d)}
+
+/* ── INCOME TABLE ── */
+.income-wrap{overflow-x:auto;border-radius:var(--r-lg);border:1px solid var(--line);margin-top:2.5rem}
+.income-table{width:100%;border-collapse:collapse;min-width:580px}
+.income-table th{background:var(--ink);color:rgba(255,255,255,.5);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:1.1rem 1.5rem;text-align:center;white-space:nowrap}
+.income-table th:first-child{text-align:left}
+.income-table th:last-child{color:var(--gold)}
+.income-table td{padding:1rem 1.5rem;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--text);text-align:center}
+.income-table td:first-child{text-align:left;font-weight:600;color:var(--ink)}
+.income-table tr:last-child td{border-bottom:none}
+.income-table tr:hover td{background:var(--cream)}
+.income-table td:last-child{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--gold-d)}
+
+/* ── TRUST STRIP ── */
+.trust{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:2.5rem 0}
+.trust__in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;max-width:1200px;margin:0 auto;padding:0 2rem}
+.trust__item{display:flex;align-items:center;gap:1rem;padding:.75rem 2.5rem;flex:1;min-width:220px}
+.trust__item:first-child{padding-left:0}
+.trust__rule{width:1px;background:var(--line);align-self:stretch;flex-shrink:0;margin:.5rem 0}
+.trust__icon{width:44px;height:44px;border-radius:12px;background:var(--gold-faint);border:1px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;color:var(--gold-d);flex-shrink:0}
+.trust__title{font-weight:700;font-size:.9rem;color:var(--ink);display:block}
+.trust__sub{font-size:.78rem;color:var(--muted);margin-top:2px;display:block;line-height:1.4}
+
+/* ── TESTIMONIAL ── */
+.testi-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:3.5rem;max-width:760px;margin:3rem auto 0;box-shadow:0 2px 24px rgba(0,0,0,.05);text-align:center}
+.testi-stars{color:var(--gold);font-size:1.1rem;letter-spacing:3px;display:block;margin-bottom:1.5rem}
+.testi-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.55rem;font-style:italic;line-height:1.55;color:var(--ink);margin-bottom:2rem}
+.testi-quote::before{content:'\201C';color:var(--gold)}
+.testi-quote::after{content:'\201D';color:var(--gold)}
+.testi-author{display:flex;align-items:center;justify-content:center;gap:1rem}
+.testi-av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.1rem;font-weight:700;color:#fff}
+.testi-name{font-weight:700;font-size:.9rem;color:var(--ink);text-align:left}
+.testi-detail{font-size:.78rem;color:var(--muted);margin-top:2px}
+
+/* ── FAQ ── */
+.faq{margin-top:2.5rem}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-btn{width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 0;background:none;border:none;cursor:pointer;text-align:left;gap:1.5rem}
+.faq-q{font-weight:600;font-size:.97rem;color:var(--ink);line-height:1.4}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .25s,transform .25s}
+.faq-item.open .faq-icon{background:var(--ink);transform:rotate(180deg)}
+.faq-item.open .faq-icon svg{stroke:#fff}
+.faq-body{overflow:hidden;height:0;transition:height .3s ease}
+.faq-inner{padding:0 0 1.5rem;font-size:.9rem;color:var(--muted);line-height:1.8}
+
+/* ── CTA SECTION ── */
+.cta-sec{background:var(--ink);padding:6rem 0}
+.cta-wrap{max-width:620px;margin:0 auto;padding:0 2rem;text-align:center}
+.form{display:flex;flex-direction:column;gap:1rem;text-align:left;margin-top:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-label{font-size:.7rem;font-weight:700;color:rgba(255,255,255,.4);display:block;margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase}
+.form-input{width:100%;padding:14px 18px;border:1.5px solid rgba(255,255,255,.1);border-radius:12px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:#fff;background:rgba(255,255,255,.06);outline:none;transition:border-color .2s}
+.form-input:focus{border-color:rgba(201,169,110,.5)}
+.form-input::placeholder{color:rgba(255,255,255,.28)}
+.form-select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.form-select option{background:#1a1a1a;color:#fff}
+.form-note{font-size:.76rem;color:rgba(255,255,255,.28);text-align:center}
+
+/* ── FOOTER ── */
+.footer{background:#0A0906;padding:1.75rem;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+.footer p{font-size:.78rem;color:rgba(255,255,255,.28);line-height:1.6}
+
+/* ── WHATSAPP ── */
+.wa-fab{position:fixed;bottom:2rem;right:2rem;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:transform .2s}
+.wa-fab:hover{transform:scale(1.1)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero__grid{grid-template-columns:1fr;gap:3rem}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .inc-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .hero__stats{grid-template-columns:1fr 1fr}
+  .hero__stat{border-bottom:1px solid var(--line)}
+  .hero__stat:nth-child(2){border-right:none}
+  .pain__grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  .inc-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .trust__in{flex-direction:column}
+  .trust__item{padding:.75rem 0;min-width:0;width:100%}
+  .trust__rule{width:100%;height:1px;margin:0}
+  .stakes__in{flex-direction:column;padding:0 1.5rem}
+  .stakes__item{min-width:0}
+  .stakes__rule{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__in">
+    <a href="#" class="nav__logo">ELEVA <span>MALTA</span></a>
+    <a href="https://wa.me/393514901584" target="_blank" rel="noopener" class="btn-nav">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+
+      <!-- Left: copy -->
+      <div>
+        <div class="hero__alert">
+          <span class="hero__alert-dot"></span>
+          <span class="hero__alert-text">2026 Enforcement Active — 3-year ban for unlicensed short-lets</span>
+        </div>
+        <h1 class="hero__h1">
+          Your Malta Property<br>
+          Needs an MTA Licence.<br>
+          <em>We Handle It.</em>
+        </h1>
+        <p class="hero__sub">From document prep and Perit coordination to MTA submission, inspection, and approval — Eleva manages the entire licencing process. You sign where needed. We do the rest.</p>
+        <div class="hero__actions">
+          <a href="#cta" class="btn btn--gold btn--lg">Get My Free Compliance Check</a>
+          <span class="hero__reassure">Free · No commitment · Reply within 24h</span>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-n">4–6 wks</span>
+            <span class="hero__stat-l">Avg licence timeline</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-n">100%</span>
+            <span class="hero__stat-l">First-submission pass rate</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-n">€0</span>
+            <span class="hero__stat-l">Eleva fee for licencing</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-n">4.9★</span>
+            <span class="hero__stat-l">Portfolio guest rating</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: risk card -->
+      <div class="risk-card">
+        <div class="risk-card__head">
+          <div class="risk-card__head-label">Risk of operating unlicensed</div>
+          <div class="risk-card__head-title">What's at stake in 2026</div>
+        </div>
+        <div class="risk-card__body">
+          <div class="risk-card__row">
+            <span class="risk-card__label">1st offence fine</span>
+            <span class="risk-card__val risk-card__val--red">€2,330</span>
+          </div>
+          <div class="risk-card__row">
+            <span class="risk-card__label">Repeat offence</span>
+            <span class="risk-card__val risk-card__val--red">€5,000</span>
+          </div>
+          <div class="risk-card__row">
+            <span class="risk-card__label">Listing removal risk</span>
+            <span class="risk-card__val risk-card__val--red">Yes</span>
+          </div>
+          <div class="risk-card__row">
+            <span class="risk-card__label">Licence ban (2026 law)</span>
+            <span class="risk-card__val risk-card__val--red">3 years</span>
+          </div>
+          <div class="risk-card__row">
+            <span class="risk-card__label">Eleva licencing fee</span>
+            <span class="risk-card__val risk-card__val--green">€0</span>
+          </div>
+        </div>
+        <div class="risk-card__cta">
+          <a href="#cta" class="btn btn--gold btn--full">Start My Compliance Check</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- STAKES BAR -->
+<div class="stakes">
+  <div class="stakes__in">
+    <div class="stakes__item">
+      <div class="stakes__icon">⚖️</div>
+      <div>
+        <div class="stakes__label">Legal requirement since 2016</div>
+        <div class="stakes__sub">All short-lets in Malta — no exceptions</div>
+      </div>
+    </div>
+    <div class="stakes__rule"></div>
+    <div class="stakes__item">
+      <div class="stakes__icon">🔍</div>
+      <div>
+        <div class="stakes__label">Airbnb now verifies licence numbers</div>
+        <div class="stakes__sub">EU Regulation 2024/1028 — active May 2026</div>
+      </div>
+    </div>
+    <div class="stakes__rule"></div>
+    <div class="stakes__item">
+      <div class="stakes__icon">🚫</div>
+      <div>
+        <div class="stakes__label">Unlicensed = 3-year application ban</div>
+        <div class="stakes__sub">Legal Notice 92 of 2026 — Malta</div>
+      </div>
+    </div>
+    <div class="stakes__rule"></div>
+    <div class="stakes__item">
+      <div class="stakes__icon">📊</div>
+      <div>
+        <div class="stakes__label">Platforms share monthly data with MTA</div>
+        <div class="stakes__sub">Every booking tracked from May 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN SECTION -->
+<section class="sec sec--cream">
+  <div class="wrap">
+    <div class="pain__intro">
+      <div class="sec-label">Sound Familiar?</div>
+      <h2 class="sec-h">Property owners come to us<br>with the same four problems</h2>
+    </div>
+    <div class="pain__grid">
+      <div class="pain__item">
+        <div class="pain__n">01</div>
+        <p class="pain__quote">"I know I need the licence but I don't know where to start — there are so many documents."</p>
+        <p class="pain__body">The MTA requires 6+ documents: proof of ownership, Perit declaration, insurance, building permits, and more. <strong>Eleva prepares the entire package</strong> — you provide your ID and title deed. We handle everything else.</p>
+      </div>
+      <div class="pain__item">
+        <div class="pain__n">02</div>
+        <p class="pain__quote">"I'm already on Airbnb without a licence. I'm worried about the 2026 crackdown."</p>
+        <p class="pain__body">You're not alone — many Malta owners are in this position. <strong>Acting now protects you</strong> from the 3-year ban and gives time to get compliant before platform enforcement kicks in fully.</p>
+      </div>
+      <div class="pain__item">
+        <div class="pain__n">03</div>
+        <p class="pain__quote">"I started the application myself, got stuck on the Perit requirement, and gave up."</p>
+        <p class="pain__body">The Perit (certified architect) declaration is the most common sticking point. <strong>Eleva coordinates directly with approved Periti</strong> — we've done this dozens of times and know exactly what each inspector expects.</p>
+      </div>
+      <div class="pain__item">
+        <div class="pain__n">04</div>
+        <p class="pain__quote">"I live abroad. How can I possibly manage a Malta licence application remotely?"</p>
+        <p class="pain__body">Most of our owners are overseas. Eleva acts as your full local representative — we submit, attend inspections, and receive correspondence on your behalf. <strong>You don't need to be in Malta.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center">
+      <div class="sec-label">The Eleva Process</div>
+      <h2 class="sec-h">From Unlicensed to Earning in 4 Steps</h2>
+      <p class="sec-sub" style="max-width:500px;margin:.75rem auto 0">We manage the full licencing journey — plus set your property up to perform from day one.</p>
+    </div>
+    <div class="process-grid">
+      <div class="proc-step">
+        <div class="proc-num">1</div>
+        <div class="proc-when">Day 1</div>
+        <div class="proc-title">Free Compliance Audit</div>
+        <p class="proc-text">We review your property's current status — planning permits, documentation gaps, compliance issues — and give you a clear action plan at no cost and no commitment.</p>
+        <span class="proc-tag">No cost · No commitment</span>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">2</div>
+        <div class="proc-when">Weeks 1–2</div>
+        <div class="proc-title">Document Preparation</div>
+        <p class="proc-text">We gather all required documents — Perit declaration, fire safety, insurance, building permits — and prepare the full MTA application. You provide ID and title deed. We handle the rest.</p>
+        <span class="proc-tag">You provide 2 docs. We handle 6+.</span>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">3</div>
+        <div class="proc-when">Weeks 2–6</div>
+        <div class="proc-title">MTA Submission &amp; Inspection</div>
+        <p class="proc-text">We submit via the MTA portal, conduct a pre-inspection walkthrough against MTA standards, and attend the official inspection. Our properties overwhelmingly pass first time.</p>
+        <span class="proc-tag">Fully handled by Eleva</span>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">4</div>
+        <div class="proc-when">Post-Approval</div>
+        <div class="proc-title">Launch &amp; Start Earning</div>
+        <p class="proc-text">Once licensed, we photograph your property, build optimised listings on Airbnb, Booking.com and more, activate AI pricing — and manage everything on an ongoing basis.</p>
+        <span class="proc-tag">Annual renewal handled automatically</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="sec sec--sand">
+  <div class="wrap">
+    <div class="center">
+      <div class="sec-label">Why Eleva</div>
+      <h2 class="sec-h">How We Compare</h2>
+      <p class="sec-sub" style="max-width:480px;margin:.75rem auto 0">Transparent side-by-side: DIY, a standard manager, and Eleva.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Do It Yourself</th>
+            <th>Standard Manager</th>
+            <th class="th-eleva">Eleva Malta<span class="th-badge">★ Recommended</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MTA licence management</td>
+            <td><span class="ico-no">✕</span> You figure it out</td>
+            <td><span class="ico-meh">~</span> Varies</td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> Full-service, included</td>
+          </tr>
+          <tr>
+            <td>Perit / architect coordination</td>
+            <td><span class="ico-no">✕</span> Source and pay yourself</td>
+            <td><span class="ico-meh">~</span> Sometimes</td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> Always included</td>
+          </tr>
+          <tr>
+            <td>Inspection preparation</td>
+            <td><span class="ico-no">✕</span> No guidance</td>
+            <td><span class="ico-meh">~</span> Basic advice</td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> Pre-inspection walkthrough</td>
+          </tr>
+          <tr>
+            <td>Annual licence renewal</td>
+            <td><span class="ico-no">✕</span> You track and manage</td>
+            <td><span class="ico-meh">~</span> Varies by contract</td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> Automatic, never lapses</td>
+          </tr>
+          <tr>
+            <td>Eco-tax collection &amp; remittance</td>
+            <td><span class="ico-no">✕</span> Manual responsibility</td>
+            <td><span class="ico-meh">~</span> Sometimes</td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> Automated, 100% compliant</td>
+          </tr>
+          <tr>
+            <td>AI dynamic pricing</td>
+            <td><span class="ico-no">✕</span></td>
+            <td><span class="ico-no">✕</span> Manual pricing</td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> Daily rate optimisation</td>
+          </tr>
+          <tr>
+            <td>Setup / onboarding fee</td>
+            <td>N/A</td>
+            <td><span class="ico-no">✕</span> Often charged</td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> Zero setup fees</td>
+          </tr>
+          <tr>
+            <td>Lock-in contract</td>
+            <td>N/A</td>
+            <td><span class="ico-no">✕</span> Typically 12 months</td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> No lock-in</td>
+          </tr>
+          <tr>
+            <td>Fee structure</td>
+            <td>All costs on you</td>
+            <td>~10%+VAT of gross</td>
+            <td class="td-eleva"><strong>30% of net</strong> — fully transparent</td>
+          </tr>
+          <tr>
+            <td>2026 compliance guarantee</td>
+            <td><span class="ico-no">✕</span></td>
+            <td><span class="ico-meh">~</span></td>
+            <td class="td-eleva"><span class="ico-yes">✓</span> Every property compliant</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">Fee note: a manager at 10%+18% VAT = ~11.8% effective fee. Eleva's 30% applies to <em>net revenue after OTA fees</em> (~85% of gross), equating to ~25.5% of gross — with AI pricing generating 30%+ more revenue to offset. Source: Gobnb public pricing, June 2026.</p>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center">
+      <div class="sec-label">What's Included</div>
+      <h2 class="sec-h">Everything Handled. Nothing Left to You.</h2>
+      <p class="sec-sub" style="max-width:500px;margin:.75rem auto 0">Licencing is just the beginning. Once approved, Eleva manages every aspect of your property.</p>
+    </div>
+    <div class="inc-grid">
+      <div class="inc-card">
+        <div class="inc-icon">📋</div>
+        <div class="inc-title">MTA Licence Application</div>
+        <p class="inc-body">Full document prep, Perit coordination, MTA portal submission, inspection attendance, and approval tracking. Zero first-submission failures to date.</p>
+        <span class="inc-tag inc-tag--green">✓ Included in management</span>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">🔄</div>
+        <div class="inc-title">Annual Licence Renewal</div>
+        <p class="inc-body">Eleva tracks every renewal date, prepares the renewal paperwork, and resubmits before expiry. You'll never operate with an expired licence.</p>
+        <span class="inc-tag inc-tag--green">✓ Included in management</span>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">💶</div>
+        <div class="inc-title">Eco-Contribution &amp; Tax</div>
+        <p class="inc-body">Malta's €0.50/guest/night eco levy is collected from guests and remitted to authorities automatically — fully documented in your monthly statement.</p>
+        <span class="inc-tag inc-tag--green">✓ Included in management</span>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">📸</div>
+        <div class="inc-title">Professional Photography</div>
+        <p class="inc-body">Properties with professional photos earn 26% more per booking on Airbnb. Eleva organises and funds the shoot as part of your onboarding — no extra cost.</p>
+        <span class="inc-tag inc-tag--green">✓ Included in management</span>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">📊</div>
+        <div class="inc-title">AI Dynamic Pricing</div>
+        <p class="inc-body">Your nightly rate is adjusted daily based on Malta demand, competitor rates, local events, and seasonal patterns. Portfolio average: 30%+ revenue uplift vs self-managed.</p>
+        <span class="inc-tag inc-tag--gold">Ongoing management</span>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">🎧</div>
+        <div class="inc-title">24/7 Guest Communication</div>
+        <p class="inc-body">Every enquiry answered, every issue resolved — in English, Italian, and other major languages. Eleva-managed properties average 4.9/5 across all platforms.</p>
+        <span class="inc-tag inc-tag--gold">Ongoing management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCOME TABLE -->
+<section class="sec sec--cream">
+  <div class="wrap">
+    <div class="center">
+      <div class="sec-label">What You Can Earn</div>
+      <h2 class="sec-h">Licensed Properties Earn More.</h2>
+      <p class="sec-sub" style="max-width:540px;margin:.75rem auto 0">Monthly net owner earnings after Eleva's 30% management fee. BnbCalc p75 data, May 2026.</p>
+    </div>
+    <div class="income-wrap">
+      <table class="income-table">
+        <thead>
+          <tr>
+            <th>Property Type</th>
+            <th>Location</th>
+            <th>Avg Occupancy</th>
+            <th>Avg Nightly Rate</th>
+            <th>Monthly Net to Owner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Studio</td><td>Sliema / St Julian's</td><td>65%</td><td>€110/night</td><td>€1,550</td></tr>
+          <tr><td>1 Bedroom</td><td>Sliema</td><td>65%</td><td>€133/night</td><td>€1,870</td></tr>
+          <tr><td>1 Bedroom</td><td>Valletta</td><td>75%</td><td>€130/night</td><td>€2,060</td></tr>
+          <tr><td>2 Bedrooms</td><td>St Julian's</td><td>66%</td><td>€168/night</td><td>€2,340</td></tr>
+          <tr><td>2 Bedrooms</td><td>Mellieħa</td><td>64%</td><td>€183/night</td><td>€2,460</td></tr>
+          <tr><td>3 Bedrooms</td><td>Valletta / Sliema</td><td>70%</td><td>€234/night</td><td>€3,450</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.76rem;color:var(--muted);margin-top:1rem;text-align:center">Net = Gross × 0.85 (after OTA fees) × 0.70 (after Eleva 30%). BnbCalc p75, May 2026. Results vary by property and season.</p>
+    <div style="text-align:center;margin-top:2.5rem">
+      <a href="#cta" class="btn btn--gold btn--lg">Get My Property's Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="trust__in">
+    <div class="trust__item">
+      <div class="trust__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <div>
+        <span class="trust__title">100% Licensed Portfolio</span>
+        <span class="trust__sub">Every Eleva-managed property holds a valid MTA licence</span>
+      </div>
+    </div>
+    <span class="trust__rule"></span>
+    <div class="trust__item">
+      <div class="trust__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+      </div>
+      <div>
+        <span class="trust__title">No Compliance Violations</span>
+        <span class="trust__sub">Zero fines or enforcement actions across the entire portfolio</span>
+      </div>
+    </div>
+    <span class="trust__rule"></span>
+    <div class="trust__item">
+      <div class="trust__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div>
+        <span class="trust__title">Real-Time Owner Portal</span>
+        <span class="trust__sub">Earnings, bookings, and statements accessible 24/7</span>
+      </div>
+    </div>
+    <span class="trust__rule"></span>
+    <div class="trust__item">
+      <div class="trust__icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+      </div>
+      <div>
+        <span class="trust__title">24/7 Owner &amp; Guest Support</span>
+        <span class="trust__sub">Round-the-clock assistance, every day of the year</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIAL -->
+<section class="sec sec--sand">
+  <div class="wrap">
+    <div class="center">
+      <div class="sec-label">Owner Experience</div>
+      <h2 class="sec-h">What owners say</h2>
+    </div>
+    <div class="testi-card">
+      <span class="testi-stars">★★★★★</span>
+      <p class="testi-quote">I tried to apply for the MTA licence myself for three months. Eleva had my licence approved in five weeks and my property live on Airbnb the week after. I wish I'd called them on day one.</p>
+      <div class="testi-author">
+        <div class="testi-av">MB</div>
+        <div>
+          <div class="testi-name">Marco B.</div>
+          <div class="testi-detail">2-bedroom apartment, Valletta · Owner since 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap-sm">
+    <div class="center">
+      <div class="sec-label">Common Questions</div>
+      <h2 class="sec-h">What owners ask about the MTA licence</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item open">
+        <button class="faq-btn">
+          <span class="faq-q">Do I need a licence if I only rent occasionally?</span>
+          <span class="faq-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-body" style="height:auto">
+          <div class="faq-inner">Yes — the licence applies regardless of frequency. Any property rented to tourists for any period under 3 months requires a Holiday Furnished Premises Licence. There are no exemptions for occasional or seasonal rentals.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">Does each property need its own licence?</span>
+          <span class="faq-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">Yes. Licences are property-specific — not owner-specific or agency-specific. If you own three apartments and want to rent all three, you need three separate licences, each with its own application, inspection, and annual fee. There is no blanket licence covering multiple units.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">How long does the licencing process take?</span>
+          <span class="faq-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">The MTA targets 5 working days for document vetting, followed by a property inspection, and 10 further working days for approval. In practice, plan for 4–6 weeks from submission to licence — assuming complete documents and a first-time inspection pass, which Eleva's pre-inspection walkthrough is designed to ensure.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">I live abroad — can Eleva handle everything remotely?</span>
+          <span class="faq-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">Yes — most of our owners are overseas. Eleva acts as your full local representative. We submit the application, manage MTA correspondence, attend the inspection, and receive the licence on your behalf. You don't need to be in Malta at any point during the process.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">What if my property fails the MTA inspection?</span>
+          <span class="faq-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">Before any MTA submission, Eleva conducts a full pre-inspection walkthrough of your property against MTA standards. We identify and resolve compliance gaps — fire equipment, furnishing requirements, signage — before the official visit. Our properties have a strong first-time pass rate as a result.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">What does the MTA licence cost and who pays for it?</span>
+          <span class="faq-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">The MTA annual licence fee is €130 per unit in Malta (€104 in Gozo), paid directly to the MTA by the owner. A one-time application fee also applies. Eleva's service — preparing and managing the entire licencing process — is included in your management agreement at no additional charge.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn">
+          <span class="faq-q">Can I rent my property while the application is pending?</span>
+          <span class="faq-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">No. You must hold a valid licence before accepting any bookings. From May 2026, Airbnb and Booking.com verify licence numbers and unlicensed properties face listing removal. This makes starting the application process immediately the only safe path forward.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FORM -->
+<section class="cta-sec" id="cta">
+  <div class="cta-wrap">
+    <div class="sec-label sec-label--light" style="margin-bottom:1.25rem">Get Started</div>
+    <h2 class="sec-h sec-h--white" style="font-size:clamp(2rem,4vw,3rem)">Get Your Free<br>Compliance Check</h2>
+    <p class="sec-sub sec-sub--white" style="margin-top:.75rem">Free, no obligation. We'll review your property's licence status and send you a personalised income estimate within 24 hours.</p>
+    <form class="form" onsubmit="return false">
+      <div class="form-row">
+        <div>
+          <label class="form-label">Your Name</label>
+          <input class="form-input" type="text" placeholder="Maria Borg">
+        </div>
+        <div>
+          <label class="form-label">Phone / WhatsApp</label>
+          <input class="form-input" type="tel" placeholder="+356 xxxx xxxx">
+        </div>
+      </div>
+      <div>
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" placeholder="maria@example.com">
+      </div>
+      <div>
+        <label class="form-label">Property Location</label>
+        <select class="form-input form-select">
+          <option value="" disabled selected>Select area</option>
+          <option>Sliema</option>
+          <option>St Julian's / Paceville</option>
+          <option>Valletta</option>
+          <option>Gzira</option>
+          <option>Mellieħa</option>
+          <option>Bugibba / St Paul's Bay</option>
+          <option>Other Malta location</option>
+        </select>
+      </div>
+      <div>
+        <label class="form-label">Current Licence Status</label>
+        <select class="form-input form-select">
+          <option value="" disabled selected>Select status</option>
+          <option>No licence — never applied</option>
+          <option>Application in progress — stuck</option>
+          <option>Licence expired</option>
+          <option>Already licensed — looking for management</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--gold btn--lg btn--full" style="margin-top:.5rem">Get My Free Compliance Check →</button>
+      <p class="form-note">No commitment. Response within 24 hours. Your data is never shared.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Eleva Group · Malta Tourism Authority Licensed · All figures are estimates based on market data. Individual results vary.</p>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a href="https://wa.me/393514901584" target="_blank" rel="noopener" class="wa-fab" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg>
+</a>
+
+<script>
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const body = item.querySelector('.faq-body');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-body').style.height = '0';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      body.style.height = body.scrollHeight + 'px';
+    }
+  });
+});
+const first = document.querySelector('.faq-item.open .faq-body');
+if (first) first.style.height = first.scrollHeight + 'px';
+</script>
+</body>
+</html>

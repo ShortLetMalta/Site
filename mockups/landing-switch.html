@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Switch Malta Property Manager | Earn More with Eleva Malta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/components.css">
+<style>
+  .lp-bar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;background:rgba(17,17,17,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:center}
+  .lp-bar__inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1280px;margin:0 auto;padding:0 2rem}
+  .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.45);transition:transform 0.2s}
+  .wa-float:hover{transform:scale(1.08)}
+  .cta-input{width:100%;padding:14px 18px;border:1.5px solid rgba(255,255,255,0.12);border-radius:12px;font-family:var(--font-body);font-size:0.95rem;color:#fff;background:rgba(255,255,255,0.06);outline:none;transition:border-color 0.2s}
+  .cta-input:focus{border-color:rgba(201,169,110,0.6)}
+  .cta-input::placeholder{color:rgba(255,255,255,0.35)}
+  .cta-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:44px;appearance:none;-webkit-appearance:none}
+  .hero-switch{position:relative;min-height:80vh;display:flex;align-items:center;background:#111;overflow:hidden}
+  .hero-switch__bg{position:absolute;inset:0;background:linear-gradient(120deg,rgba(17,17,17,0.95) 0%,rgba(17,17,17,0.75) 60%,rgba(17,17,17,0.4) 100%)}
+  .hero-switch__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45}
+  .hero-switch__content{position:relative;z-index:2;padding:8rem 0 6rem;max-width:700px}
+  .warning-banner{background:rgba(201,169,110,0.12);border:1px solid rgba(201,169,110,0.3);border-radius:12px;padding:1rem 1.5rem;display:inline-flex;align-items:center;gap:0.75rem;margin-bottom:2rem}
+  .warning-banner__text{font-size:0.875rem;color:#C9A96E;font-weight:600}
+  .signs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:2.5rem}
+  .sign-item{display:flex;gap:1rem;padding:1.5rem;border-radius:16px;background:#FAFAF8;border:1px solid #F0F0F0;align-items:flex-start}
+  .sign-icon{font-size:1.5rem;flex-shrink:0}
+  .sign-title{font-weight:700;font-size:0.95rem;margin-bottom:0.3rem}
+  .sign-text{font-size:0.85rem;color:#616161;line-height:1.6}
+  .income-comparison{display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center;margin-top:2.5rem}
+  .income-col{background:#FAFAF8;border-radius:20px;padding:2.5rem 2rem;text-align:center}
+  .income-col--after{background:#111}
+  .income-col__label{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#9E9E9E;margin-bottom:0.75rem}
+  .income-col--after .income-col__label{color:rgba(255,255,255,0.4)}
+  .income-col__amount{font-family:'Cormorant Garamond',Georgia,serif;font-size:3rem;font-weight:800;color:#111;line-height:1}
+  .income-col--after .income-col__amount{color:#C9A96E}
+  .income-col__sub{font-size:0.8rem;color:#9E9E9E;margin-top:0.5rem}
+  .income-col--after .income-col__sub{color:rgba(255,255,255,0.5)}
+  .arrow-circle{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#C9A96E,#A07D45);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff;flex-shrink:0}
+  .switch-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+  .switch-step{text-align:center;padding:2rem 1.5rem;background:#FAFAF8;border-radius:20px}
+  .switch-step__num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#C9A96E,#A07D45);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:800;color:#fff}
+  .switch-step__title{font-weight:700;margin-bottom:0.5rem}
+  .switch-step__text{font-size:0.875rem;color:#616161;line-height:1.6}
+  .guarantee-box{background:#111;border-radius:24px;padding:3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2.5rem}
+  .guarantee-item{display:flex;gap:1rem;align-items:flex-start}
+  .guarantee-icon{width:44px;height:44px;border-radius:12px;background:rgba(201,169,110,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+  .guarantee-title{font-weight:700;color:#fff;margin-bottom:0.3rem}
+  .guarantee-text{font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.6}
+</style>
+</head>
+<body>
+
+<div class="lp-bar">
+  <div class="lp-bar__inner">
+    <a href="../index.html" class="nav__logo">ELEVA MALTA<span class="nav__logo-dot"></span></a>
+    <a href="https://wa.me/393514901584" target="_blank" rel="noopener" class="btn btn-gold btn-sm" style="display:inline-flex;align-items:center;gap:0.5rem"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg> WhatsApp</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero-switch">
+  <img src="../images/location-valletta.png" class="hero-switch__img" alt="Malta property">
+  <div class="hero-switch__bg"></div>
+  <div class="container hero-switch__content">
+    <div class="warning-banner">
+      <span>⚠️</span>
+      <span class="warning-banner__text">Most Malta properties are underperforming by 30–40%</span>
+    </div>
+    <h1 class="heading-1 text-white" style="margin-bottom:1.5rem">
+      Earning Less Than<br>
+      <span style="color:#C9A96E">Your Property</span><br>Deserves?
+    </h1>
+    <p class="subheading text-white" style="opacity:0.85;margin-bottom:2.5rem">
+      Switching your Malta property management to Eleva takes less than 2 weeks — and on average increases net owner income by 30–45%. No downtime, no hassle.
+    </p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+      <a href="#cta-form" class="btn btn-gold btn-lg">Get a Free Income Audit</a>
+      <a href="../calculator.html" class="btn btn-outline btn-lg">Calculate What I Should Earn</a>
+    </div>
+  </div>
+</header>
+
+<!-- SIGNS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="label">Is This You?</div>
+      <h2 class="heading-2">Signs Your Property Manager Isn't Performing</h2>
+    </div>
+    <div class="signs-grid">
+      <div class="sign-item">
+        <div class="sign-icon">💸</div>
+        <div>
+          <div class="sign-title">Your occupancy is below 75%</div>
+          <p class="sign-text">BnbCalc comparables show Sliema market average at 68%, Valletta at 74–75%. Below 60% means revenue is being left on the table every single month.</p>
+        </div>
+      </div>
+      <div class="sign-item">
+        <div class="sign-icon">🔇</div>
+        <div>
+          <div class="sign-title">You don't know what's happening</div>
+          <p class="sign-text">If your manager only contacts you with problems or at month-end, you're flying blind. You should have real-time visibility of your own property.</p>
+        </div>
+      </div>
+      <div class="sign-item">
+        <div class="sign-icon">💰</div>
+        <div>
+          <div class="sign-title">Hidden fees keep appearing</div>
+          <p class="sign-text">Cleaning surcharges, maintenance markups, "admin fees." Eleva charges one rate: 30% net of OTA fees. Nothing else, ever.</p>
+        </div>
+      </div>
+      <div class="sign-item">
+        <div class="sign-icon">⭐</div>
+        <div>
+          <div class="sign-title">Guest reviews below 4.7</div>
+          <p class="sign-text">Anything below 4.7 on Airbnb hurts your ranking and ADR. Our managed properties average 4.9/5. Guest experience is a direct income lever.</p>
+        </div>
+      </div>
+      <div class="sign-item">
+        <div class="sign-icon">📊</div>
+        <div>
+          <div class="sign-title">Static pricing all year</div>
+          <p class="sign-text">If your manager charges the same rate in January as in August, you're losing thousands. Eleva's AI adjusts pricing daily based on live demand.</p>
+        </div>
+      </div>
+      <div class="sign-item">
+        <div class="sign-icon">📋</div>
+        <div>
+          <div class="sign-title">MTA compliance is your problem</div>
+          <p class="sign-text">Your manager should handle MTA licence renewals, eco-contribution collection, and tax reporting. If they don't — you're exposed to fines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCOME COMPARISON -->
+<section class="section bg-sand" style="padding:5rem 0">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="label">The Numbers</div>
+      <h2 class="heading-2">What Switching Actually Means for Your Income</h2>
+      <p class="subheading" style="margin:0.75rem auto 0;max-width:560px">Real figures for a typical managed 1-bedroom apartment in Sliema, Malta.</p>
+    </div>
+    <div class="income-comparison">
+      <div class="income-col">
+        <div class="income-col__label">With Your Current Manager</div>
+        <div class="income-col__amount">€1,100</div>
+        <div class="income-col__sub">avg monthly net<br>55–62% occupancy</div>
+        <div style="margin-top:1.5rem;font-size:0.8rem;color:#9E9E9E">Static pricing, 1 platform,<br>20% fee + hidden extras</div>
+      </div>
+      <div class="arrow-circle">→</div>
+      <div class="income-col income-col--after">
+        <div class="income-col__label">With Eleva Malta</div>
+        <div class="income-col__amount">€1,510</div>
+        <div class="income-col__sub">avg monthly net<br>68% occupancy, €104/night</div>
+        <div style="margin-top:1.5rem;font-size:0.8rem;color:rgba(255,255,255,0.4)">AI pricing, 4 platforms,<br>one transparent 30% fee</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.8rem;color:#9E9E9E;margin-top:1.5rem">Example: 1-bed Sliema. Before = 58% occ / €88 ADR / hidden fees. After = BnbCalc comparable data, Sliema, May 2026. EUR/USD 0.92. Individual results vary.</p>
+  </div>
+</section>
+
+<!-- HOW TO SWITCH -->
+<section class="section">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="label">The Switch Process</div>
+      <h2 class="heading-2">Switching Takes Less Than 2 Weeks</h2>
+      <p class="subheading" style="margin:0.75rem auto 0;max-width:520px">We handle the entire transition. Zero downtime, zero guest disruption.</p>
+    </div>
+    <div class="switch-steps">
+      <div class="switch-step">
+        <div class="switch-step__num">1</div>
+        <div class="switch-step__title">Free Income Audit</div>
+        <p class="switch-step__text">We review your property's current performance — occupancy, ADR, reviews — and show you exactly what you're missing.</p>
+      </div>
+      <div class="switch-step">
+        <div class="switch-step__num">2</div>
+        <div class="switch-step__title">Notice & Handover</div>
+        <p class="switch-step__text">We help you exit your current agreement and coordinate the handover, including MTA licence transfer and listing migration.</p>
+      </div>
+      <div class="switch-step">
+        <div class="switch-step__num">3</div>
+        <div class="switch-step__title">Relaunch & Optimise</div>
+        <p class="switch-step__text">New professional photography, relisted on 4 platforms with AI pricing. Most properties see income increase within the first month.</p>
+      </div>
+    </div>
+    <div class="guarantee-box">
+      <div>
+        <div class="label" style="color:#C9A96E;margin-bottom:1.5rem">Our Guarantee</div>
+        <h3 class="heading-3 text-white" style="margin-bottom:1rem">If We Don't Beat Your Current Income, We'll Tell You</h3>
+        <p style="color:rgba(255,255,255,0.6);line-height:1.7;font-size:0.95rem">Our free income audit is honest. If your property is already at its ceiling, we'll say so. We only take on management where we're confident we can improve results.</p>
+        <a href="#cta-form" class="btn btn-gold" style="margin-top:2rem">Book a Free Audit</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div class="guarantee-item">
+          <div class="guarantee-icon">🔒</div>
+          <div>
+            <div class="guarantee-title">No Lock-In Contracts</div>
+            <div class="guarantee-text">Month-to-month. Leave any time with 30 days notice.</div>
+          </div>
+        </div>
+        <div class="guarantee-item">
+          <div class="guarantee-icon">💯</div>
+          <div>
+            <div class="guarantee-title">One Transparent Fee</div>
+            <div class="guarantee-text">30% net of OTA fees. No setup, no extras, no surprises.</div>
+          </div>
+        </div>
+        <div class="guarantee-item">
+          <div class="guarantee-icon">⚡</div>
+          <div>
+            <div class="guarantee-title">Zero Downtime</div>
+            <div class="guarantee-text">Existing bookings honoured. We switch without losing a single night.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FORM -->
+<section id="cta-form" style="background:#111;padding:7rem 0">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:1020px;margin:0 auto">
+      <div>
+        <div class="label" style="color:#C9A96E;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem"><span style="width:24px;height:1.5px;background:#C9A96E;display:block"></span>Free Income Audit</div>
+        <h2 class="heading-2 text-white" style="margin-bottom:1.25rem">Find Out What You're Missing Every Month</h2>
+        <p style="color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:2.5rem;font-size:0.95rem">We'll review your current performance — occupancy, ADR, reviews — and show you exactly what switching to Eleva would mean for your income. Free, honest, no commitment.</p>
+        <a href="https://wa.me/393514901584" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.875rem;padding:18px 36px;background:#25D366;color:#fff;border-radius:99px;font-weight:700;font-size:1.05rem;text-decoration:none;box-shadow:0 8px 32px rgba(37,211,102,0.3)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg>
+          Request Free Audit on WhatsApp
+        </a>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:1rem">Or use the form — we'll respond within 2 hours.</p>
+      </div>
+      <form name="switch-audit" method="POST" action="../contact.html" style="display:flex;flex-direction:column;gap:1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:2.5rem">
+        <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:700;color:#fff;margin-bottom:0.25rem">Book a Free Income Audit</h3>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);margin-bottom:0.75rem">We'll compare your current income to what Eleva would deliver.</p>
+        <input type="text" name="name" placeholder="Your full name" class="cta-input" required>
+        <input type="text" name="location" placeholder="Property location in Malta" class="cta-input" required>
+        <select name="bedrooms" class="cta-input cta-select" required>
+          <option value="" disabled selected>Number of bedrooms</option>
+          <option value="studio">Studio</option>
+          <option value="1">1 Bedroom</option>
+          <option value="2">2 Bedrooms</option>
+          <option value="3+">3+ Bedrooms</option>
+        </select>
+        <select name="current_manager" class="cta-input cta-select">
+          <option value="" disabled selected>Current situation</option>
+          <option value="self">Self-managing</option>
+          <option value="agency">With a management company</option>
+          <option value="long-term">Currently long-term let</option>
+          <option value="vacant">Property is vacant</option>
+        </select>
+        <input type="tel" name="phone" placeholder="Your WhatsApp number" class="cta-input" required>
+        <button type="submit" style="padding:18px;background:linear-gradient(135deg,#C9A96E,#A07D45);color:#fff;border:none;border-radius:12px;font-family:var(--font-body);font-size:1rem;font-weight:700;cursor:pointer;margin-top:0.5rem;box-shadow:0 8px 24px rgba(201,169,110,0.35)">Get My Free Income Audit →</button>
+        <p style="font-size:0.72rem;color:rgba(255,255,255,0.25);text-align:center;margin:0">No obligation. 100% honest assessment.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/393514901584" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.445 0 .01 5.437 0 12.045c0 2.112.552 4.173 1.6 6.012L0 24l6.135-1.61a11.782 11.782 0 005.91 1.586h.005c6.604 0 12.039-5.437 12.042-12.045a11.807 11.807 0 00-3.534-8.514z"/></svg>
+</a>
+
+</body>
+</html>

@@ -10,7 +10,7 @@
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  transition: all 0.4s var(--ease-smooth)
+  transition: background 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth)
 }
 
 .nav--transparent {
@@ -21,7 +21,7 @@
   background: rgba(17, 17, 17, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08)
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08)
 }
 
 .nav__inner {
@@ -1054,7 +1054,10 @@
   }
 
   .nav__mobile {
-    display: flex
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
   }
 
   .footer__grid {
