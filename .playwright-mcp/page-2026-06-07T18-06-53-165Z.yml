@@ -1,0 +1,378 @@
+- generic [active] [ref=e1]:
+  - link "Passa ai contenuti principali" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - region "developers.google.com utilizza i cookie di Google per erogare i propri servizi, migliorarne la qualità e analizzare il traffico." [ref=e4]:
+      - paragraph [ref=e5]:
+        - text: developers.google.com utilizza i cookie di Google per erogare i propri servizi, migliorarne la qualità e analizzare il traffico.
+        - link "Scopri di più su come Google utilizza i cookie. Si apre in una nuova scheda." [ref=e6] [cursor=pointer]:
+          - /url: https://policies.google.com/technologies/cookies?hl=it
+          - text: Scopri di più
+      - button "Ok" [ref=e7] [cursor=pointer]
+    - banner:
+      - generic:
+        - generic [ref=e10]:
+          - text: menu
+          - generic [ref=e11]:
+            - link "Google Search Central" [ref=e12] [cursor=pointer]:
+              - /url: https://developers.google.com/search?hl=it
+              - img "Google Search Central" [ref=e15]
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - link "GoogleSearch Central" [ref=e19] [cursor=pointer]:
+                  - /url: https://developers.google.com/search?hl=it
+                  - img "Google" [ref=e20]
+                  - text: Search Central
+          - generic [ref=e22]:
+            - navigation "Schede superiori" [ref=e25]:
+              - generic [ref=e26]:
+                - link "Documentazione, selected" [ref=e27] [cursor=pointer]:
+                  - /url: https://developers.google.com/search/docs?hl=it
+                  - text: Documentazione
+                - button "Menu a discesa per Documentazione" [ref=e28] [cursor=pointer]: arrow_drop_down
+              - link "Assistenza" [ref=e30] [cursor=pointer]:
+                - /url: https://developers.google.com/search/help?hl=it
+              - link "Blog" [ref=e32] [cursor=pointer]:
+                - /url: https://developers.google.com/search/blog?hl=it
+              - generic [ref=e33]:
+                - button "Menu a discesa per la navigazione estesa" [ref=e34] [cursor=pointer]: arrow_drop_down Altro
+                - text: arrow_drop_down
+            - generic [ref=e38]:
+              - combobox "Cerca" [ref=e39]
+              - img [ref=e41]
+              - generic [ref=e44]: /
+          - generic "Seleziona le preferenze relative alla lingua." [ref=e45]:
+            - button "Language" [ref=e46] [cursor=pointer]:
+              - img
+              - generic [ref=e47]: Language
+              - img
+          - link "Accedi" [ref=e50] [cursor=pointer]:
+            - /url: https://developers.google.com/_d/signin?continue=https%3A%2F%2Fdevelopers.google.com%2Fsearch%2Fdocs%2Fessentials%3Fhl%3Dit&prompt=select_account
+        - generic [ref=e53]:
+          - list [ref=e56]:
+            - listitem [ref=e57]:
+              - link "Documentation" [ref=e58] [cursor=pointer]:
+                - /url: https://developers.google.com/search/docs?hl=it
+          - link "Search Console" [ref=e60] [cursor=pointer]:
+            - /url: https://goo.gle/searchconsole
+    - generic [ref=e62]:
+      - text: filter_list close
+      - navigation "Menu laterale" [ref=e63]:
+        - text: arrow_back
+        - generic [ref=e64]:
+          - text: arrow_forward arrow_forward arrow_forward arrow_forward
+          - list [ref=e66]:
+            - listitem [ref=e67]:
+              - link "Presentazione" [ref=e68] [cursor=pointer]:
+                - /url: /search/docs
+                - generic [ref=e69]: Presentazione
+            - listitem [ref=e70]:
+              - generic [ref=e71]:
+                - generic [ref=e72] [cursor=pointer]: arrow_drop_down
+                - button "Nozioni di base sulla Ricerca" [ref=e73] [cursor=pointer]:
+                  - generic [ref=e74]: Nozioni di base sulla Ricerca
+                - list [ref=e75]:
+                  - listitem [ref=e76]:
+                    - link "Panoramica" [ref=e77] [cursor=pointer]:
+                      - /url: /search/docs/essentials
+                      - generic [ref=e78]: Panoramica
+                  - listitem [ref=e79]:
+                    - link "Requisiti tecnici" [ref=e80] [cursor=pointer]:
+                      - /url: /search/docs/essentials/technical
+                      - generic [ref=e81]: Requisiti tecnici
+                  - listitem [ref=e82]:
+                    - link "Norme relative allo spam" [ref=e83] [cursor=pointer]:
+                      - /url: /search/docs/essentials/spam-policies
+                      - generic [ref=e84]: Norme relative allo spam
+            - listitem [ref=e85]:
+              - generic [ref=e86]:
+                - generic [ref=e87] [cursor=pointer]: expand_less
+                - button "Concetti fondamentali della SEO" [ref=e88] [cursor=pointer]:
+                  - generic [ref=e89]: Concetti fondamentali della SEO
+                - text: arrow_drop_down
+            - listitem [ref=e90]:
+              - generic [ref=e91]:
+                - generic [ref=e92] [cursor=pointer]: expand_less
+                - button "Scansione e indicizzazione" [ref=e93] [cursor=pointer]:
+                  - generic [ref=e94]: Scansione e indicizzazione
+                - text: arrow_drop_down arrow_drop_down arrow_drop_down arrow_drop_down open_in_new open_in_new open_in_new arrow_drop_down open_in_new arrow_drop_down arrow_drop_down arrow_drop_down not_interested arrow_drop_down arrow_drop_down arrow_drop_down arrow_drop_down arrow_drop_down
+            - listitem [ref=e95]:
+              - generic [ref=e96]:
+                - generic [ref=e97] [cursor=pointer]: expand_less
+                - button "Ranking e aspetto nella ricerca" [ref=e98] [cursor=pointer]:
+                  - generic [ref=e99]: Ranking e aspetto nella ricerca
+                - text: arrow_drop_down open_in_new arrow_drop_down arrow_drop_down arrow_drop_down open_in_new arrow_drop_down arrow_drop_down verified_user not_interested arrow_drop_down verified_user arrow_drop_down arrow_drop_down arrow_drop_down
+            - listitem [ref=e100]:
+              - generic [ref=e101]:
+                - generic [ref=e102] [cursor=pointer]: expand_less
+                - button "Monitoraggio e debug" [ref=e103] [cursor=pointer]:
+                  - generic [ref=e104]: Monitoraggio e debug
+                - text: arrow_drop_down arrow_drop_down arrow_drop_down
+            - listitem [ref=e105]:
+              - generic [ref=e106]:
+                - generic [ref=e107] [cursor=pointer]: expand_less
+                - button "Guide per siti specifici" [ref=e108] [cursor=pointer]:
+                  - generic [ref=e109]: Guide per siti specifici
+                - text: arrow_drop_down arrow_drop_down arrow_drop_down
+    - button "Nascondi navigazione laterale" [expanded] [ref=e110] [cursor=pointer]:
+      - generic [ref=e111]: chevron_left
+    - generic [ref=e112]:
+      - main [ref=e113]:
+        - generic [ref=e114]:
+          - article [ref=e115]:
+            - navigation [ref=e116]:
+              - list "Breadcrumb" [ref=e117]:
+                - listitem [ref=e118]:
+                  - link "Home page" [ref=e119] [cursor=pointer]:
+                    - /url: https://developers.google.com/?hl=it
+                - listitem [ref=e120]:
+                  - generic [ref=e121]: chevron_right
+                  - link "Search Central" [ref=e122] [cursor=pointer]:
+                    - /url: https://developers.google.com/search?hl=it
+                - listitem [ref=e123]:
+                  - generic [ref=e124]: chevron_right
+                  - link "Documentation" [ref=e125] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs?hl=it
+            - button "Invia feedback" [ref=e127] [cursor=pointer]
+            - list [ref=e129]:
+              - listitem [ref=e130]:
+                - heading "Su questa pagina" [level=2] [ref=e131]:
+                  - generic [ref=e132]: Su questa pagina
+                - text: expand_more
+              - listitem [ref=e133]:
+                - link "Requisiti tecnici" [ref=e134] [cursor=pointer]:
+                  - /url: "#technical-requirements"
+                  - generic [ref=e135]: Requisiti tecnici
+              - listitem [ref=e136]:
+                - link "Norme relative allo spam" [ref=e137] [cursor=pointer]:
+                  - /url: "#spam-policies"
+                  - generic [ref=e138]: Norme relative allo spam
+              - listitem [ref=e139]:
+                - link "Best practice chiave" [ref=e140] [cursor=pointer]:
+                  - /url: "#key-best-practices"
+                  - generic [ref=e141]: Best practice chiave
+              - listitem: more_horiz
+            - generic [ref=e142]:
+              - heading "Nozioni di base sulla Ricerca Google Strumenti LLM" [level=1] [ref=e143]:
+                - text: Nozioni di base sulla Ricerca Google
+                - group "Strumenti LLM" [ref=e146]:
+                  - button "Copia pagina come Markdown" [ref=e148] [cursor=pointer]:
+                    - generic: content_copy
+                  - button "Altre opzioni per gli strumenti LLM" [ref=e151] [cursor=pointer]: arrow_drop_down
+              - paragraph [ref=e152]: "Le Nozioni di base sulla Ricerca Google riguardano gli aspetti fondamentali relativi a ciò che rende i tuoi contenuti basati sul web (pagine web, immagini, video o altro materiale disponibile pubblicamente che Google trova sul web) idonei a essere mostrati e a funzionare bene sulla Ricerca Google:"
+              - list [ref=e153]:
+                - listitem [ref=e154]: "Requisiti tecnici: ciò di cui Google ha bisogno in una pagina web per mostrarla nella Ricerca Google."
+                - listitem [ref=e155]: "Norme relative allo spam: i comportamenti e le tattiche che possono portare a un ranking inferiore o una rimozione completa dai risultati della Ricerca Google."
+                - listitem [ref=e156]: "Best practice chiave: gli elementi principali che possono contribuire a migliorare l'aspetto del tuo sito nei risultati della Ricerca Google."
+              - paragraph [ref=e157]:
+                - text: Non è previsto alcun costo per comparire nei risultati della Ricerca Google, indipendentemente da quello che puoi sentir dire da altre persone. Tieni presente che il semplice fatto che una pagina soddisfi tutti questi requisiti e best practice non significa che Google eseguirà la scansione, l'indicizzazione o la pubblicazione dei suoi contenuti. Scopri di più su
+                - link "come funziona la Ricerca" [ref=e158] [cursor=pointer]:
+                  - /url: https://developers.google.com/search/docs/fundamentals/how-search-works?hl=it
+                - text: .
+              - 'heading "Requisiti tecnici Copia link in questa sezione: Requisiti tecnici" [level=2] [ref=e159]':
+                - heading "Requisiti tecnici" [level=2] [ref=e160]
+                - 'button "Copia link in questa sezione: Requisiti tecnici" [ref=e161] [cursor=pointer]': link
+              - paragraph [ref=e162]:
+                - text: I
+                - link "requisiti tecnici" [ref=e163] [cursor=pointer]:
+                  - /url: https://developers.google.com/search/docs/essentials/technical?hl=it
+                - text: fanno riferimento agli aspetti minimi indispensabili di cui la Ricerca Google ha bisogno per mostrare una pagina web nei risultati di ricerca. In realtà, sono davvero poche le operazioni tecniche da eseguire per una pagina web; la maggior parte dei siti soddisfa i requisiti tecnici senza che i proprietari se ne accorgano.
+              - heading "Norme relative allo spam" [level=2] [ref=e164]
+              - paragraph [ref=e165]:
+                - text: Le
+                - link "norme sullo spam" [ref=e166] [cursor=pointer]:
+                  - /url: https://developers.google.com/search/docs/essentials/spam-policies?hl=it
+                - text: descrivono in dettaglio i comportamenti e le tattiche che possono portare a un peggioramento del ranking di una pagina o di un intero sito oppure alla loro rimozione completa dalla Ricerca Google. I siti che si concentrano sull'offerta dei migliori contenuti e della migliore esperienza per le persone e che rispettano lo spirito dei nostri principi hanno maggiori probabilità di ottenere buone prestazioni nei risultati della Ricerca Google.
+              - heading "Best practice chiave" [level=2] [ref=e167]
+              - paragraph [ref=e168]:
+                - text: Anche se sono diverse le azioni che puoi intraprendere per
+                - link "migliorare la SEO del tuo sito" [ref=e169] [cursor=pointer]:
+                  - /url: https://developers.google.com/search/docs?hl=it
+                - text: ", esistono alcune pratiche principali che possono avere il massimo impatto sul ranking e sull'aspetto dei tuoi contenuti web nella Ricerca Google:"
+              - list [ref=e170]:
+                - listitem [ref=e171]:
+                  - link "Crea contenuti utili, affidabili e pensati per le persone" [ref=e172] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=it
+                  - text: .
+                - listitem [ref=e173]:
+                  - text: Utilizza parole che le persone userebbero per cercare i tuoi contenuti e posiziona queste parole in posizioni in evidenza nella pagina, ad esempio
+                  - link "il titolo e l'intestazione principale" [ref=e174] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/appearance/title-link?hl=it#page-titles
+                  - text: di una pagina, nonché in altri elementi descrittivi quali
+                  - link "testo alternativo" [ref=e175] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/appearance/google-images?hl=it#use-descriptive-alt-text
+                  - text: e testo del link.
+                - listitem [ref=e176]:
+                  - link "Rendi i link sottoponibili a scansione" [ref=e177] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/crawling-indexing/links-crawlable?hl=it#crawlable-links
+                  - text: in modo che Google possa trovare altre pagine sul tuo sito tramite i link sulla pagina.
+                - listitem [ref=e178]: Fai conoscere il tuo sito. Partecipa attivamente alle community in cui puoi far conoscere a persone che la pensano come te i servizi e i prodotti che menzioni sul sito.
+                - listitem [ref=e179]:
+                  - text: Se hai altri contenuti, ad esempio
+                  - link "immagini" [ref=e180] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/appearance/google-images?hl=it
+                  - text: ","
+                  - link "video" [ref=e181] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/appearance/video?hl=it
+                  - text: ","
+                  - link "dati strutturati" [ref=e182] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=it
+                  - text: e
+                  - link "JavaScript" [ref=e183] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics?hl=it
+                  - text: ", assicurati di seguire le specifiche best practice, in modo che anche noi possiamo comprendere queste parti nella pagina."
+                - listitem [ref=e184]:
+                  - text: Migliora l'
+                  - link "aspetto del sito" [ref=e185] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/appearance/visual-elements-gallery?hl=it
+                  - text: nella Ricerca Google abilitando funzionalità significative per il tuo sito.
+                - listitem [ref=e186]:
+                  - text: Se hai contenuti che non dovrebbero essere trovati nei risultati di ricerca oppure vuoi disattivare completamente le funzionalità, utilizza il metodo appropriato per
+                  - link "controllare in che modo i tuoi contenuti vengono visualizzati nella Ricerca Google" [ref=e187] [cursor=pointer]:
+                    - /url: https://developers.google.com/search/docs/crawling-indexing/control-what-you-share?hl=it
+                  - text: .
+            - button "Invia feedback" [ref=e189] [cursor=pointer]
+          - generic [ref=e190]:
+            - paragraph [ref=e191]:
+              - text: Salvo quando diversamente specificato, i contenuti di questa pagina sono concessi in base alla
+              - link "licenza Creative Commons Attribution 4.0" [ref=e192] [cursor=pointer]:
+                - /url: https://creativecommons.org/licenses/by/4.0/
+              - text: ", mentre gli esempi di codice sono concessi in base alla"
+              - link "licenza Apache 2.0" [ref=e193] [cursor=pointer]:
+                - /url: https://www.apache.org/licenses/LICENSE-2.0
+              - text: . Per ulteriori dettagli, consulta le
+              - link "norme del sito di Google Developers" [ref=e194] [cursor=pointer]:
+                - /url: https://developers.google.com/site-policies?hl=it
+              - text: . Java è un marchio registrato di Oracle e/o delle sue consociate.
+            - paragraph [ref=e195]: Ultimo aggiornamento 2025-12-18 UTC.
+      - navigation "Promozioni" [ref=e197]:
+        - list [ref=e198]:
+          - listitem [ref=e199]:
+            - link "LinkedIn feed for Google Search Central" [ref=e200] [cursor=pointer]:
+              - /url: https://www.linkedin.com/showcase/googlesearchcentral/
+              - img "LinkedIn" [ref=e202]
+              - text: LinkedIn
+            - generic [ref=e203]: Unisciti a noi su LinkedIn
+          - listitem [ref=e204]:
+            - link "Google Search Central YouTube channel" [ref=e205] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCWf2ZlNsCGDS89VBF_awNvA?hl=it
+              - img "YouTube" [ref=e207]
+              - text: YouTube
+            - generic [ref=e208]: Guarda i nostri video
+          - listitem [ref=e209]:
+            - link "RSS feed for the Search Central Blog" [ref=e210] [cursor=pointer]:
+              - /url: https://feeds.feedburner.com/blogspot/amDG
+              - img "Blog" [ref=e212]
+              - text: Blog
+            - generic [ref=e213]: Iscriviti al nostro feed RSS
+          - listitem [ref=e214]:
+            - link "Search Off the Record podcast episodes" [ref=e215] [cursor=pointer]:
+              - /url: https://pod.link/1512522198
+              - img "Podcast" [ref=e217]
+              - text: Podcast
+            - generic [ref=e218]: Ascolta Search Off the Record
+          - listitem [ref=e219]:
+            - link "Twitter feed for Google Search Central" [ref=e220] [cursor=pointer]:
+              - /url: https://twitter.com/googlesearchc
+              - img "X (Twitter)" [ref=e222]
+              - text: X (Twitter)
+            - generic [ref=e223]: Seguici su X (Twitter)
+      - navigation "Link piè di pagina" [ref=e225]:
+        - list [ref=e226]:
+          - listitem [ref=e227]:
+            - heading "Assistenza" [level=3] [ref=e228]
+            - list [ref=e229]:
+              - listitem [ref=e230]:
+                - link "Vai al forum di assistenza" [ref=e231] [cursor=pointer]:
+                  - /url: https://support.google.com/webmasters/community
+              - listitem [ref=e232]:
+                - link "Inviare una domanda durante la sessione di consulenza" [ref=e233] [cursor=pointer]:
+                  - /url: /search/help/office-hours
+              - listitem [ref=e234]:
+                - link "Segnalare spam, phishing o malware" [ref=e235] [cursor=pointer]:
+                  - /url: /search/help/report-quality-issues
+              - listitem [ref=e236]:
+                - link "Ulteriori risorse di assistenza" [ref=e237] [cursor=pointer]:
+                  - /url: /search/help
+          - listitem [ref=e238]:
+            - heading "Risorse" [level=3] [ref=e239]
+            - list [ref=e240]:
+              - listitem [ref=e241]:
+                - link "Hai bisogno di un SEO?" [ref=e242] [cursor=pointer]:
+                  - /url: /search/docs/fundamentals/get-on-google
+              - listitem [ref=e243]:
+                - link "Guida introduttiva alla SEO" [ref=e244] [cursor=pointer]:
+                  - /url: /search/docs/fundamentals/seo-starter-guide
+              - listitem [ref=e245]:
+                - link "Stato dei sistemi della Ricerca" [ref=e246] [cursor=pointer]:
+                  - /url: https://status.search.google.com
+              - listitem [ref=e247]:
+                - link "Documentazione di Search Console" [ref=e248] [cursor=pointer]:
+                  - /url: https://support.google.com/webmasters
+              - listitem [ref=e249]:
+                - link "Case study" [ref=e250] [cursor=pointer]:
+                  - /url: /search/case-studies/overview
+          - listitem [ref=e251]:
+            - heading "Strumenti" [level=3] [ref=e252]
+            - list [ref=e253]:
+              - listitem [ref=e254]:
+                - link "Search Console" [ref=e255] [cursor=pointer]:
+                  - /url: https://search.google.com/search-console
+              - listitem [ref=e256]:
+                - link "Test dei risultati avanzati" [ref=e257] [cursor=pointer]:
+                  - /url: https://search.google.com/test/rich-results
+              - listitem [ref=e258]:
+                - link "PageSpeed Insights" [ref=e259] [cursor=pointer]:
+                  - /url: https://pagespeed.web.dev
+              - listitem [ref=e260]:
+                - link "Test delle pagine AMP" [ref=e261] [cursor=pointer]:
+                  - /url: https://search.google.com/test/amp
+      - generic [ref=e263]:
+        - navigation "Altri siti web di Google Developers" [ref=e264]:
+          - link "Google Developers" [ref=e265] [cursor=pointer]:
+            - /url: https://developers.google.com/?hl=it
+            - img "Google Developers" [ref=e267]
+          - list [ref=e268]:
+            - listitem [ref=e269]:
+              - link "Android" [ref=e270] [cursor=pointer]:
+                - /url: //developer.android.com?hl=it
+            - listitem [ref=e271]:
+              - link "Chrome" [ref=e272] [cursor=pointer]:
+                - /url: //developer.chrome.com/home?hl=it
+            - listitem [ref=e273]:
+              - link "Firebase" [ref=e274] [cursor=pointer]:
+                - /url: //firebase.google.com?hl=it
+            - listitem [ref=e275]:
+              - link "Google Cloud Platform" [ref=e276] [cursor=pointer]:
+                - /url: //cloud.google.com?hl=it
+            - listitem [ref=e277]:
+              - link "Google AI" [ref=e278] [cursor=pointer]:
+                - /url: //ai.google.dev/?hl=it
+            - listitem [ref=e279]:
+              - link "Tutti i prodotti" [ref=e280] [cursor=pointer]:
+                - /url: https://developers.google.com/products?hl=it
+        - navigation "Link utilità" [ref=e281]:
+          - list [ref=e282]:
+            - listitem [ref=e283]:
+              - link "Termini" [ref=e284] [cursor=pointer]:
+                - /url: https://developers.google.com/terms/site-terms?hl=it
+            - listitem [ref=e285]:
+              - text: "|"
+              - link "Privacy" [ref=e286] [cursor=pointer]:
+                - /url: //policies.google.com/privacy?hl=it
+            - text: "|"
+          - generic "Seleziona le preferenze relative alla lingua." [ref=e287]:
+            - button "Language" [ref=e288] [cursor=pointer]:
+              - img
+              - generic [ref=e289]: Language
+              - img
+      - toolbar "Menu del riquadro laterale" [ref=e292]:
+        - button "Info" [ref=e293] [cursor=pointer]:
+          - img [ref=e295]
+          - generic [ref=e298]: Info
+        - button "Chat" [ref=e299] [cursor=pointer]:
+          - img [ref=e301]
+          - generic [ref=e304]: Chat
+        - button "API" [ref=e305] [cursor=pointer]:
+          - img [ref=e307]
+          - generic [ref=e309]: API

@@ -183,16 +183,17 @@ img{max-width:100%;display:block}
 .trust__title{font-weight:700;font-size:.9rem;color:var(--ink);display:block}
 .trust__sub{font-size:.78rem;color:var(--muted);margin-top:2px;display:block;line-height:1.4}
 
-/* ── TESTIMONIAL ── */
-.testi-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:3.5rem;max-width:760px;margin:3rem auto 0;box-shadow:0 2px 24px rgba(0,0,0,.05);text-align:center}
-.testi-stars{color:var(--gold);font-size:1.1rem;letter-spacing:3px;display:block;margin-bottom:1.5rem}
-.testi-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.55rem;font-style:italic;line-height:1.55;color:var(--ink);margin-bottom:2rem}
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.25rem;margin-top:3rem}
+.testi-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:2rem 1.75rem;box-shadow:0 2px 16px rgba(0,0,0,.04);grid-column:span 2;display:flex;flex-direction:column}
+.testi-stars{color:var(--gold);font-size:.95rem;letter-spacing:3px;display:block;margin-bottom:1rem}
+.testi-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-style:italic;line-height:1.6;color:var(--ink);margin-bottom:1.5rem;flex:1}
 .testi-quote::before{content:'\201C';color:var(--gold)}
 .testi-quote::after{content:'\201D';color:var(--gold)}
-.testi-author{display:flex;align-items:center;justify-content:center;gap:1rem}
-.testi-av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.1rem;font-weight:700;color:#fff}
-.testi-name{font-weight:700;font-size:.9rem;color:var(--ink);text-align:left}
-.testi-detail{font-size:.78rem;color:var(--muted);margin-top:2px}
+.testi-author{display:flex;align-items:center;gap:.75rem;margin-top:auto}
+.testi-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-weight:700;color:#fff;flex-shrink:0}
+.testi-name{font-weight:700;font-size:.88rem;color:var(--ink)}
+.testi-detail{font-size:.74rem;color:var(--muted);margin-top:2px}
 
 /* ── FAQ ── */
 .faq{margin-top:2.5rem}
@@ -231,6 +232,8 @@ img{max-width:100%;display:block}
   .hero__grid{grid-template-columns:1fr;gap:3rem}
   .process-grid{grid-template-columns:1fr 1fr}
   .inc-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .testi-card,.testi-card:nth-child(4),.testi-card:nth-child(5){grid-column:span 1}
 }
 @media(max-width:700px){
   .hero__stats{grid-template-columns:1fr 1fr}
@@ -239,6 +242,8 @@ img{max-width:100%;display:block}
   .pain__grid{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr}
   .inc-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .testi-card,.testi-card:nth-child(4),.testi-card:nth-child(5){grid-column:span 1}
   .form-row{grid-template-columns:1fr}
   .trust__in{flex-direction:column}
   .trust__item{padding:.75rem 0;min-width:0;width:100%}
@@ -673,14 +678,71 @@ img{max-width:100%;display:block}
       <div class="sec-label">Owner Experience</div>
       <h2 class="sec-h">What owners say</h2>
     </div>
-    <div class="testi-card">
-      <span class="testi-stars">★★★★★</span>
-      <p class="testi-quote">I tried to apply for the MTA licence myself for three months. Eleva had my licence approved in five weeks and my property live on Airbnb the week after. I wish I'd called them on day one.</p>
-      <div class="testi-author">
-        <div class="testi-av">MB</div>
-        <div>
-          <div class="testi-name">Marco B.</div>
-          <div class="testi-detail">2-bedroom apartment, Valletta · Owner since 2025</div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <span class="testi-stars">★★★★★</span>
+        <p class="testi-quote">I tried to apply for the MTA licence myself for three months. Eleva had it approved in five weeks and my property live on Airbnb the week after. I wish I'd called them on day one.</p>
+        <div class="testi-author">
+          <div class="testi-av">MB</div>
+          <div>
+            <div class="testi-name">Marco B.</div>
+            <div class="testi-detail">2-bedroom, Valletta · Owner since 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="testi-stars">★★★★★</span>
+        <p class="testi-quote">I live in London and was convinced managing a Maltese short-let from abroad was impossible. Eleva handled the licence, the inspection, and the first three months of bookings — I didn't need to be there once.</p>
+        <div class="testi-author">
+          <div class="testi-av">SK</div>
+          <div>
+            <div class="testi-name">Sarah K.</div>
+            <div class="testi-detail">1-bedroom, Sliema · Owner since 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="testi-stars">★★★★★</span>
+        <p class="testi-quote">When I heard about the 2026 enforcement changes I panicked — I'd been renting without a licence for two years. Eleva sorted everything within six weeks. Fully compliant before the deadline.</p>
+        <div class="testi-author">
+          <div class="testi-av">GM</div>
+          <div>
+            <div class="testi-name">Giuseppe M.</div>
+            <div class="testi-detail">3-bedroom, St Julian's · Owner since 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="testi-stars">★★★★★</span>
+        <p class="testi-quote">I switched from another agency after two years of missed renewals and zero transparency. The difference with Eleva has been night and day — everything is handled and I receive clear monthly reports.</p>
+        <div class="testi-author">
+          <div class="testi-av">AT</div>
+          <div>
+            <div class="testi-name">Anna T.</div>
+            <div class="testi-detail">Studio, Valletta · Owner since 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="testi-stars">★★★★★</span>
+        <p class="testi-quote">My Mellieħa apartment earns more in summer than I expected for the full year. The AI pricing makes a real difference — consistently above what I was getting with manual management.</p>
+        <div class="testi-author">
+          <div class="testi-av">DC</div>
+          <div>
+            <div class="testi-name">David C.</div>
+            <div class="testi-detail">2-bedroom, Mellieħa · Owner since 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="testi-stars">★★★★★</span>
+        <p class="testi-quote">The eco-tax and paperwork side of things always stressed me out. With Eleva it's all automatic — I see it on the monthly statement and never have to think about it. Complete peace of mind.</p>
+        <div class="testi-author">
+          <div class="testi-av">LF</div>
+          <div>
+            <div class="testi-name">Laura F.</div>
+            <div class="testi-detail">1-bedroom, Gzira · Owner since 2025</div>
+          </div>
         </div>
       </div>
     </div>
